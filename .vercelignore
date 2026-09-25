@@ -1,0 +1,7 @@
+data/
+.agent-logs/
+scripts/
+.agents/
+.claude/
+*.md
+!README.md

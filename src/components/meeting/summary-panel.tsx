@@ -99,7 +99,7 @@ export function SummaryPanel({
           <DropdownMenu.Portal>
             <DropdownMenu.Content align="start" sideOffset={6} className="z-50 w-[270px] rounded-xl border border-line bg-surface p-1.5 shadow-pop">
               <DropdownMenu.Label className="px-2 py-1.5 text-[11.5px] font-medium text-ink-3">Note template</DropdownMenu.Label>
-              {TEMPLATES.map((t) => (
+              {(readOnly ? TEMPLATES.filter((t) => summaries[t.key]) : TEMPLATES).map((t) => (
                 <DropdownMenu.Item
                   key={t.key}
                   onSelect={() => pick(t.key)}

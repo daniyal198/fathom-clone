@@ -39,6 +39,8 @@ export function VideoPlayer({
   const wrap = useRef<HTMLDivElement>(null);
   const clipRef = useRef(clipRange);
   clipRef.current = clipRange;
+  const durRef = useRef(durationMs);
+  durRef.current = durationMs;
   const startRef = useRef(clipRange?.startMs ?? initialMs ?? 0);
   const didInit = useRef(false);
 
@@ -56,6 +58,12 @@ export function VideoPlayer({
       if (clip && v.currentTime * 1000 >= clip.endMs) {
         v.pause();
         v.currentTime = clip.endMs / 1000;
+      }
+      if (clip && v.currentTime * 1000 < clip.startMs - 500) v.currentTime = clip.startMs / 1000;
+      // A recording can be shorter than its media file (a live call ended early): stop at its end.
+      if (durRef.current > 0 && v.currentTime * 1000 >= durRef.current) {
+        v.pause();
+        v.currentTime = durRef.current / 1000;
       }
       p.emit();
       raf = requestAnimationFrame(loop);
@@ -162,7 +170,7 @@ export function VideoPlayer({
           <IconBtn label="Forward 10s (L)" onClick={() => p.seek(p.getTime() + 10000, { play: playing })}>
             <RotateCw size={15} />
           </IconBtn>
-          <TimeReadout durationMs={clipRange ? clipRange.endMs : durationMs} />
+          <TimeReadout durationMs={durationMs} range={clipRange} />
           <div className="ml-auto flex items-center gap-1">
             {onHighlight && (
               <button
@@ -197,11 +205,13 @@ function IconBtn({ label, onClick, children }: { label: string; onClick: () => v
   );
 }
 
-function TimeReadout({ durationMs }: { durationMs: number }) {
+function TimeReadout({ durationMs, range }: { durationMs: number; range?: { startMs: number; endMs: number } | null }) {
   const t = useTime(1000);
+  const start = range?.startMs ?? 0;
+  const end = range?.endMs ?? durationMs;
   return (
     <span className="ml-1.5 font-mono text-[12px] text-ink-3 tabular-nums">
-      <span className="text-ink-2">{clock(t)}</span> / {clock(durationMs)}
+      <span className="text-ink-2">{clock(Math.min(Math.max(t - start, 0), end - start))}</span> / {clock(end - start)}
     </span>
   );
 }
@@ -226,12 +236,17 @@ function Timeline({
   const bar = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<{ x: number; ms: number } | null>(null);
   const color = new Map(participants.map((x) => [x.key, x.color]));
-  const total = Math.max(durationMs, 1);
-  const pctOf = (ms: number) => `${(ms / total) * 100}%`;
+  // Shared clips: the bar spans only the clip, so viewers can't scrub into the rest of the meeting.
+  const from = clipRange?.startMs ?? 0;
+  const to = clipRange?.endMs ?? durationMs;
+  const total = Math.max(to - from, 1);
+  const pctOf = (ms: number) => `${(Math.min(Math.max(ms - from, 0), total) / total) * 100}%`;
+  const widthOf = (a: number, b: number) => `${((Math.min(b, to) - Math.max(a, from)) / total) * 100}%`;
+  const visible = clipRange ? utterances.filter((u) => u.endMs > from && u.startMs < to) : utterances;
 
   const msAt = (clientX: number) => {
     const r = bar.current!.getBoundingClientRect();
-    return Math.min(total, Math.max(0, ((clientX - r.left) / r.width) * total));
+    return from + Math.min(total, Math.max(0, ((clientX - r.left) / r.width) * total));
   };
   const hoverChapter = hover ? chapters[indexAt(chapters, hover.ms)] : null;
   const hoverUtt = hover ? utterances[indexAt(utterances, hover.ms)] : null;
@@ -254,21 +269,15 @@ function Timeline({
     >
       {/* speaker segments: who spoke when */}
       <div className="absolute inset-x-0 top-2.5 h-2.5 overflow-hidden rounded-full bg-sunken">
-        {utterances.map((u) => (
+        {visible.map((u) => (
           <div
             key={u.idx}
             className="absolute top-0 h-full opacity-70"
-            style={{ left: pctOf(u.startMs), width: `max(1px, ${pctOf(u.endMs - u.startMs)})`, background: color.get(u.speaker) }}
+            style={{ left: pctOf(u.startMs), width: `max(1px, ${widthOf(u.startMs, u.endMs)})`, background: color.get(u.speaker) }}
           />
         ))}
         <div className="absolute inset-y-0 left-0 bg-white/55" style={{ left: pctOf(t), right: 0 }} />
       </div>
-      {clipRange && (
-        <div
-          className="absolute top-1.5 h-4.5 rounded border-2 border-hl-strong"
-          style={{ left: pctOf(clipRange.startMs), width: pctOf(clipRange.endMs - clipRange.startMs) }}
-        />
-      )}
       {chapters.slice(1).map((c) => (
         <div key={c.idx} className="absolute top-1.5 h-4.5 w-[2px] rounded bg-surface" style={{ left: pctOf(c.startMs) }} />
       ))}
@@ -276,7 +285,7 @@ function Timeline({
         <div
           key={h.id}
           className="absolute top-0 h-1.5 rounded-full bg-hl-strong"
-          style={{ left: pctOf(h.startMs), width: `max(4px, ${pctOf(h.endMs - h.startMs)})` }}
+          style={{ left: pctOf(h.startMs), width: `max(4px, ${widthOf(h.startMs, h.endMs)})` }}
           title={h.note || "Highlight"}
         />
       ))}
@@ -286,7 +295,7 @@ function Timeline({
           className="pointer-events-none absolute bottom-full z-10 mb-1.5 -translate-x-1/2 rounded-lg bg-ink px-2 py-1 text-[11.5px] whitespace-nowrap text-white shadow-pop"
           style={{ left: Math.min(Math.max(hover.x, 60), (bar.current?.clientWidth ?? 0) - 60) }}
         >
-          <span className="font-mono">{clock(hover.ms)}</span>
+          <span className="font-mono">{clock(hover.ms - from)}</span>
           {hoverName && <span className="text-white/70"> · {hoverName}</span>}
           {hoverChapter && <div className="max-w-[220px] truncate text-white/70">{hoverChapter.title}</div>}
         </div>

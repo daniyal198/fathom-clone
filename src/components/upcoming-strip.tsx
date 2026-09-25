@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { CalendarDays, CircleDot, Radio } from "lucide-react";
 import type { CalendarEvent } from "@/lib/queries";
 import { setEventRecord } from "@/app/actions";
@@ -33,6 +33,8 @@ export function RecordSwitch({ on, onChange, disabled }: { on: boolean; onChange
 export function useEventRecord(initial: CalendarEvent[]) {
   const [events, setEvents] = useState(initial);
   const [, start] = useTransition();
+  // Server-side changes (e.g. a new auto-record rule) arrive as fresh props after router.refresh().
+  useEffect(() => setEvents(initial), [initial]);
   const toggle = (id: string, record: boolean) => {
     setEvents((evs) => evs.map((e) => (e.id === id ? { ...e, record } : e)));
     start(() => setEventRecord(id, record));

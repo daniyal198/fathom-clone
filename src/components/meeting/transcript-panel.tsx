@@ -19,7 +19,7 @@ export function TranscriptPanel({
   participants: Participant[];
   speakerFilter: number | null;
   setSpeakerFilter: (k: number | null) => void;
-  onClip: (startMs: number, endMs: number, note: string) => void;
+  onClip?: (startMs: number, endMs: number, note: string) => void; // omitted on read-only share pages
   meetingUrl: string;
 }) {
   const p = usePlayer();
@@ -154,7 +154,7 @@ export function TranscriptPanel({
           onWheel={() => follow && setFollow(false)}
           onTouchMove={() => follow && setFollow(false)}
           onKeyDown={(e) => ["PageUp", "PageDown", "ArrowUp", "ArrowDown", "Home", "End"].includes(e.key) && follow && setFollow(false)}
-          onMouseUp={onMouseUp}
+          onMouseUp={onClip ? onMouseUp : undefined}
         >
           {visible.map((u, i) => {
             const prev = visible[i - 1];
@@ -176,7 +176,7 @@ export function TranscriptPanel({
               />
             );
           })}
-          {selection && (
+          {selection && onClip && (
             <button
               style={{ top: Math.max(4, selection.top) }}
               className="animate-fade-up absolute left-1/2 z-10 inline-flex h-8 -translate-x-1/2 items-center gap-1.5 rounded-lg bg-ink px-3 text-[12.5px] font-medium text-white shadow-pop hover:bg-ink/85"
@@ -231,7 +231,7 @@ const Line = memo(function Line({
   needle: string;
   isCurrentMatch: boolean;
   onSeek: (ms: number) => void;
-  onClip: (s: number, e: number, note: string) => void;
+  onClip?: (s: number, e: number, note: string) => void;
   meetingUrl: string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -255,14 +255,16 @@ const Line = memo(function Line({
         {needle.length > 1 ? <Marked text={u.text} needle={needle} /> : u.text}
       </p>
       <div className="absolute top-1 right-1 hidden items-center gap-0.5 rounded-lg border border-line bg-surface p-0.5 shadow-sm group-hover:flex">
-        <button
-          title="Highlight this line"
-          onClick={() => onClip(u.startMs, u.endMs, u.text.slice(0, 140))}
-          className="flex h-6 w-6 items-center justify-center rounded-md text-ink-3 hover:bg-hl hover:text-ink"
-        >
-          <Sparkles size={13} />
-        </button>
-        <button
+        {onClip && (
+          <button
+            title="Highlight this line"
+            onClick={() => onClip(u.startMs, u.endMs, u.text.slice(0, 140))}
+            className="flex h-6 w-6 items-center justify-center rounded-md text-ink-3 hover:bg-hl hover:text-ink"
+          >
+            <Sparkles size={13} />
+          </button>
+        )}
+        {meetingUrl && <button
           title={copied ? "Copied!" : "Copy link to this moment"}
           onClick={() => {
             navigator.clipboard.writeText(`${meetingUrl}?t=${u.startMs}`);
@@ -272,7 +274,7 @@ const Line = memo(function Line({
           className={cn("flex h-6 w-6 items-center justify-center rounded-md hover:bg-sunken", copied ? "text-ok" : "text-ink-3 hover:text-ink")}
         >
           <Link2 size={13} />
-        </button>
+        </button>}
       </div>
     </div>
   );
