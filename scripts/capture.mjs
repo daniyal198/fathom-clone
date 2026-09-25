@@ -130,6 +130,41 @@ Session: \`${sid.slice(0, 8)}\` | Project: \`${project}\` | Author: \`${AUTHOR}\
   return file;
 }
 
+// Secrets never reach the public log: every value in the repo's .env* files, plus common key shapes,
+// is replaced with a visible marker. This is the only transformation applied to captured text.
+function secretsFrom(root) {
+  const vals = [];
+  let files = [];
+  try {
+    files = fs.readdirSync(root).filter((f) => f.startsWith(".env"));
+  } catch {}
+  for (const f of files) {
+    try {
+      for (const line of fs.readFileSync(path.join(root, f), "utf8").split("\n")) {
+        const m = line.match(/^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*["']?(.*?)["']?\s*$/);
+        if (m && m[2].length >= 12) vals.push([m[1], m[2]]);
+      }
+    } catch {}
+  }
+  return vals;
+}
+
+const KEY_SHAPES = [
+  /AIza[0-9A-Za-z_\-]{35}/g,
+  /\bAQ\.[A-Za-z0-9_\-]{30,}/g,
+  /\bsk-(?:ant-|proj-)?[A-Za-z0-9_\-]{20,}/g,
+  /\bgh[pousr]_[A-Za-z0-9]{30,}/g,
+  /\bxox[abpr]-[A-Za-z0-9\-]{10,}/g,
+  /\bpostgres(?:ql)?:\/\/[^\s:@]+:[^\s@]+@[^\s]+/g,
+];
+
+function redact(text, root) {
+  let out = text;
+  for (const [name, val] of secretsFrom(root)) out = out.split(val).join(`[REDACTED:${name}]`);
+  for (const re of KEY_SHAPES) out = out.replace(re, "[REDACTED:secret]");
+  return out;
+}
+
 function setField(doc, key, value) {
   return doc.replace(new RegExp(`^${key}: .*$`, "m"), `${key}: ${value}`);
 }
@@ -155,7 +190,7 @@ function main() {
     if (num === 1) doc = setField(doc, "first_prompt_time", iso);
     doc = setField(doc, "total_exchanges", num);
     doc = setField(doc, "last_prompt_time", iso);
-    doc += `\n[LOG_ENTRY type=PROMPT num=${num} session=${short}]\ntimestamp: ${iso}\nmodel: ${model}\n\n${input.prompt ?? ""}\n\n`;
+    doc += `\n[LOG_ENTRY type=PROMPT num=${num} session=${short}]\ntimestamp: ${iso}\nmodel: ${model}\n\n${redact(input.prompt ?? "", root)}\n\n`;
     fs.writeFileSync(file, doc);
     return;
   }
@@ -167,8 +202,10 @@ function main() {
     entries = readTranscript(input.transcript_path);
     resp = finalResponse(entries);
   }
-  const text = resp?.text ?? input.last_assistant_message ?? "";
+  const text = redact(resp?.text ?? input.last_assistant_message ?? "", root);
   const model = resp?.entry?.message?.model || lastModel(entries) || "unknown";
+  // No log file means no prompt was captured for this session (e.g. hook installed mid-session).
+  if (!fs.existsSync(dir) || !fs.readdirSync(dir).some((f) => f.endsWith(`_${sid}.md`))) return;
   const file = logFile(dir, sid, project, model, now);
   let doc = fs.readFileSync(file, "utf8");
   const num = (doc.match(/^\[LOG_ENTRY type=PROMPT /gm) || []).length;

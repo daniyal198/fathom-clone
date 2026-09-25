@@ -133,3 +133,16 @@ Capture test 2 received (daniyal198, second session, 8x assignment). Note: the G
 - **The session that installed the hook** had already run a planning conversation (reading the brief,
   choosing the stack) before capture existed, so those earlier turns aren't in `.agent-logs/`.
   Everything after the hook was installed is captured.
+
+## Secret redaction (added after setup; the only way entries are ever altered)
+
+The first real build prompt pasted two API keys, and the hook captured them verbatim. Because
+`.agent-logs/` ships publicly, that one entry was redacted in place **before it was ever committed**:
+the key values now read `[REDACTED:GEMINI_API_KEY]` / `[REDACTED:DEEPGRAM_API_KEY]`. Nothing else in the
+entry was changed. From then on `capture.mjs` scrubs automatically at capture time: any value found
+in the repo's `.env*` files (gitignored) and common key shapes (Google `AIza…`/`AQ.…`, `sk-…`,
+GitHub tokens, Slack tokens, `postgres://user:pass@…` URLs) are replaced with a `[REDACTED:<name>]`
+marker. The rest of every prompt and response is stored verbatim.
+
+This session's log file (`…_627d946b-….md`) starts at that prompt. The hook was installed partway
+through this session, and every turn after installation is captured.
