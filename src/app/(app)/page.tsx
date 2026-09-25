@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CalendarDays, CheckSquare, Loader2, Sparkles, Upload } from "lucide-react";
 import { getCalendar, listMeetings, type MeetingListItem } from "@/lib/queries";
-import { cn, dayLabel, duration, thumbFor, timeLabel } from "@/lib/format";
+import { cn, dayLabel, duration, people, thumbFor, timeLabel } from "@/lib/format";
 import { AvatarStack } from "@/components/ui";
 import { UpcomingStrip } from "@/components/upcoming-strip";
 
@@ -116,7 +116,7 @@ function MeetingRow({ m, first }: { m: MeetingListItem; first: boolean }) {
         )}
         <div className="mt-2 flex items-center gap-3 text-[12px] text-ink-3">
           <AvatarStack people={m.participants} size={20} />
-          <span>{m.participants.length} people</span>
+          <span>{people(m.participants.length)}</span>
           {m.actionCount > 0 && (
             <span className="flex items-center gap-1">
               <CheckSquare size={12} />

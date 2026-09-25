@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import { Check, Copy, ListChecks } from "lucide-react";
 import type { ActionItem, Participant } from "@/lib/types";
 import { toggleActionItem } from "@/app/actions";
@@ -23,6 +23,7 @@ export function ActionsPanel({
 }) {
   const p = usePlayer();
   const [items, setItems] = useState(initial);
+  useEffect(() => setItems(initial), [initial]); // e.g. an owner renamed via "Who spoke when"
   const [copied, setCopied] = useState(false);
   const [, start] = useTransition();
   const color = new Map(participants.map((x) => [x.name, x.color]));

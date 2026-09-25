@@ -218,7 +218,14 @@ function markSubstring(raw: string, q: string) {
 export async function getCalendar() {
   await keepDemoFresh();
   const [settings] = await sql`SELECT * FROM settings WHERE id = 1`;
-  const events = await sql`SELECT * FROM calendar_events WHERE ends_at > now() - interval '12 hours' ORDER BY starts_at`;
+  // Demo events are anchored to the current hour (offset_min), so one is always in progress and the rest upcoming.
+  const events = await sql`
+    SELECT * FROM (
+      SELECT e.*,
+        COALESCE(date_trunc('hour', now()) + make_interval(mins => e.offset_min), e.starts_at) AS s,
+        COALESCE(date_trunc('hour', now()) + make_interval(mins => e.offset_min + e.length_min), e.ends_at) AS en
+      FROM calendar_events e) x
+    WHERE en > now() ORDER BY s`;
   return {
     connected: settings?.calendar_connected ?? false,
     email: (settings?.calendar_email as string | null) ?? null,
@@ -226,8 +233,8 @@ export async function getCalendar() {
     events: events.map((e) => ({
       id: e.id as string,
       title: e.title as string,
-      startsAt: iso(e.starts_at),
-      endsAt: iso(e.ends_at),
+      startsAt: iso(e.s),
+      endsAt: iso(e.en),
       attendees: e.attendees as string[],
       platform: e.platform as string,
       external: e.external as boolean,
@@ -238,3 +245,25 @@ export async function getCalendar() {
   };
 }
 export type CalendarEvent = Awaited<ReturnType<typeof getCalendar>>["events"][number];
+
+export async function listActionItems() {
+  await keepDemoFresh();
+  const rows = await sql`
+    SELECT a.id, a.text, a.assignee, a.start_ms, a.done, m.id AS meeting_id, m.title AS meeting_title, m.started_at,
+           (SELECT p.color FROM participants p WHERE p.meeting_id = a.meeting_id AND p.name = a.assignee LIMIT 1) AS color
+    FROM action_items a JOIN meetings m ON m.id = a.meeting_id
+    WHERE m.status = 'ready'
+    ORDER BY m.started_at DESC, a.start_ms NULLS LAST, a.id`;
+  return rows.map((r) => ({
+    id: r.id as number,
+    text: r.text as string,
+    assignee: r.assignee as string | null,
+    startMs: r.start_ms as number | null,
+    done: r.done as boolean,
+    meetingId: r.meeting_id as string,
+    meetingTitle: r.meeting_title as string,
+    startedAt: iso(r.started_at),
+    color: r.color as string | null,
+  }));
+}
+export type ActionRow = Awaited<ReturnType<typeof listActionItems>>[number];

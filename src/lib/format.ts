@@ -54,3 +54,5 @@ export function thumbFor(m: { sourceUrl: string | null }) {
   const yt = m.sourceUrl?.match(/[?&]v=([\w-]{11})/)?.[1];
   return yt ? `https://i.ytimg.com/vi/${yt}/mqdefault.jpg` : null;
 }
+
+export const people = (n: number) => `${n} ${n === 1 ? "person" : "people"}`;

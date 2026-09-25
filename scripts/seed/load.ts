@@ -1,6 +1,6 @@
 // Seed pipeline, stage 3: upload media to Vercel Blob and load everything into Postgres.
 // Idempotent: each seeded meeting is deleted (cascade) and re-inserted.
-//   npx tsx scripts/seed/load.ts
+//   npx tsx scripts/seed/load.ts [--calendar-only]
 import fs from "node:fs";
 import path from "node:path";
 import { config } from "dotenv";
@@ -34,7 +34,9 @@ async function main() {
   const sources = readJSON<Source[]>(path.join(__dirname, "sources.json"));
   const urls: Record<string, string> = fs.existsSync(URLS) ? readJSON(URLS) : {};
 
-  for (const src of sources) {
+  // --calendar-only: refresh the demo calendar without touching meetings (keeps highlights, ticks, generated notes).
+  const calendarOnly = process.argv.includes("--calendar-only");
+  for (const src of calendarOnly ? [] : sources) {
     const nFile = path.join(SEED, `${src.id}.notes.json`);
     if (!fs.existsSync(nFile)) {
       console.log(`skip ${src.id}: not processed`);
@@ -139,22 +141,17 @@ async function main() {
 
   // Upcoming calendar (stubbed Google Calendar). Recordable events replay a real recording in the live simulator.
   await sql`DELETE FROM calendar_events`;
-  const at = (dayOffset: number, h: number, m = 0) => {
-    const d = new Date();
-    d.setDate(d.getDate() + dayOffset);
-    d.setHours(h, m, 0, 0);
-    return d.toISOString();
-  };
   const loaded = new Set((await sql`SELECT id FROM meetings`).map((r) => r.id as string));
-  type Ev = { id: string; title: string; s: string; e: string; who: string[]; ext: boolean; rec: boolean; replay: string | null; platform?: string };
+  // Offsets are minutes from the top of the current hour, resolved at read time (see getCalendar).
+  type Ev = { id: string; title: string; off: number; len: number; who: string[]; ext: boolean; rec: boolean; replay: string | null; platform?: string };
   const events: Ev[] = [
-    { id: "ev-package", title: "Package team weekly", s: at(0, 9), e: at(0, 9, 15), who: [], ext: false, rec: true, replay: "package-weekly" },
-    { id: "ev-pmm", title: "Product marketing weekly", s: at(0, 11), e: at(0, 12), who: [], ext: false, rec: true, replay: "pmm-weekly" },
-    { id: "ev-lunch", title: "Lunch", s: at(0, 12, 30), e: at(0, 13, 30), who: [], ext: false, rec: false, replay: null, platform: "none" },
-    { id: "ev-discovery", title: "Discovery call: Northwind Foods", s: at(0, 15), e: at(0, 15, 30), who: [], ext: true, rec: true, replay: "steak-discovery" },
-    { id: "ev-sig", title: "SIG Network community call", s: at(1, 10), e: at(1, 10, 30), who: [], ext: true, rec: false, replay: "k8s-sig-network", platform: "zoom" },
-    { id: "ev-ceo", title: "Pods & CEO sync", s: at(1, 14), e: at(1, 14, 30), who: [], ext: false, rec: true, replay: "ceo-pods-sync", platform: "meet" },
-    { id: "ev-interview", title: "Interview: Senior PMM candidate", s: at(2, 13), e: at(2, 13, 45), who: ["Jordan Lee (candidate)", "Cindy"], ext: true, rec: false, replay: null, platform: "teams" },
+    { id: "ev-pmm", title: "Product marketing weekly", off: 0, len: 60, who: [], ext: false, rec: true, replay: "pmm-weekly" },
+    { id: "ev-package", title: "Package team weekly", off: 90, len: 15, who: [], ext: false, rec: true, replay: "package-weekly" },
+    { id: "ev-focus", title: "Focus time", off: 120, len: 90, who: [], ext: false, rec: false, replay: null, platform: "none" },
+    { id: "ev-discovery", title: "Discovery call: Northwind Foods", off: 240, len: 30, who: [], ext: true, rec: true, replay: "steak-discovery" },
+    { id: "ev-sig", title: "SIG Network community call", off: 1440 + 60, len: 30, who: [], ext: true, rec: false, replay: "k8s-sig-network" },
+    { id: "ev-ceo", title: "Pods & CEO sync", off: 1440 + 180, len: 30, who: [], ext: false, rec: true, replay: "ceo-pods-sync", platform: "meet" },
+    { id: "ev-interview", title: "Interview: Senior PMM candidate", off: 2880 + 120, len: 45, who: ["Jordan Lee (candidate)", "Cindy"], ext: true, rec: false, replay: null, platform: "teams" },
   ];
   const names = new Map<string, string[]>();
   for (const r of await sql`SELECT meeting_id, array_agg(name ORDER BY talk_ms DESC) AS names FROM participants GROUP BY meeting_id`) {
@@ -162,8 +159,8 @@ async function main() {
   }
   for (const ev of events) {
     if (ev.replay && names.has(ev.replay)) ev.who = names.get(ev.replay)!;
-    await sql`INSERT INTO calendar_events (id, title, starts_at, ends_at, attendees, platform, external, record, replay_of)
-              VALUES (${ev.id}, ${ev.title}, ${ev.s}, ${ev.e}, ${JSON.stringify(ev.who)}::jsonb, ${ev.platform ?? "zoom"},
+    await sql`INSERT INTO calendar_events (id, title, starts_at, ends_at, offset_min, length_min, attendees, platform, external, record, replay_of)
+              VALUES (${ev.id}, ${ev.title}, now(), now(), ${ev.off}, ${ev.len}, ${JSON.stringify(ev.who)}::jsonb, ${ev.platform ?? "zoom"},
                       ${ev.ext}, ${ev.rec}, ${ev.replay && loaded.has(ev.replay) ? ev.replay : null})`;
   }
   await sql`UPDATE settings SET calendar_connected = false, calendar_email = null, auto_record = 'all' WHERE id = 1`;

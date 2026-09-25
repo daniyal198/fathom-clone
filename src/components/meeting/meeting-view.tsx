@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import * as Popover from "@radix-ui/react-popover";
-import { ArrowLeft, CalendarDays, Clock, ExternalLink, Share2, Sparkles, Users } from "lucide-react";
+import { ArrowLeft, CalendarDays, Check, Clock, ExternalLink, Pencil, Share2, Sparkles, Users } from "lucide-react";
 import type { MeetingData } from "@/lib/queries";
 import type { Highlight } from "@/lib/types";
-import { addHighlight, shareMeeting } from "@/app/actions";
-import { clock, cn, duration, pct, shortDate, thumbFor, timeLabel } from "@/lib/format";
+import { addHighlight, renameSpeaker, shareMeeting } from "@/app/actions";
+import { clock, cn, duration, pct, people, shortDate, thumbFor, timeLabel } from "@/lib/format";
 import { AvatarStack, Button } from "@/components/ui";
 import { PlayerProvider, indexAt, usePlayer, useTime } from "./player-store";
 import { VideoPlayer } from "./video-player";
@@ -127,7 +128,7 @@ function MeetingInner({ data, initialMs }: { data: MeetingData; initialMs: numbe
               </span>
               <Popover.Root>
                 <Popover.Trigger className="flex items-center gap-1.5 rounded-md hover:text-ink">
-                  <Users size={12} /> {participants.length} people
+                  <Users size={12} /> {people(participants.length)}
                   <AvatarStack people={participants} size={18} max={5} />
                 </Popover.Trigger>
                 <Popover.Portal>
@@ -291,6 +292,16 @@ function Chapters({ chapters }: { chapters: MeetingData["chapters"] }) {
 function SpeakerLanes({ data, totalTalk, onFocus }: { data: MeetingData; totalTalk: number; onFocus: (key: number) => void }) {
   const p = usePlayer();
   const t = useTime(500);
+  const router = useRouter();
+  const [editing, setEditing] = useState<number | null>(null);
+  const [draft, setDraft] = useState("");
+  const save = async (key: number) => {
+    setEditing(null);
+    const cur = data.participants.find((x) => x.key === key);
+    if (!draft.trim() || draft.trim() === cur?.name) return;
+    await renameSpeaker(data.meeting.id, key, draft);
+    router.refresh();
+  };
   const { participants, utterances, meeting } = data;
   const total = Math.max(meeting.durationMs, 1);
   const byPerson = useMemo(() => {
@@ -304,18 +315,53 @@ function SpeakerLanes({ data, totalTalk, onFocus }: { data: MeetingData; totalTa
     <section className="rounded-xl border border-line bg-surface">
       <h2 className="flex items-center justify-between border-b border-line px-4 py-2.5 text-[13px] font-semibold">
         <span>
-          Who spoke when <span className="font-normal text-ink-3">· {participants.length} people</span>
+          Who spoke when <span className="font-normal text-ink-3">· {people(participants.length)}</span>
         </span>
         <span className="text-[11.5px] font-normal text-ink-3">Click a name to see only their lines</span>
       </h2>
       <div className="space-y-1 p-3">
         {participants.map((x) => (
           <div key={x.key} className="group flex items-center gap-3">
-            <button onClick={() => onFocus(x.key)} className="flex w-[150px] shrink-0 items-center gap-2 truncate text-left text-[12.5px] hover:text-accent">
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: x.color }} />
-              <span className="truncate font-medium">{x.name}</span>
-              <span className="ml-auto text-ink-3 tabular-nums">{pct(x.talkMs, totalTalk)}%</span>
-            </button>
+            {editing === x.key ? (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  save(x.key);
+                }}
+                className="flex w-[170px] shrink-0 items-center gap-1"
+              >
+                <input
+                  autoFocus
+                  value={draft}
+                  onChange={(e) => setDraft(e.target.value)}
+                  onBlur={() => save(x.key)}
+                  onKeyDown={(e) => e.key === "Escape" && setEditing(null)}
+                  className="h-6 min-w-0 flex-1 rounded border border-accent px-1.5 text-[12.5px] outline-none"
+                />
+                <button type="submit" className="text-ok" aria-label="Save name">
+                  <Check size={14} />
+                </button>
+              </form>
+            ) : (
+              <div className="flex w-[170px] shrink-0 items-center gap-1">
+                <button onClick={() => onFocus(x.key)} className="flex min-w-0 flex-1 items-center gap-2 text-left text-[12.5px] hover:text-accent">
+                  <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: x.color }} />
+                  <span className="truncate font-medium">{x.name}</span>
+                  <span className="ml-auto text-ink-3 tabular-nums">{pct(x.talkMs, totalTalk)}%</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setDraft(x.name);
+                    setEditing(x.key);
+                  }}
+                  className="text-ink-3 opacity-0 group-hover:opacity-100 hover:text-ink focus:opacity-100"
+                  aria-label={`Rename ${x.name}`}
+                  title="Wrong name? Rename this speaker"
+                >
+                  <Pencil size={12} />
+                </button>
+              </div>
+            )}
             <div className="relative h-5 flex-1 rounded bg-canvas">
               {(byPerson.get(x.key) ?? []).map((u) => (
                 <button

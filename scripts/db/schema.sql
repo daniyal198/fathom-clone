@@ -96,8 +96,12 @@ CREATE TABLE IF NOT EXISTS calendar_events (
   external    boolean NOT NULL DEFAULT false,
   record      boolean NOT NULL DEFAULT true,
   replay_of   text REFERENCES meetings(id) ON DELETE SET NULL,  -- recording the live simulator replays
-  meeting_id  text REFERENCES meetings(id) ON DELETE SET NULL   -- meeting produced once "recorded"
+  meeting_id  text REFERENCES meetings(id) ON DELETE SET NULL,  -- meeting produced once "recorded"
+  offset_min  integer,   -- demo: start relative to the current hour, so there is always a call to join
+  length_min  integer
 );
+ALTER TABLE calendar_events ADD COLUMN IF NOT EXISTS offset_min integer;
+ALTER TABLE calendar_events ADD COLUMN IF NOT EXISTS length_min integer;
 
 CREATE TABLE IF NOT EXISTS settings (
   id                 integer PRIMARY KEY DEFAULT 1,

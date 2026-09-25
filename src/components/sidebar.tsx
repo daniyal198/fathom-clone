@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarDays, Info, Search, Sparkles, Upload, Video } from "lucide-react";
+import { CalendarDays, CheckSquare, Info, Search, Sparkles, Upload, Video } from "lucide-react";
 import { cn } from "@/lib/format";
 import { Kbd, Logo } from "./ui";
 
 const NAV = [
   { href: "/", label: "Meetings", icon: Video, match: (p: string) => p === "/" || p.startsWith("/meetings") },
+  { href: "/action-items", label: "Action items", icon: CheckSquare, match: (p: string) => p.startsWith("/action-items") },
   { href: "/highlights", label: "Highlights", icon: Sparkles, match: (p: string) => p.startsWith("/highlights") },
   { href: "/calendar", label: "Calendar", icon: CalendarDays, match: (p: string) => p.startsWith("/calendar") || p.startsWith("/live") },
   { href: "/upload", label: "Upload recording", icon: Upload, match: (p: string) => p.startsWith("/upload") },

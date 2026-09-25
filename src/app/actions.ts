@@ -70,3 +70,13 @@ export async function setAutoRecord(mode: "all" | "external" | "internal" | "non
 export async function setEventRecord(eventId: string, record: boolean) {
   await sql`UPDATE calendar_events SET record = ${record} WHERE id = ${eventId} AND platform <> 'none'`;
 }
+
+export async function renameSpeaker(meetingId: string, key: number, name: string) {
+  const clean = name.trim().slice(0, 60);
+  if (!clean) return;
+  const [old] = await sql`SELECT name FROM participants WHERE meeting_id = ${meetingId} AND key = ${key}`;
+  if (!old) return;
+  await sql`UPDATE participants SET name = ${clean} WHERE meeting_id = ${meetingId} AND key = ${key}`;
+  // Keep action-item owners in step with the corrected name.
+  await sql`UPDATE action_items SET assignee = ${clean} WHERE meeting_id = ${meetingId} AND assignee = ${old.name}`;
+}
