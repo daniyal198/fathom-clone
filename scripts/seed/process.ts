@@ -80,13 +80,13 @@ ${String(info.description ?? "").slice(0, 3000)}`;
   const title = String(info.title);
   if (!notes.chapters) {
     console.log(`[${src.id}] insights…`);
-    Object.assign(notes, await generateInsights(title, utts, people));
+    Object.assign(notes, await generateInsights(title, utts, people, "quality"));
     writeJSON(nFile, notes);
   }
   for (const key of new Set(["general", src.template])) {
     if (notes.summaries[key]) continue;
     console.log(`[${src.id}] summary: ${key}…`);
-    notes.summaries[key] = await generateSummary(key, title, utts, people);
+    notes.summaries[key] = await generateSummary(key, title, utts, people, "quality");
     writeJSON(nFile, notes);
   }
   console.log(`[${src.id}] done: ${utts.length} lines, ${speakers.length} speakers, ${notes.actionItems.length} action items`);

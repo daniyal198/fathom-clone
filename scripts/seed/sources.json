@@ -1,9 +1,9 @@
 [
-  { "id": "pmm-weekly", "youtube": "uE4HwpsreEE", "type": "team", "template": "general" },
-  { "id": "ceo-pods-sync", "youtube": "Q7sxtxoRgT4", "type": "exec", "template": "general" },
-  { "id": "steak-discovery", "youtube": "QsJyiY_P5UQ", "type": "sales", "template": "sales" },
-  { "id": "issue-504188-sync", "youtube": "VV1Bjazv0dk", "type": "sync", "template": "project" },
-  { "id": "k8s-sig-network", "youtube": "3DNmDpTenCU", "type": "community", "template": "general" },
-  { "id": "eng-key-meeting", "youtube": "qGFoZ8yodc4", "type": "review", "template": "general" },
-  { "id": "package-weekly", "youtube": "Of39LKmX6iM", "type": "standup", "template": "standup" }
+  { "id": "package-weekly", "youtube": "Of39LKmX6iM", "type": "standup", "template": "standup", "title": "Package team weekly", "daysAgo": 0, "hour": 9 },
+  { "id": "pmm-weekly", "youtube": "uE4HwpsreEE", "type": "team", "template": "general", "title": "Product marketing weekly", "daysAgo": 1, "hour": 11 },
+  { "id": "steak-discovery", "youtube": "QsJyiY_P5UQ", "type": "sales", "template": "sales", "daysAgo": 1, "hour": 15 },
+  { "id": "ceo-pods-sync", "youtube": "Q7sxtxoRgT4", "type": "exec", "template": "project", "title": "Pods & CEO sync", "daysAgo": 2, "hour": 14, "platform": "meet" },
+  { "id": "issue-504188-sync", "youtube": "VV1Bjazv0dk", "type": "sync", "template": "project", "daysAgo": 3, "hour": 10 },
+  { "id": "eng-key-meeting", "youtube": "qGFoZ8yodc4", "type": "review", "template": "general", "title": "Engineering key review", "daysAgo": 5, "hour": 13, "shared": true },
+  { "id": "k8s-sig-network", "youtube": "3DNmDpTenCU", "type": "community", "template": "general", "title": "Kubernetes SIG Network", "daysAgo": 6, "hour": 10, "shared": true }
 ]

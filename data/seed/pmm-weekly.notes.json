@@ -1,5 +1,210 @@
 {
- "summaries": {},
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "The product marketing meeting addressed sales play timelines, defining sales play launches, and planning the 14.0 release. A major discussion focused on improving the credibility and scalability of partner and competitor comparison pages, with a push to shift Group Conversation reporting from activities to outcomes.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Sales play timelines require better coordination, with GTM motion leads as DRIs and PMMs for review.",
+        "startMs": 151270
+       },
+       {
+        "text": "The DevOps platform sales play is being completed for sales, but a full campaign may be tabled due to lack of sales appetite.",
+        "startMs": 256510
+       },
+       {
+        "text": "A launch readiness checklist will be created as an MR template to standardize sales play launch expectations.",
+        "startMs": 768625
+       },
+       {
+        "text": "Brian will own the 14.0 release launch, which typically includes press announcements and special activities.",
+        "startMs": 1049315
+       },
+       {
+        "text": "William advocates shifting Group Conversation reporting from activity-based outputs to measurable outcomes and results.",
+        "startMs": 1555030
+       },
+       {
+        "text": "The team is refining partner and competitor comparison pages to improve credibility, transparency, and maintenance scalability.",
+        "startMs": 2586220
+       }
+      ]
+     },
+     {
+      "heading": "Sales Plays Timeline",
+      "bullets": [
+       {
+        "text": "William raised concerns about the sales plays timeline and coordination across GTM motions.",
+        "startMs": 75375
+       },
+       {
+        "text": "Cindy clarified that the DRI for the schedule and work plan should be each GTM motion lead, with PMMs ensuring it makes sense.",
+        "startMs": 151270
+       },
+       {
+        "text": "The issue linking the timeline is useful for visibility, even if specific dates might shift.",
+        "startMs": 178240
+       }
+      ]
+     },
+     {
+      "heading": "Platform Sales Play & Messaging",
+      "bullets": [
+       {
+        "text": "Cindy questioned why the platform sales play was scheduled so late, suggesting it could be pulled in closer.",
+        "startMs": 217155
+       },
+       {
+        "text": "Cormac explained there were discussions about the immediate need for a DevOps platform sales play campaign.",
+        "startMs": 226530
+       },
+       {
+        "text": "Cormac suggested finishing the sales play to give sales a tool, but potentially tabling other campaign elements.",
+        "startMs": 256510
+       },
+       {
+        "text": "Brian shared an MR to separate brand messaging from the use case, addressing confusion between the two.",
+        "startMs": 380325
+       },
+       {
+        "text": "There wasn't practical demand for a dedicated DevOps platform sales play as long as the use case was well-defined.",
+        "startMs": 495495
+       }
+      ]
+     },
+     {
+      "heading": "Defining Sales Play Launch",
+      "bullets": [
+       {
+        "text": "Samia asked for a clear definition of what constitutes \"launching a sales play.\"",
+        "startMs": 601945
+       },
+       {
+        "text": "Cindy acknowledged the need for a launch readiness checklist, as each sales play can differ in enablement requirements.",
+        "startMs": 680710
+       },
+       {
+        "text": "Cindy proposed creating an MR template with a checklist for sales play launches.",
+        "startMs": 768625
+       },
+       {
+        "text": "William noted that launch dates are constrained by David Somers' calendar and associated marketing campaigns.",
+        "startMs": 918495
+       },
+       {
+        "text": "Samia will reach out to Hannah (global SDR lead), Chris Wang (SDR enablement), and Kelley (SMB enablement) for input.",
+        "startMs": 1009830
+       }
+      ]
+     },
+     {
+      "heading": "14.0 Release Planning",
+      "bullets": [
+       {
+        "text": "William announced the upcoming 14.0 major release in June, which typically involves press announcements.",
+        "startMs": 1049315
+       },
+       {
+        "text": "Brian was assigned ownership of the 14.0 launch, with Samia handling 13.12 in May.",
+        "startMs": 1129035
+       },
+       {
+        "text": "Cormac noted that the 14.3 release will overlap with the Contribute event.",
+        "startMs": 1220230
+       },
+       {
+        "text": "Brian will plan the activities for the 14.0 launch, coordinating with Natasha and leveraging new brand messaging.",
+        "startMs": 1374425
+       },
+       {
+        "text": "Parker will open an MR to update the release post manager page to reflect the new assignments.",
+        "startMs": 1387750
+       }
+      ]
+     },
+     {
+      "heading": "Group Conversation Deck Format",
+      "bullets": [
+       {
+        "text": "William stated the GC deck is due next Monday and expressed dissatisfaction with the current format's emphasis on activities over results.",
+        "startMs": 1527070
+       },
+       {
+        "text": "He desires a shift to reporting on outcomes and how the team is tracking towards them.",
+        "startMs": 1555030
+       },
+       {
+        "text": "For the upcoming GC, the team will stick to the old format, but William will work on a new approach for future GCs.",
+        "startMs": 1590395
+       },
+       {
+        "text": "William believes management should create the GC deck, with teams contributing items they want visibility for.",
+        "startMs": 1881215
+       }
+      ]
+     },
+     {
+      "heading": "Partner vs. Competitor Pages",
+      "bullets": [
+       {
+        "text": "Alida thanked the team for their help with the partner versus competitor exercise.",
+        "startMs": 1944515
+       },
+       {
+        "text": "William highlighted the nuance of distinguishing between partners, potential partners, and tools with overlapping capabilities on comparison pages.",
+        "startMs": 2018045
+       },
+       {
+        "text": "He strongly dislikes the current graphic on DevOps tools pages, citing a loss of credibility and frustration for partners.",
+        "startMs": 2512490
+       },
+       {
+        "text": "William supports Alida's proposal for a new graphic that transparently shows GitLab as a platform and other tools' specific scope.",
+        "startMs": 2676350
+       },
+       {
+        "text": "The team discussed tiering comparison pages and having PMMs update 1-3 top tools quarterly to maintain freshness and scalability.",
+        "startMs": 2936270
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Cindy will create an MR to stub out a sales play launch checklist.",
+        "startMs": 964115
+       },
+       {
+        "text": "Samia will asynchronously reach out to Hannah, Chris Wang, and Kelley regarding SDR enablement.",
+        "startMs": 1009830
+       },
+       {
+        "text": "Brian will plan the activities for the 14.0 release launch.",
+        "startMs": 1374425
+       },
+       {
+        "text": "Parker will open an MR to update the release post manager page with the new assignments.",
+        "startMs": 1387750
+       },
+       {
+        "text": "William will create a GC slide on how GTM motions are measuring success.",
+        "startMs": 1881215
+       },
+       {
+        "text": "Alida will add her thoughts to the issue regarding partner vs. competitor page strategy.",
+        "startMs": 2119960
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-2.5-flash"
+  }
+ },
  "title": "Product Marketing Meeting 2020-04-12",
  "actionItems": [
   {

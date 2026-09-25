@@ -1,0 +1,32 @@
+[
+ {
+  "key": 0,
+  "name": "Host",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 1,
+  "name": "Antonio",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 2,
+  "name": "Boi",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 3,
+  "name": "Dan",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 4,
+  "name": "Gaurav",
+  "role": null,
+  "confident": true
+ }
+]

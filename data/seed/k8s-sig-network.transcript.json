@@ -1,0 +1,908 @@
+{
+ "durationMs": 1739880,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 320,
+   "endMs": 35300,
+   "text": "Record. Hello, everybody. It is 01/30/2025. Gotta practice saying 2025. Is the SigNetwork regular call? We are governed by the code of conduct. So as usual, please don't be a jerk. We have a fairly light agenda today. In fact, we have basically no agenda except look at the caps today. So if you have something that you wanted to talk about with the group, the agenda doc is open and is linked from the calendar invite. Please go feel free to throw yourselves in the agenda."
+  },
+  {
+   "idx": 1,
+   "speaker": 0,
+   "startMs": 36260,
+   "endMs": 51565,
+   "text": "In the very short term, let's look at triage. I loaded up the main window, but I did not actually start doing it yet this morning. I'm sorry for that. Let's share the screen. Here, our window. This window."
+  },
+  {
+   "idx": 2,
+   "speaker": 0,
+   "startMs": 55120,
+   "endMs": 56240,
+   "text": "How about now?"
+  },
+  {
+   "idx": 3,
+   "speaker": 0,
+   "startMs": 58960,
+   "endMs": 77395,
+   "text": "Okay. Cool. Let's look at these tests. Flaking tests, external traffic policy, local should only target nodes with endpoints. Let me load up a few. Three days, last week, two weeks ago, two weeks, all the way back to December. And let's start with these."
+  },
+  {
+   "idx": 4,
+   "speaker": 0,
+   "startMs": 79155,
+   "endMs": 85640,
+   "text": "Signet workload balances, ETP local should show only. Antonio, of course, is on it."
+  },
+  {
+   "idx": 5,
+   "speaker": 1,
+   "startMs": 86600,
+   "endMs": 121990,
+   "text": "But this Dan commented. This was, like, in the chat. And it's it's complex. It's one load balancer take one hour, and it fail once in one week. I don't know. I'm not saying that the the main problem that I saw is that nobody is keeping the cloud controller manager up to date. So what we are really testing, if it's a problem in the cloud provider code, we are testing the version 13 instead of the current version."
+  },
+  {
+   "idx": 6,
+   "speaker": 0,
+   "startMs": 127025,
+   "endMs": 131345,
+   "text": "So what do we do with this? Do we what's the next steps?"
+  },
+  {
+   "idx": 7,
+   "speaker": 1,
+   "startMs": 131745,
+   "endMs": 139905,
+   "text": "The next step is somebody managing the copy by the DCP. Need to get this up to date."
+  },
+  {
+   "idx": 8,
+   "speaker": 2,
+   "startMs": 142410,
+   "endMs": 149850,
+   "text": "Okay. You can feel free to tag me on it because we have some folks looking at it. Well, I am tagged."
+  },
+  {
+   "idx": 9,
+   "speaker": 1,
+   "startMs": 150250,
+   "endMs": 166505,
+   "text": "The the other thing is that is there is this migration from the what is the name? Registry, artifactory? I don't remember. The internal DC Yeah. Name. DCR to AR. Okay. So since and and I don't know if this"
+  },
+  {
+   "idx": 10,
+   "speaker": 1,
+   "startMs": 168440,
+   "endMs": 173080,
+   "text": "budget or where this is stored is is going to be impacted or not."
+  },
+  {
+   "idx": 11,
+   "speaker": 0,
+   "startMs": 175000,
+   "endMs": 213675,
+   "text": "Okay. But wait. If you can take a look and then route it, if we need to shake the tree on Cloud Controller Manager, I I'm happy to do that. It's okay. Yeah. Just assign it to me. You you did it. Alright. I did. Alright. Service selector does not recreate all required endpoints when a pod is oh, this one. When a pod has multiple containers. So Antonio and I looked at this one a little bit. They this user is trying to have a pod with multiple containers where the multiple containers have ports with the same name, which shouldn't have been allowed but is allowed. It's a bug,"
+  },
+  {
+   "idx": 12,
+   "speaker": 0,
+   "startMs": 214715,
+   "endMs": 246905,
+   "text": "I think, anyway, and was expecting the service to pick both endpoints for the named port. So they set their service front end port to choose a back end by name, and then they were surprised that it only picked one per pod. So I explained sorry. I'm sharing my screen. I explained the sort of assumption of fungibility. Like, we assume for service that all of the endpoints are gonna produce the same result. They pointed out that that's not really documented that way."
+  },
+  {
+   "idx": 13,
+   "speaker": 0,
+   "startMs": 249225,
+   "endMs": 277755,
+   "text": "Anyway, what they're really trying to do is collect, like, metadata about various RPC services and sort sort of, like, metrics, I guess, and publish it all through a single service, like a a headless service so they could go and collect all of the endpoints, and we just don't have a a way of representing this today. That's not how services work."
+  },
+  {
+   "idx": 14,
+   "speaker": 0,
+   "startMs": 280030,
+   "endMs": 288430,
+   "text": "So I followed up, and we'll see if they like any of the answers or not. Anybody have other thoughts they wanna talk about on this one?"
+  },
+  {
+   "idx": 15,
+   "speaker": 0,
+   "startMs": 292045,
+   "endMs": 299965,
+   "text": "It's an interesting bend on the usual use case. I'm not sure that we have what they want. I'm not sure that we want to have what they want."
+  },
+  {
+   "idx": 16,
+   "speaker": 0,
+   "startMs": 301645,
+   "endMs": 311560,
+   "text": "Alright. I'm assigned to this one. Unable to use Kubernetes service cluster IP with IPN cap IP IP. I have not looked at this one. Has anybody looked at this?"
+  },
+  {
+   "idx": 17,
+   "speaker": 3,
+   "startMs": 312280,
+   "endMs": 317160,
+   "text": "Yeah. Have something mildly unholy. That that's a very honest bug report."
+  },
+  {
+   "idx": 18,
+   "speaker": 1,
+   "startMs": 318495,
+   "endMs": 346880,
+   "text": "The the the but the the it's just well explained, and he's very polite. So he's trying to find a solution to his problem, but he's not trying to push. So, basically, he wants I think I don't know if my ticket's here. This he wants an a service IP route. So he wants to to route traffic to another port based only on the IP. Because the"
+  },
+  {
+   "idx": 19,
+   "speaker": 1,
+   "startMs": 348815,
+   "endMs": 378705,
+   "text": "the interesting routing thing is is the encapsulated IP. So it seems that he's trying to do some kind of pause acting as as a border router or something that encapsulate this and encapsulate traffic. And, of course, the service, it doesn't work. At the moment that you encapsulate with IP, you lose all the all the port and protocol properties. So the proxy is not able to do anything."
+  },
+  {
+   "idx": 20,
+   "speaker": 0,
+   "startMs": 382545,
+   "endMs": 385265,
+   "text": "Okay. It's a long word part. I'm not gonna read it here."
+  },
+  {
+   "idx": 21,
+   "speaker": 1,
+   "startMs": 388540,
+   "endMs": 398700,
+   "text": "The good thing is that he wants to do some kind of IP route. Services with the cluster IP only. That is the same that people want with the some of the people want with their old parts."
+  },
+  {
+   "idx": 22,
+   "speaker": 1,
+   "startMs": 400745,
+   "endMs": 405065,
+   "text": "But this is a nice project for using IP address."
+  },
+  {
+   "idx": 23,
+   "speaker": 0,
+   "startMs": 407305,
+   "endMs": 412425,
+   "text": "Okay. So you're you're saying it's a feature request? You wanna just remove triage?"
+  },
+  {
+   "idx": 24,
+   "speaker": 1,
+   "startMs": 413610,
+   "endMs": 430975,
+   "text": "It's a feature request. You can I mean, this is one of the we can project? You can you have a nice API to to indicate the IP and the back end. Implementing is is not complicated. You don't need to get the packet and send to the other part."
+  },
+  {
+   "idx": 25,
+   "speaker": 0,
+   "startMs": 431295,
+   "endMs": 436335,
+   "text": "I'm not sure everybody has the same notion of weekend project that you do, Antonio. But"
+  },
+  {
+   "idx": 26,
+   "speaker": 1,
+   "startMs": 436895,
+   "endMs": 459995,
+   "text": "Okay. Is look. If if they just want to do that, it's it's it's that. It's getting the packet in one pod and sending to another pod. Is this a Kubernetes feature that they want? Like, you you marked it as feature request. Is it a service feature? Is it a gateway feature? Is it The the the for me, the difficult thing here is to come with the right API."
+  },
+  {
+   "idx": 27,
+   "speaker": 1,
+   "startMs": 463355,
+   "endMs": 502070,
+   "text": "And in in in all the old ports kept an issue, Dan made a good analysis. And a subset of people is asking for the other people is asking for other thing. So I know that this the functionality is is asked. I I also think that we have some internal people asking for something similar to say, I want to send traffic to this virtual ID and this go to some port. So I I know people want it. It's not a lot of people, but they know. The the the problem that I see here is to to make the right API for this. Is this more like a the egress route"
+  },
+  {
+   "idx": 28,
+   "speaker": 0,
+   "startMs": 502230,
+   "endMs": 502870,
+   "text": "stuff?"
+  },
+  {
+   "idx": 29,
+   "speaker": 1,
+   "startMs": 504070,
+   "endMs": 511030,
+   "text": "It's it's kind of. Right? It's because you you you need to it's like a service that you only publish the cluster IP."
+  },
+  {
+   "idx": 30,
+   "speaker": 0,
+   "startMs": 513735,
+   "endMs": 533260,
+   "text": "Alright. I'll I'll read this one over. I've already marked it as triage, and you've already marked it as feature. Unfortunately, we mark it as triaged and don't assign like, if nobody's working on it, it's just gonna get stuck. I don't think it's consolation for the user that we accepted their feature if we're not actually doing anything with it."
+  },
+  {
+   "idx": 31,
+   "speaker": 1,
+   "startMs": 533900,
+   "endMs": 542265,
+   "text": "For me, the case, the API. If somebody can come with a nice API, I'm happy to help them to to have a prototype or something. So Alright."
+  },
+  {
+   "idx": 32,
+   "speaker": 0,
+   "startMs": 542985,
+   "endMs": 548905,
+   "text": "Alright. I will read over just so I'm aware of it. Would a new API like that need"
+  },
+  {
+   "idx": 33,
+   "speaker": 3,
+   "startMs": 549145,
+   "endMs": 550025,
+   "text": "a cap?"
+  },
+  {
+   "idx": 34,
+   "speaker": 0,
+   "startMs": 551065,
+   "endMs": 569735,
+   "text": "Absolutely. Cool. Well, it depends on where it's implemented. If it's part of gateway, then it would probably go through gateways enhancement process. But but If it's in call, it'll be kept. Don't don't send me a PR without having discussed the API beforehand. Gotcha. Makes sense. That's why I'm saying the ticket back to the API."
+  },
+  {
+   "idx": 35,
+   "speaker": 2,
+   "startMs": 570775,
+   "endMs": 571415,
+   "text": "Okay."
+  },
+  {
+   "idx": 36,
+   "speaker": 0,
+   "startMs": 573015,
+   "endMs": 579335,
+   "text": "Long lived TCP connections fail when downscaling cube proxy with ETP cluster. Let me look at this one."
+  },
+  {
+   "idx": 37,
+   "speaker": 0,
+   "startMs": 581940,
+   "endMs": 584100,
+   "text": "Antonio is not oh, I did respond to it."
+  },
+  {
+   "idx": 38,
+   "speaker": 0,
+   "startMs": 585780,
+   "endMs": 606915,
+   "text": "This is around node life cycle. They're routing through a node, and they're unhappy that if that node gets decommissioned, they have no real warning about the fact that their connection is going down. They're also not using, they're not using the"
+  },
+  {
+   "idx": 39,
+   "speaker": 0,
+   "startMs": 609660,
+   "endMs": 622620,
+   "text": "cube proxies health checking to say whether things are I'm trying to remember the details. Yeah. The the the the the the the tape that we added"
+  },
+  {
+   "idx": 40,
+   "speaker": 0,
+   "startMs": 624215,
+   "endMs": 633255,
+   "text": "to indicate that this node is probably going away, which uses cube proxy health check. They're not using this. If I recall, it's on AWS."
+  },
+  {
+   "idx": 41,
+   "speaker": 0,
+   "startMs": 635575,
+   "endMs": 638650,
+   "text": "I didn't see that was just a triage."
+  },
+  {
+   "idx": 42,
+   "speaker": 0,
+   "startMs": 651565,
+   "endMs": 652285,
+   "text": "K."
+  },
+  {
+   "idx": 43,
+   "speaker": 0,
+   "startMs": 661405,
+   "endMs": 662845,
+   "text": "And then another failing test,"
+  },
+  {
+   "idx": 44,
+   "speaker": 0,
+   "startMs": 664590,
+   "endMs": 668510,
+   "text": "which was health check node port there."
+  },
+  {
+   "idx": 45,
+   "speaker": 0,
+   "startMs": 675790,
+   "endMs": 676590,
+   "text": "Oh, that's cute."
+  },
+  {
+   "idx": 46,
+   "speaker": 1,
+   "startMs": 682885,
+   "endMs": 684085,
+   "text": "Which one?"
+  },
+  {
+   "idx": 47,
+   "speaker": 0,
+   "startMs": 685525,
+   "endMs": 687045,
+   "text": "I love these sorts of bugs."
+  },
+  {
+   "idx": 48,
+   "speaker": 0,
+   "startMs": 693360,
+   "endMs": 696720,
+   "text": "This is from December. So"
+  },
+  {
+   "idx": 49,
+   "speaker": 0,
+   "startMs": 705885,
+   "endMs": 709805,
+   "text": "Is there something more we can do here? I don't know. Okay."
+  },
+  {
+   "idx": 50,
+   "speaker": 0,
+   "startMs": 713725,
+   "endMs": 716365,
+   "text": "Do you wanna look at more, or should we go to the agenda? Let's"
+  },
+  {
+   "idx": 51,
+   "speaker": 0,
+   "startMs": 717980,
+   "endMs": 734155,
+   "text": "we're going back into December. There are lots of issues open here. Let's leave it here for now. Actually, small number of untriage issues, which is pretty nice. Anybody who feels like looking at this I saw there was an update to the FQDN one this week. Was that right, Dan?"
+  },
+  {
+   "idx": 52,
+   "speaker": 3,
+   "startMs": 737595,
+   "endMs": 743275,
+   "text": "Or maybe I just I I added an agenda thing about that. Perfect. Okay."
+  },
+  {
+   "idx": 53,
+   "speaker": 0,
+   "startMs": 745720,
+   "endMs": 749320,
+   "text": "Okay. Then let's, let's switch back to agenda. I'll stop sharing."
+  },
+  {
+   "idx": 54,
+   "speaker": 0,
+   "startMs": 751080,
+   "endMs": 751960,
+   "text": "Stop."
+  },
+  {
+   "idx": 55,
+   "speaker": 0,
+   "startMs": 754200,
+   "endMs": 767065,
+   "text": "Agenda then says we have kept review. Do we wanna run through open caps? We kinda did this last time. I think we're happy with it unless anybody has news. Yeah. I have two two news."
+  },
+  {
+   "idx": 56,
+   "speaker": 1,
+   "startMs": 767225,
+   "endMs": 781370,
+   "text": "One is the the the first the short one is there is a kept and nothing involved within the call. Right? That is about adding TLS to the gRPC pro. And"
+  },
+  {
+   "idx": 57,
+   "speaker": 1,
+   "startMs": 782890,
+   "endMs": 808510,
+   "text": "I really think that it has to most of the people I know use gRPC services with TLS. So having the Insecure TLS option seems a good thing for it also has parity with the HTTP Pro. Okay. But I don't know if it wasn't added because something that I cannot see or request. Yes."
+  },
+  {
+   "idx": 58,
+   "speaker": 0,
+   "startMs": 809070,
+   "endMs": 821705,
+   "text": "No. I see it now in our dashboard. It's at the bottom. I added it. Yes. Great. There's no automatic process that adds them to this list, unfortunately. If there's a way to do that, I don't know what it is."
+  },
+  {
+   "idx": 59,
+   "speaker": 0,
+   "startMs": 823225,
+   "endMs": 832100,
+   "text": "So TLS support and gRPC probe seems like, I mean, just from the title alone seems reasonable. Who's reviewing that?"
+  },
+  {
+   "idx": 60,
+   "speaker": 2,
+   "startMs": 832580,
+   "endMs": 836340,
+   "text": "I mean, I could take it, Antonio, if you're that's why you mentioned me."
+  },
+  {
+   "idx": 61,
+   "speaker": 1,
+   "startMs": 836820,
+   "endMs": 844580,
+   "text": "No. I I I mentioned you because you have the historical context. I don't mind to Oh, I see. I think it will just was not added because"
+  },
+  {
+   "idx": 62,
+   "speaker": 2,
+   "startMs": 845275,
+   "endMs": 853115,
+   "text": "we didn't consider it at the time. Whoever created the gRPC, it looked like they have the basic functionality."
+  },
+  {
+   "idx": 63,
+   "speaker": 1,
+   "startMs": 853675,
+   "endMs": 855995,
+   "text": "Yeah. So by the way."
+  },
+  {
+   "idx": 64,
+   "speaker": 0,
+   "startMs": 856395,
+   "endMs": 865000,
+   "text": "Boi, I'm happy to assign it to you if you wanna to do it. You know, I'm trying to get more people to do API reviews upfront if you want it or if somebody else wants it."
+  },
+  {
+   "idx": 65,
+   "speaker": 0,
+   "startMs": 867560,
+   "endMs": 873400,
+   "text": "Volunteers? Otherwise, I'll just throw it in the back of my queue and get to it if I get to it. The Yeah. Just I assigned it to me."
+  },
+  {
+   "idx": 66,
+   "speaker": 1,
+   "startMs": 875275,
+   "endMs": 896200,
+   "text": "I signed it to to drive it to the person. He started with a more complicated approach of adding certificates and all the stuff, and I talking to to to just aim for the parity with HTTP. And now I need approval from Node and and and from your team and for the interview."
+  },
+  {
+   "idx": 67,
+   "speaker": 0,
+   "startMs": 896920,
+   "endMs": 922460,
+   "text": "Somebody wants to drive it, I will be happy to hand it over because it's less things that they have to do. Yes. That's that's my thinking too. Actually, I made a promise to my boss that I was not gonna do API reviews without having API shadows on them. So I'll put it in my queue. I'll send it to the group of people who have sort of volunteered to shadow API reviews. But, boy, since I think of all of us, you're the closest to it, maybe you wanna take the first pass. Okay."
+  },
+  {
+   "idx": 68,
+   "speaker": 2,
+   "startMs": 922780,
+   "endMs": 926220,
+   "text": "It's Antonio, can you just ping it to me or if it's on the dashboard?"
+  },
+  {
+   "idx": 69,
+   "speaker": 0,
+   "startMs": 927275,
+   "endMs": 947160,
+   "text": "It's on the it's on our dashboard. It's at the bottom. Let me mark it as, next. I will say next alpha in 33 is the goal, and now it moves it to the top of the list. Okay? And the other one is the cluster domain downward API, Antonio?"
+  },
+  {
+   "idx": 70,
+   "speaker": 1,
+   "startMs": 947400,
+   "endMs": 967610,
+   "text": "Yeah. I spend a lot of time trying to, you know, find all the possible paths, and I found this this kernel capability and the EOTF name spaces that is called domain name. So it's calling well, I don't know if it's a static domain name, the the sub name. Well, it's it's just so"
+  },
+  {
+   "idx": 71,
+   "speaker": 1,
+   "startMs": 969210,
+   "endMs": 971850,
+   "text": "so good to be true that"
+  },
+  {
+   "idx": 72,
+   "speaker": 0,
+   "startMs": 972490,
+   "endMs": 983855,
+   "text": "So my my understanding of that field is it's not the DNS domain name. It's more like the NIST domain name. Like, it Yes. It's it's it's from Sun. Right?"
+  },
+  {
+   "idx": 73,
+   "speaker": 1,
+   "startMs": 984335,
+   "endMs": 993215,
+   "text": "Yeah. So that's what I'm saying. We have an orphan thing that nobody uses that is called domain name, and we want to put domain name in some place. So"
+  },
+  {
+   "idx": 74,
+   "speaker": 0,
+   "startMs": 996220,
+   "endMs": 996940,
+   "text": "Okay."
+  },
+  {
+   "idx": 75,
+   "speaker": 1,
+   "startMs": 997580,
+   "endMs": 1001660,
+   "text": "I'm happy to look at it. Alignment there in the stats and"
+  },
+  {
+   "idx": 76,
+   "speaker": 0,
+   "startMs": 1002940,
+   "endMs": 1007740,
+   "text": "It seems sort of you know, it's equal parts smelly and clever."
+  },
+  {
+   "idx": 77,
+   "speaker": 1,
+   "startMs": 1009485,
+   "endMs": 1016125,
+   "text": "Yeah. That's why I'm saying it's so good to be true that I don't know. If there is something wrong that is going to break or not."
+  },
+  {
+   "idx": 78,
+   "speaker": 0,
+   "startMs": 1016525,
+   "endMs": 1032200,
+   "text": "Okay. I will have to think about it. If anybody else if anybody is familiar with the kernel's implication of domain name, speak now. I could sure use your input. Otherwise, we'll go off and try to learn about it."
+  },
+  {
+   "idx": 79,
+   "speaker": 0,
+   "startMs": 1035995,
+   "endMs": 1041035,
+   "text": "Okay. Anybody anybody wants to look at this one? Otherwise, I'll just assign it to myself."
+  },
+  {
+   "idx": 80,
+   "speaker": 1,
+   "startMs": 1041435,
+   "endMs": 1069265,
+   "text": "The the the main reason why I push it that is because Docker is using it. So that means that we are not going to be the first. But for me They're they're using it for this? I don't know exactly. I need to check. Okay. I mean, they they were the ones pushing the the OCI spec to include domain name. So now it's part of the OCI spec. So it's not something that you need to go and to the namespace and tune or whatever. It's just an option of the runtime."
+  },
+  {
+   "idx": 81,
+   "speaker": 1,
+   "startMs": 1069825,
+   "endMs": 1105735,
+   "text": "So that's why I'm saying it's it's a clear boundary. It's not that we need to hack our way around. We just need to to pass an option to the runtime. So the obvious question is if Docker supports that means ContainerD supports it. How about Cryo? Does anybody know? I already opened the issue to the Cryo people. I'm just waiting to call on that. I mean, I want first to make sense. If it makes sense, I'm confident I can plan all the ecosystem to support the team ops. But what I I don't understand, as you say, it's hacky and it's many and all the stuff. But"
+  },
+  {
+   "idx": 82,
+   "speaker": 0,
+   "startMs": 1106680,
+   "endMs": 1123455,
+   "text": "I mean, look, the fact that Docker is doing it sort of clears the way for us a little bit. If they're if they've managed to make it work and not break lots of users, it's probably the case that we will be okay. Not guaranteed, but it certainly helps."
+  },
+  {
+   "idx": 83,
+   "speaker": 1,
+   "startMs": 1124655,
+   "endMs": 1133935,
+   "text": "I like that it's name space, and it has an API from the run times. Those are the things that that are my my"
+  },
+  {
+   "idx": 84,
+   "speaker": 0,
+   "startMs": 1134255,
+   "endMs": 1158555,
+   "text": "pushing. I mean, a a long time back, we had this idea of evolving the DNS schema so that we could possibly have two different cluster suffixes. One for, like, the new schema that is sane and one for the old schema, which is in insane. And then on a per namespace basis, you could choose. So the fact that this is namespace means different pods could get a different answer here."
+  },
+  {
+   "idx": 85,
+   "speaker": 0,
+   "startMs": 1160155,
+   "endMs": 1195150,
+   "text": "Right? We don't we're not doing that work we're not doing that work at the moment, but we could. Imagine a pod said by opting in, like, I want DNS Kubernetes DNS scheme of e two. Right? It'll get a different instead of cluster dot local, which really we should not be using dot local, it would get cluster dot example or something. And it would have instead of something, you know, service name dot namespace dot s v c, it might get service name dot s dot namespace, which would be a more natural hierarchy. Right?"
+  },
+  {
+   "idx": 86,
+   "speaker": 0,
+   "startMs": 1196670,
+   "endMs": 1218595,
+   "text": "Yeah. Anyway but we can't make that change compatibly with the n dots and everything else that we've done. So if a if a pod were to opt in to schema v two, then maybe the end dots would default to two instead of five. But, that's it's a big project. I think it's possible, but it's gotta have somebody who cares enough to drive it."
+  },
+  {
+   "idx": 87,
+   "speaker": 0,
+   "startMs": 1220190,
+   "endMs": 1232110,
+   "text": "And right now, there isn't anybody. Most of us have worked around the n dot stuff. But if somebody was really shaking their fist angrily at it, I would say, hey. Look. I've got some ideas. Maybe you could explore them."
+  },
+  {
+   "idx": 88,
+   "speaker": 0,
+   "startMs": 1233915,
+   "endMs": 1237595,
+   "text": "It's in the category of work I'd love to see somebody else do, not me."
+  },
+  {
+   "idx": 89,
+   "speaker": 0,
+   "startMs": 1240555,
+   "endMs": 1245435,
+   "text": "Okay. Dan, endpoint slice semantics. The floor is yours."
+  },
+  {
+   "idx": 90,
+   "speaker": 3,
+   "startMs": 1246460,
+   "endMs": 1269045,
+   "text": "So this is a second order spin off from the deprecating endpoints kept. I started I I I filed the PR to port the aggregated API server over to endpoint slices, and Jordan reviewed it. And it turns out there are all sorts of things about endpoint slices that we just sort of assume that aren't actually true. So I was trying to update the docs. It just needs some review."
+  },
+  {
+   "idx": 91,
+   "speaker": 3,
+   "startMs": 1270965,
+   "endMs": 1272405,
+   "text": "Probably Rob should look at it too."
+  },
+  {
+   "idx": 92,
+   "speaker": 2,
+   "startMs": 1274720,
+   "endMs": 1276000,
+   "text": "That's Can give us a"
+  },
+  {
+   "idx": 93,
+   "speaker": 0,
+   "startMs": 1276800,
+   "endMs": 1278720,
+   "text": "sneak peek on where do we mess up?"
+  },
+  {
+   "idx": 94,
+   "speaker": 3,
+   "startMs": 1280480,
+   "endMs": 1296695,
+   "text": "Like, the thing that got me in the review is that I assumed that port always had to be non nil in endpoint port, but it does not. API server validation allows you to have a nil port even though there are no defined semantics for that, and Kube proxy will ignore it."
+  },
+  {
+   "idx": 95,
+   "speaker": 0,
+   "startMs": 1297975,
+   "endMs": 1302455,
+   "text": "Cool. I mean, having spent a lot of time in the validation code lately,"
+  },
+  {
+   "idx": 96,
+   "speaker": 3,
+   "startMs": 1303175,
+   "endMs": 1322715,
+   "text": "that's not at all surprising to me. Oh, this was intentional, though. It's not an accident. Oh. Oh, okay. There's there's all this extensibility in endpoint slice that we are not using and possibly will never use, but it it's all there in the API definition. And so that's what this PR is sort of trying to I see. Okay."
+  },
+  {
+   "idx": 97,
+   "speaker": 0,
+   "startMs": 1323275,
+   "endMs": 1324155,
+   "text": "Cool."
+  },
+  {
+   "idx": 98,
+   "speaker": 3,
+   "startMs": 1325355,
+   "endMs": 1329115,
+   "text": "And then maybe we should change some of that,"
+  },
+  {
+   "idx": 99,
+   "speaker": 3,
+   "startMs": 1330715,
+   "endMs": 1332155,
+   "text": "if we think it was unintended."
+  },
+  {
+   "idx": 100,
+   "speaker": 0,
+   "startMs": 1333630,
+   "endMs": 1347070,
+   "text": "I mean, changing validation is really hard. One of my side projects is making it easier to write correct validation and harder to write incorrect validation. And in doing so, we realize how much incorrect validation we have."
+  },
+  {
+   "idx": 101,
+   "speaker": 0,
+   "startMs": 1349395,
+   "endMs": 1378745,
+   "text": "It's very difficult to go in, like, bulk convert the existing validation to these new mechanisms because the new mechanisms are stricter. And that would be breaking changes, and we can't do that. So, like, validating IPs versus validating sloppy IPs, like, allowing those leading zeros is a great example, right, where, nope, we just have to keep allowing those zeros. We're gonna work on building that ratcheting in, so that we can, you know, weed them out over an indefinite amount of time."
+  },
+  {
+   "idx": 102,
+   "speaker": 3,
+   "startMs": 1379785,
+   "endMs": 1384745,
+   "text": "There's a gap about that that you need to review too. It's in it's in my queue. I"
+  },
+  {
+   "idx": 103,
+   "speaker": 0,
+   "startMs": 1385625,
+   "endMs": 1398430,
+   "text": "yes. It's it's in my queue. I I'm just adding things as we're talking. I'm adding those two that Antonio added, putting them in my my cap window, which is already 40 tabs long. So, I will try to get to it. I promise."
+  },
+  {
+   "idx": 104,
+   "speaker": 0,
+   "startMs": 1400590,
+   "endMs": 1415225,
+   "text": "Okay. Thanks for exploring that. I I'm, I will look at it. All KKPRs are prioritized behind CAPS right now. So It's not urgent. I mean, you know, it's just documentation changes. So"
+  },
+  {
+   "idx": 105,
+   "speaker": 0,
+   "startMs": 1416745,
+   "endMs": 1417465,
+   "text": "Yep. Okay."
+  },
+  {
+   "idx": 106,
+   "speaker": 0,
+   "startMs": 1420200,
+   "endMs": 1422920,
+   "text": "Other agenda topics. We're at the end of our agenda. So"
+  },
+  {
+   "idx": 107,
+   "speaker": 4,
+   "startMs": 1424520,
+   "endMs": 1455870,
+   "text": "oh, sorry, Gaurav. Just add Oh, yes. I just added one thing. But this is the PR which Dan has sent out. Sorry, Dan. I have to go I'm yet to go through all the comments. I was just curious, like, I see towards the last year proposed four options, two of them being that we rename or not use the preferred close and move on to something like preferred node. I so is there something in particular why we don't want to keep something like preferred close and only have something like preferred node? Is"
+  },
+  {
+   "idx": 108,
+   "speaker": 3,
+   "startMs": 1457390,
+   "endMs": 1493055,
+   "text": "there something is there some reason why we can't have both of them? I mean, I I know it's possible some of the comments may be answering it, but I thought maybe if we have time over here, we can just bring it up. So, yes, the you should read through the the discussion. It's not saying get rid of prefer close and have preferred node. It's saying rename preferred close to preferred same zone and also add preferred same node. The the argument being that because we failed to come up with a way that we could make preferred close sometimes mean preferred same node, that that means that it's not really about prefer close. It's about prefer same zone. And and so we should just be honest."
+  },
+  {
+   "idx": 109,
+   "speaker": 4,
+   "startMs": 1494175,
+   "endMs": 1504240,
+   "text": "I see. And this is us talking about the Qproxy implementation, which is which can only handle, like, preferred zone right now, right, and for the foreseeable future?"
+  },
+  {
+   "idx": 110,
+   "speaker": 3,
+   "startMs": 1504960,
+   "endMs": 1517565,
+   "text": "It it I mean, read read through the comments. Like like Okay. Yeah. I'll I'll do that. It it seems like trying to ever make preferred close mean anything other than same zone is is would run into problems. So"
+  },
+  {
+   "idx": 111,
+   "speaker": 0,
+   "startMs": 1518445,
+   "endMs": 1544105,
+   "text": "Alright. Sure. Thank you. I wanna go back to I will go back and look at it. That one's also in my queue, but near the front. I really wanna convince myself that it's absolutely not possible to just bend prefer close to mean sometimes it means prefer node. That's an implementation choice. A node is closer than a zone. So, is the risk of that really worth adding a second policy"
+  },
+  {
+   "idx": 112,
+   "speaker": 3,
+   "startMs": 1544345,
+   "endMs": 1566350,
+   "text": "that we then have to keep forever? That that's the part that I wanna focus on. And and the thing I I think we can make we we can avoid false positives on that, but I think we couldn't in in order to do that, we can't avoid false negatives. Your your same node services will sporadically revert back to same zone even though you didn't want them to."
+  },
+  {
+   "idx": 113,
+   "speaker": 3,
+   "startMs": 1568775,
+   "endMs": 1588750,
+   "text": "But that, I mean, that is implied in the word prefer. Right? Right. But but it's not doing it for a good reason. It's doing it for bad reasons because we had to be extra careful so that we don't accidentally force prefer same node semantics on somebody who didn't want it at all. Oh, this is because of the daemon set related"
+  },
+  {
+   "idx": 114,
+   "speaker": 0,
+   "startMs": 1589230,
+   "endMs": 1590030,
+   "text": "linkage?"
+  },
+  {
+   "idx": 115,
+   "speaker": 3,
+   "startMs": 1590510,
+   "endMs": 1607685,
+   "text": "Yeah. Like, the the making sure that you really did intend to deploy an endpoint to every node. And so, like, you know, when you're rolling out an update, like, you know, oh, well, it's on all but two nodes. Maybe you didn't mean same node. You just meant same zone. Yeah."
+  },
+  {
+   "idx": 116,
+   "speaker": 2,
+   "startMs": 1609525,
+   "endMs": 1612300,
+   "text": "Okay. I don't know."
+  },
+  {
+   "idx": 117,
+   "speaker": 4,
+   "startMs": 1612780,
+   "endMs": 1621340,
+   "text": "Obviously, we wanna come up with a way and define how that the same node will operate without confusing the preferred close. Right? Is"
+  },
+  {
+   "idx": 118,
+   "speaker": 3,
+   "startMs": 1623180,
+   "endMs": 1639865,
+   "text": "Well, if you add thing Go ahead, Dan. I was gonna say, if if we add the new, you know, label, the first name node, then, you know, then we know for sure that that's what you wanted, and so we don't have to worry about confused heuristics. The the question was whether we could have heuristics that were good enough to not need a new label."
+  },
+  {
+   "idx": 119,
+   "speaker": 3,
+   "startMs": 1642410,
+   "endMs": 1650810,
+   "text": "And yeah. Like yeah. Read read read through. People had arguments. Maybe you don't agree with all those arguments. But"
+  },
+  {
+   "idx": 120,
+   "speaker": 4,
+   "startMs": 1652650,
+   "endMs": 1661945,
+   "text": "Okay. That makes yeah. I'll go through all the comments, and that should be helpful. Yeah. So this came up. We were discussing earlier all the caps that"
+  },
+  {
+   "idx": 121,
+   "speaker": 0,
+   "startMs": 1662825,
+   "endMs": 1679910,
+   "text": "our Google people are pushing forward, and I asked about this one. So, Gaurav, please take a look. If you can poke holes in Dan's argument, please do. If you're convinced, then please say so, and we can decide to move forward since you're closest to the routing stuff. Sounds good."
+  },
+  {
+   "idx": 122,
+   "speaker": 4,
+   "startMs": 1680390,
+   "endMs": 1681750,
+   "text": "Thank you, Dan, for the PR."
+  },
+  {
+   "idx": 123,
+   "speaker": 0,
+   "startMs": 1683615,
+   "endMs": 1706740,
+   "text": "Awesome. Anything else? We have agenda. That's the end of our agenda. Anybody have anything else they wanna bring up? We got roughly two weeks to kept freeze. PR freeze is one week. Okay. It's not a freeze. John just sent out a note. Right? It's not a freeze, but, really, you should have your stuff ready for PRR within the week."
+  },
+  {
+   "idx": 124,
+   "speaker": 0,
+   "startMs": 1710255,
+   "endMs": 1711775,
+   "text": "Anybody else have topics?"
+  },
+  {
+   "idx": 125,
+   "speaker": 0,
+   "startMs": 1714895,
+   "endMs": 1720095,
+   "text": "Okay. Alright. Then maybe we'll just end early. Give everybody a half hour or twenty minutes back."
+  },
+  {
+   "idx": 126,
+   "speaker": 0,
+   "startMs": 1721935,
+   "endMs": 1723215,
+   "text": "Speak now or forever after."
+  },
+  {
+   "idx": 127,
+   "speaker": 0,
+   "startMs": 1726240,
+   "endMs": 1730400,
+   "text": "Okay. Great. Thanks everybody for joining us. We'll see you all in two weeks."
+  },
+  {
+   "idx": 128,
+   "speaker": 0,
+   "startMs": 1734000,
+   "endMs": 1739280,
+   "text": "What's that option again? I stopped recording. Recording. Stop."
+  }
+ ]
+}

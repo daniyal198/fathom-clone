@@ -1,0 +1,300 @@
+{
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "The meeting focused on GitLab's scaling strategy, comparing functional decomposition (2x scaling) with a podding approach (potential 10x-33x scaling). Preliminary data showing 97% of users interact with only one top-level namespace strongly supports pursuing the podding strategy for significant scaling benefits.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Josh is documenting high-level strategy, iteration strategies, and non-detest options, and gathering data on cross-namespace workflows.",
+        "startMs": 11120
+       },
+       {
+        "text": "Principles for the scaling work, including minimizing self-managed impact, have been documented.",
+        "startMs": 56700
+       },
+       {
+        "text": "Functional decomposition of CI data is estimated to provide a 2x scaling benefit.",
+        "startMs": 310240
+       },
+       {
+        "text": "Preliminary data indicates 97% of users interact with only one top-level namespace, suggesting potential for 33x scaling with pods.",
+        "startMs": 993540
+       },
+       {
+        "text": "Podding offers a significant benefit by allowing GitLab to be its own biggest customer, identifying issues before they impact other pods.",
+        "startMs": 1501310
+       }
+      ]
+     },
+     {
+      "heading": "Investigation Streams & Documentation Updates",
+      "bullets": [
+       {
+        "text": "Josh is documenting high-level strategy, iteration strategies, and non-detest options.",
+        "startMs": 11120
+       },
+       {
+        "text": "Data is being gathered on cross-namespace workflows.",
+        "startMs": 11120
+       },
+       {
+        "text": "Principles for the work, including minimizing self-managed impact, have been documented on slide three.",
+        "startMs": 56700
+       },
+       {
+        "text": "Josh reflowed initial slides for clearer narrative and added a slide on why sharding within a pod is not needed.",
+        "startMs": 82940
+       }
+      ]
+     },
+     {
+      "heading": "Functional Decomposition vs. Podding Strategy",
+      "bullets": [
+       {
+        "text": "Eric believes functional decomposition is relevant for large self-managed customers and should be a \"forever decision.\"",
+        "startMs": 120385
+       },
+       {
+        "text": "Sid stated functional decomposition of CI data provides a 2x scaling benefit, while the overall problem is 10x.",
+        "startMs": 188420
+       },
+       {
+        "text": "Jarir clarified functional decomposition was always intended as a bridge to sharding, not a long-term strategy for everything.",
+        "startMs": 481475
+       },
+       {
+        "text": "Sid expressed concern that decomposition discussions are leading towards microservices complexity and two-phase commits.",
+        "startMs": 546175
+       },
+       {
+        "text": "Fabienne confirmed current decomposition work is solely focused on CI tables, with no decisions made for other parts.",
+        "startMs": 775785
+       },
+       {
+        "text": "Sid emphasized the goal is 10x scaling for 10 million users, which decomposition alone cannot achieve.",
+        "startMs": 912110
+       },
+       {
+        "text": "The core question is whether to shard via pods or table shards, as decomposition might complicate a pod strategy.",
+        "startMs": 948225
+       }
+      ]
+     },
+     {
+      "heading": "Cross-Namespace Workflow Data",
+      "bullets": [
+       {
+        "text": "Fabienne presented preliminary data showing 97% of all users interact with only one top-level namespace.",
+        "startMs": 993540
+       },
+       {
+        "text": "For users with paid namespaces, 97% interact with two or fewer top-level namespaces.",
+        "startMs": 1030655
+       },
+       {
+        "text": "Sid interpreted this as potential for 33x scaling if 3% of users need to be in the same pod.",
+        "startMs": 1059865
+       },
+       {
+        "text": "Fabienne noted limitations: data is across all users (not active), personal namespaces are not separated, and reasons for low cross-namespace usage are unclear.",
+        "startMs": 1087535
+       },
+       {
+        "text": "Sid suggested even if 10% of users need to be on the same pods, it still offers 10x headroom.",
+        "startMs": 1141915
+       },
+       {
+        "text": "Josh added that the value of cross-namespace workflows might be low, so disrupting them might not significantly alter user experience.",
+        "startMs": 1306695
+       }
+      ]
+     },
+     {
+      "heading": "Benefits of Podding",
+      "bullets": [
+       {
+        "text": "Steve highlighted that dedicating a pod for GitLab's own use helped find many problems before they reached other customer pods.",
+        "startMs": 1466740
+       },
+       {
+        "text": "Sid agreed this is a great point and should be added to the slide deck.",
+        "startMs": 1512575
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Fabienne will get an estimate from the CI decomposition team on expected headroom.",
+        "startMs": 860235
+       },
+       {
+        "text": "Fabienne will run a report on what percentage of all namespaces the 3% of users (who use more than one namespace) are spread across.",
+        "startMs": 1220155
+       },
+       {
+        "text": "Sid asked to add the benefit of using a dedicated pod for GitLab's own use to the slide deck.",
+        "startMs": 1512575
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-2.5-flash"
+  },
+  "project": {
+   "content": {
+    "tldr": "The meeting compared functional decomposition against a podding strategy for scaling GitLab to 10 million users. Preliminary data showing 97% of users stay within one namespace suggests podding offers significantly higher scaling potential than decomposition.",
+    "sections": [
+     {
+      "heading": "Status",
+      "bullets": [
+       {
+        "text": "Josh is documenting high-level strategy, iteration plans, and principles for the podding project.",
+        "startMs": 11120
+       },
+       {
+        "text": "Fabienne and the database group found that 97% of all users interact with only one top-level namespace.",
+        "startMs": 993540
+       },
+       {
+        "text": "The CI decomposition team is currently focused solely on CI tables to address immediate scaling constraints.",
+        "startMs": 775785
+       }
+      ]
+     },
+     {
+      "heading": "Decisions made",
+      "bullets": [
+       {
+        "text": "The team will maintain the single data store strategy for acquisitions rather than integrating separate decomposed databases.",
+        "startMs": 665365
+       },
+       {
+        "text": "A dedicated internal pod will be added to the production deployment chain to identify issues before they reach customers.",
+        "startMs": 1466740
+       }
+      ]
+     },
+     {
+      "heading": "Blockers & risks",
+      "bullets": [
+       {
+        "text": "Sid expressed concern that functional decomposition adds excessive application complexity and baggage to the codebase.",
+        "startMs": 553055
+       },
+       {
+        "text": "Steve warned that podding alone may eventually be insufficient for the largest accounts, requiring further data decomposition.",
+        "startMs": 1431555
+       },
+       {
+        "text": "Current database proposals, such as normalizing certain tables, may make future podding or splitting more difficult.",
+        "startMs": 813285
+       }
+      ]
+     },
+     {
+      "heading": "Open questions",
+      "bullets": [
+       {
+        "text": "What is the exact percentage of namespaces used by the 3% of users who cross namespace boundaries?",
+        "startMs": 1220155
+       },
+       {
+        "text": "What is the specific headroom benefit of CI decomposition according to the technical team's estimates?",
+        "startMs": 860235
+       },
+       {
+        "text": "How would disrupting cross-namespace workflows, like forking open-source projects, impact the overall user experience?",
+        "startMs": 1107950
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Fabienne will analyze the distribution of the 3% of cross-namespace users across the total project landscape.",
+        "startMs": 1248035
+       },
+       {
+        "text": "Fabienne will obtain a formal estimate from the decomposition team regarding expected database headroom gains.",
+        "startMs": 860235
+       },
+       {
+        "text": "Josh will update the slide deck to include the benefits of using internal pods for early bug detection.",
+        "startMs": 1512575
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ },
+ "title": "GitLab Pods & CEO Sync",
+ "actionItems": [
+  {
+   "text": "Get an estimate from the team on the expected headroom from CI table decomposition.",
+   "assignee": "Fabienne",
+   "startMs": 860235
+  },
+  {
+   "text": "Run a report on the percentage of all namespaces used by the 3% of users who use more than one namespace.",
+   "assignee": "Fabienne",
+   "startMs": 1220155
+  },
+  {
+   "text": "Add prior experience regarding hurdles and the need for multiple scaling approaches to the doc.",
+   "assignee": "Steve",
+   "startMs": 1420355
+  },
+  {
+   "text": "Add the point about the huge benefit of using a dedicated pod for internal use to the slide deck.",
+   "assignee": "Sid Sijbrandij",
+   "startMs": 1512575
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Meeting Start & Updates",
+   "gist": "Josh provided updates on investigation streams, documentation for high-level strategy, and refinements to the presentation slides.",
+   "startMs": 0,
+   "endMs": 120385
+  },
+  {
+   "idx": 1,
+   "title": "Decomposition vs. Podding Strategy",
+   "gist": "Eric and Sid debated the benefits of functional decomposition for self-managed customers and CI data, questioning its scaling impact compared to podding.",
+   "startMs": 120385,
+   "endMs": 384810
+  },
+  {
+   "idx": 2,
+   "title": "Clarifying Decomposition's Role",
+   "gist": "Jarir clarified that functional decomposition was intended as a bridge to sharding, not a long-term strategy, to reduce sharding complexity and create boundaries.",
+   "startMs": 384810,
+   "endMs": 968200
+  },
+  {
+   "idx": 3,
+   "title": "Cross-Namespace Workflow Data",
+   "gist": "Fabienne presented preliminary data indicating that 97% of users interact with only one top-level namespace, suggesting significant scaling potential for podding.",
+   "startMs": 968200,
+   "endMs": 1393405
+  },
+  {
+   "idx": 4,
+   "title": "Podding Benefits & Conclusion",
+   "gist": "Steve highlighted the operational benefits of using a dedicated pod for internal use, and the meeting concluded with appreciation for the discussion.",
+   "startMs": 1393405,
+   "endMs": 1524557
+  }
+ ],
+ "model": "gemini-2.5-flash"
+}

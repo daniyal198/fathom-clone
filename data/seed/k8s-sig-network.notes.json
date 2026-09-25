@@ -1,0 +1,323 @@
+{
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "The SIG Network meeting focused on triaging open issues and reviewing Kubernetes Enhancement Proposals (KEPs). Key discussions included a flaking test, a service IP routing feature request, and updates on EndpointSlice semantics and preferred close/node policies.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Triage of several open issues was conducted, including a flaking test, a service selector bug, and a service IP routing feature request.",
+        "startMs": 58960
+       },
+       {
+        "text": "Antonio highlighted the need to update the Cloud Controller Manager for accurate test results.",
+        "startMs": 86600
+       },
+       {
+        "text": "A KEP for TLS support in gRPC probes was discussed, with Boi potentially taking on the review.",
+        "startMs": 767225
+       },
+       {
+        "text": "Antonio also presented an idea for the cluster domain downward API, leveraging an OCI spec 'domain name' option.",
+        "startMs": 947400
+       },
+       {
+        "text": "Dan provided an update on EndpointSlice semantics, noting undocumented extensibility and potential validation issues.",
+        "startMs": 1240555
+       },
+       {
+        "text": "Gaurav raised questions about the 'preferred close' and 'preferred node' policies for kube-proxy, prompting further review.",
+        "startMs": 1424520
+       }
+      ]
+     },
+     {
+      "heading": "Issue Triage: Flaking Tests",
+      "bullets": [
+       {
+        "text": "A flaking test for 'Signet workload balances, ETP local' was discussed, failing once a week and taking an hour.",
+        "startMs": 58960
+       },
+       {
+        "text": "Antonio noted the Cloud Controller Manager is outdated, affecting test accuracy.",
+        "startMs": 86600
+       },
+       {
+        "text": "Antonio suggested someone managing the Cloud Provider GCP needs to update it.",
+        "startMs": 131745
+       },
+       {
+        "text": "Boi offered to look into the Cloud Controller Manager update.",
+        "startMs": 142410
+       },
+       {
+        "text": "Antonio also mentioned potential impact from the DCR to AR registry migration.",
+        "startMs": 150250
+       }
+      ]
+     },
+     {
+      "heading": "Issue Triage: Service Selector Bug",
+      "bullets": [
+       {
+        "text": "A user reported a bug where a service with a named port only picked one endpoint from a pod with multiple containers.",
+        "startMs": 175000
+       },
+       {
+        "text": "Host explained the service assumption of fungibility, where all endpoints produce the same result.",
+        "startMs": 214715
+       },
+       {
+        "text": "The user was trying to collect metadata from various RPC services via a headless service, which is not currently supported.",
+        "startMs": 249225
+       }
+      ]
+     },
+     {
+      "heading": "Issue Triage: Kubernetes Service Cluster IP with IPN Cap IP IP",
+      "bullets": [
+       {
+        "text": "Antonio described a feature request for service IP routing, where traffic is routed based only on IP, losing port/protocol properties.",
+        "startMs": 318495
+       },
+       {
+        "text": "The user wants a service with a cluster IP only, similar to requests for old parts.",
+        "startMs": 388540
+       },
+       {
+        "text": "Antonio suggested it is a feature request, but the main challenge is defining the right API.",
+        "startMs": 436895
+       },
+       {
+        "text": "Host noted that a new API would likely require a KEP.",
+        "startMs": 549145
+       }
+      ]
+     },
+     {
+      "heading": "Issue Triage: Long-lived TCP connections fail",
+      "bullets": [
+       {
+        "text": "A user reported long-lived TCP connections failing when downscaling kube-proxy with ETP cluster.",
+        "startMs": 573015
+       },
+       {
+        "text": "The issue involves routing through a node that gets decommissioned without warning.",
+        "startMs": 585780
+       },
+       {
+        "text": "The user is not using kube-proxy's health checking to indicate node status.",
+        "startMs": 609660
+       }
+      ]
+     },
+     {
+      "heading": "KEP Review: TLS Support in gRPC Probe",
+      "bullets": [
+       {
+        "text": "Antonio brought up a KEP to add TLS support to gRPC probes, noting gRPC services often use TLS.",
+        "startMs": 767225
+       },
+       {
+        "text": "Boi offered to review the KEP, having historical context on gRPC probes.",
+        "startMs": 832580
+       },
+       {
+        "text": "The goal is to achieve parity with HTTP probes and target next alpha in 33.",
+        "startMs": 875275
+       }
+      ]
+     },
+     {
+      "heading": "KEP Review: Cluster Domain Downward API",
+      "bullets": [
+       {
+        "text": "Antonio explored using a kernel capability and IETF namespace called 'domain name' for the cluster domain downward API.",
+        "startMs": 947400
+       },
+       {
+        "text": "Host noted this field might be more like a NIST domain name, not DNS.",
+        "startMs": 972490
+       },
+       {
+        "text": "Antonio mentioned Docker uses this, implying OCI spec support, which could simplify implementation.",
+        "startMs": 1041435
+       },
+       {
+        "text": "Host acknowledged Docker's usage reduces risk but highlighted the need for Cryo support.",
+        "startMs": 1106680
+       }
+      ]
+     },
+     {
+      "heading": "KEP Review: EndpointSlice Semantics",
+      "bullets": [
+       {
+        "text": "Dan reported on a PR to update EndpointSlice documentation, stemming from porting the aggregated API server.",
+        "startMs": 1240555
+       },
+       {
+        "text": "He found assumptions about EndpointSlice, like 'port' always being non-nil, were incorrect.",
+        "startMs": 1276800
+       },
+       {
+        "text": "API server validation allows nil ports, and Kube-proxy ignores them, indicating undocumented extensibility.",
+        "startMs": 1280480
+       },
+       {
+        "text": "Dan suggested changing some of the API if unintended.",
+        "startMs": 1325355
+       }
+      ]
+     },
+     {
+      "heading": "KEP Review: Preferred Close vs. Preferred Node",
+      "bullets": [
+       {
+        "text": "Gaurav asked about the proposal to rename 'preferred close' to 'preferred same zone' and add 'preferred same node'.",
+        "startMs": 1424520
+       },
+       {
+        "text": "Dan explained the argument is that 'preferred close' effectively means 'preferred same zone' due to implementation challenges.",
+        "startMs": 1457390
+       },
+       {
+        "text": "Host questioned if 'prefer close' could be bent to sometimes mean 'prefer node' to avoid a new policy.",
+        "startMs": 1518445
+       },
+       {
+        "text": "Dan stated that making 'prefer close' mean 'same node' would lead to false negatives, reverting to 'same zone'.",
+        "startMs": 1568775
+       },
+       {
+        "text": "Gaurav will review the comments on the PR to understand the arguments better.",
+        "startMs": 1652650
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Boi to review the KEP for TLS support in gRPC probes.",
+        "startMs": 922780
+       },
+       {
+        "text": "Host to read over the service IP routing feature request and the cluster domain downward API KEP.",
+        "startMs": 542985
+       },
+       {
+        "text": "Host to review Dan's PR on EndpointSlice semantics and the KEP on preferred close/node.",
+        "startMs": 1385625
+       },
+       {
+        "text": "Gaurav to review the discussion on preferred close/node policies and provide feedback.",
+        "startMs": 1662825
+       },
+       {
+        "text": "Antonio to follow up with Cryo regarding 'domain name' support for the cluster domain downward API.",
+        "startMs": 1069825
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-2.5-flash"
+  }
+ },
+ "title": "Kubernetes SIG Network 20250130",
+ "actionItems": [
+  {
+   "text": "Ensure the cloud controller manager is up to date for testing.",
+   "assignee": null,
+   "startMs": 131745
+  },
+  {
+   "text": "Be tagged on the cloud controller manager update issue.",
+   "assignee": "Boi",
+   "startMs": 142410
+  },
+  {
+   "text": "Route the Cloud Controller Manager issue if needed.",
+   "assignee": "Host",
+   "startMs": 175000
+  },
+  {
+   "text": "Read over the 'Unable to use Kubernetes service cluster IP with IPN cap IP IP' issue.",
+   "assignee": "Host",
+   "startMs": 542985
+  },
+  {
+   "text": "Take the first pass at reviewing the TLS support in gRPC probe CAP.",
+   "assignee": "Boi",
+   "startMs": 832580
+  },
+  {
+   "text": "Review the cluster domain downward API CAP.",
+   "assignee": "Host",
+   "startMs": 1035995
+  },
+  {
+   "text": "Review Dan's PR on endpoint slice semantics documentation.",
+   "assignee": "Host",
+   "startMs": 1400590
+  },
+  {
+   "text": "Read through the comments on the preferred close/preferred node discussion.",
+   "assignee": "Gaurav",
+   "startMs": 1504960
+  },
+  {
+   "text": "Review Dan's argument regarding preferred close/preferred node and provide feedback.",
+   "assignee": "Gaurav",
+   "startMs": 1662825
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Meeting Start & Agenda",
+   "gist": "The Host opened the meeting, noted the date, and mentioned a light agenda focused on CAPs and triage.",
+   "startMs": 0,
+   "endMs": 36260
+  },
+  {
+   "idx": 1,
+   "title": "Issue Triage",
+   "gist": "The group triaged several issues including flaking tests, service selector behavior with multiple containers, and a request for service IP routing.",
+   "startMs": 36260,
+   "endMs": 754200
+  },
+  {
+   "idx": 2,
+   "title": "CAP Review",
+   "gist": "Antonio introduced two new CAPs: TLS support for gRPC probes and the cluster domain downward API, seeking reviewers and discussion.",
+   "startMs": 754200,
+   "endMs": 1240555
+  },
+  {
+   "idx": 3,
+   "title": "Endpoint Slice Semantics",
+   "gist": "Dan discussed challenges and assumptions found while porting the aggregated API server to endpoint slices, particularly regarding port validation.",
+   "startMs": 1240555,
+   "endMs": 1424520
+  },
+  {
+   "idx": 4,
+   "title": "Preferred Close/Node Discussion",
+   "gist": "Gaurav inquired about the distinction and potential for combining 'preferred close' and 'preferred node' policies in kube-proxy.",
+   "startMs": 1424520,
+   "endMs": 1683615
+  },
+  {
+   "idx": 5,
+   "title": "Meeting Wrap-up",
+   "gist": "The Host concluded the meeting early as there were no further agenda topics or discussions.",
+   "startMs": 1683615,
+   "endMs": 1739280
+  }
+ ],
+ "model": "gemini-2.5-flash"
+}

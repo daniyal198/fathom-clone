@@ -1,0 +1,1118 @@
+{
+ "durationMs": 1981332,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 3360,
+   "endMs": 14480,
+   "text": "Alright. Cool. Thanks, Alex. Thanks, Chris. And we're here to chat about couple of things, around the sharing keys and categorization."
+  },
+  {
+   "idx": 1,
+   "speaker": 0,
+   "startMs": 18515,
+   "endMs": 25555,
+   "text": "So, should we quickly talk about the sharding keys, the due date for the sharding keys first?"
+  },
+  {
+   "idx": 2,
+   "speaker": 1,
+   "startMs": 27730,
+   "endMs": 34690,
+   "text": "Yeah. I just updated the other agenda for the stand up with some discussions we've kept in the past."
+  },
+  {
+   "idx": 3,
+   "speaker": 1,
+   "startMs": 36770,
+   "endMs": 45585,
+   "text": "Oh, I'm not sure, yeah, why why we needed this and how important this But"
+  },
+  {
+   "idx": 4,
+   "speaker": 0,
+   "startMs": 51425,
+   "endMs": 52225,
+   "text": "you know, Alex?"
+  },
+  {
+   "idx": 5,
+   "speaker": 2,
+   "startMs": 57020,
+   "endMs": 62540,
+   "text": "Are you talking about the due dates for the teams to have their shouting keys completed?"
+  },
+  {
+   "idx": 6,
+   "speaker": 1,
+   "startMs": 63180,
+   "endMs": 63900,
+   "text": "Yeah."
+  },
+  {
+   "idx": 7,
+   "speaker": 2,
+   "startMs": 67580,
+   "endMs": 69260,
+   "text": "No. I wasn't across the details."
+  },
+  {
+   "idx": 8,
+   "speaker": 2,
+   "startMs": 70825,
+   "endMs": 80585,
+   "text": "Cece would talk to me about these things kind of at a higher level. Just I'd be asked for confirmation every so often whether I thought dates were achievable."
+  },
+  {
+   "idx": 9,
+   "speaker": 2,
+   "startMs": 82660,
+   "endMs": 88580,
+   "text": "Like like I mentioned in Slack, I think there's a difference between the expected ETA than what we're also asking from Teams."
+  },
+  {
+   "idx": 10,
+   "speaker": 1,
+   "startMs": 95115,
+   "endMs": 98875,
+   "text": "Yeah. The the explaining was yeah. Sorry, Alex. I"
+  },
+  {
+   "idx": 11,
+   "speaker": 2,
+   "startMs": 100715,
+   "endMs": 103035,
+   "text": "mean, I'll I just I I guess, just to"
+  },
+  {
+   "idx": 12,
+   "speaker": 2,
+   "startMs": 104715,
+   "endMs": 114930,
+   "text": "highlight that there is a difference between the the sharding keys with the organization ID column versus the others. So the organization ID columns are are more important."
+  },
+  {
+   "idx": 13,
+   "speaker": 1,
+   "startMs": 115490,
+   "endMs": 129645,
+   "text": "Yep. That was my understanding that we need this done because some other word depends on them, but I'm not sure what. But somehow that, at some point, that changed that we need all them done by November, which I think was, like,"
+  },
+  {
+   "idx": 14,
+   "speaker": 1,
+   "startMs": 131645,
+   "endMs": 159405,
+   "text": "pretty clear it's not gonna happen. So for the organization idea, I'll go through the issues, and I'll post another update. We should be very close, if not done. Because, like, last time I was looking at it, there was significant progress. But for the rest of the key the tables here, like, we talked in the previous meeting, they're, like, 70 something tables that are not done yet. Some maybe not even started."
+  },
+  {
+   "idx": 15,
+   "speaker": 0,
+   "startMs": 162525,
+   "endMs": 163325,
+   "text": "Okay."
+  },
+  {
+   "idx": 16,
+   "speaker": 0,
+   "startMs": 165165,
+   "endMs": 175320,
+   "text": "Maybe something there's something to take out with Nick then. Mhmm. It's the new due date. Okay. Let's move on to the next one if you all don't have anything else."
+  },
+  {
+   "idx": 17,
+   "speaker": 2,
+   "startMs": 177000,
+   "endMs": 185235,
+   "text": "Just like I mentioned in Slack, I just back of the envelope type calculation based on the the progress graph."
+  },
+  {
+   "idx": 18,
+   "speaker": 2,
+   "startMs": 187155,
+   "endMs": 194355,
+   "text": "A realistic ETA looks like May 2025. It's just going on the the curve of the graph. And"
+  },
+  {
+   "idx": 19,
+   "speaker": 2,
+   "startMs": 197560,
+   "endMs": 231870,
+   "text": "my my concern is that the easy ones get done first, and then the the harder ones get pushed back and deferred. And maybe there's, like, you know, like, an 8020 issue here where the the first 80% are quite easier than the last 20% take forever. So the progress is is strangely linear in that graph, but I don't know if that's that that may be a bit optimistic If if you just take it very naively as as a steady, realistic graph for the moment for progress,"
+  },
+  {
+   "idx": 20,
+   "speaker": 2,
+   "startMs": 232350,
+   "endMs": 238990,
+   "text": "maybe it's not realistic going towards the end of trying to get all these cleared up. Maybe there's more complexity hidden."
+  },
+  {
+   "idx": 21,
+   "speaker": 0,
+   "startMs": 240805,
+   "endMs": 241525,
+   "text": "Okay."
+  },
+  {
+   "idx": 22,
+   "speaker": 0,
+   "startMs": 249125,
+   "endMs": 249445,
+   "text": "Yeah."
+  },
+  {
+   "idx": 23,
+   "speaker": 0,
+   "startMs": 252610,
+   "endMs": 257330,
+   "text": "I think we need a date because but we need the teams to keep working on it. So"
+  },
+  {
+   "idx": 24,
+   "speaker": 0,
+   "startMs": 259250,
+   "endMs": 263170,
+   "text": "yeah. I'll I'll I'll find out more from someone."
+  },
+  {
+   "idx": 25,
+   "speaker": 1,
+   "startMs": 263890,
+   "endMs": 268295,
+   "text": "Yeah. But by the way, the way I found like, you can see from one of those"
+  },
+  {
+   "idx": 26,
+   "speaker": 1,
+   "startMs": 270055,
+   "endMs": 296220,
+   "text": "discussion links I posted. The way I found that November is for all sharding cases because some team was telling me in the review that they need to meet that deadline. So somehow that was communicated to Teams, and they, like, were aware that at least trying to achieve it. But is it all Teams? So, yeah, I don't know. Which is good because at least they've they've been, like, making progress, I hope. Mhmm."
+  },
+  {
+   "idx": 27,
+   "speaker": 0,
+   "startMs": 296835,
+   "endMs": 297555,
+   "text": "Okay."
+  },
+  {
+   "idx": 28,
+   "speaker": 2,
+   "startMs": 297955,
+   "endMs": 321980,
+   "text": "Yeah. I I think there's a challenge there when working with other teams, trying to to get them to work on things that we need them to work on where unless we set those due dates, you know, maybe the work doesn't actually happen. But we've also just completed phase two. Right? And so these shouting keys, I believe, are not actually required until phase seven. Right."
+  },
+  {
+   "idx": 29,
+   "speaker": 0,
+   "startMs": 322300,
+   "endMs": 323020,
+   "text": "Yeah."
+  },
+  {
+   "idx": 30,
+   "speaker": 2,
+   "startMs": 323420,
+   "endMs": 323740,
+   "text": "So,"
+  },
+  {
+   "idx": 31,
+   "speaker": 2,
+   "startMs": 325325,
+   "endMs": 333165,
+   "text": "yeah, the I mean, that's always the way with with estimations and projects project estimations and scheduling and so on. Right? It's always"
+  },
+  {
+   "idx": 32,
+   "speaker": 2,
+   "startMs": 334925,
+   "endMs": 337085,
+   "text": "longer than we think it will be. And"
+  },
+  {
+   "idx": 33,
+   "speaker": 2,
+   "startMs": 339350,
+   "endMs": 351590,
+   "text": "I'm not across the details, but it it does seem like it might be worth given the overall road map that we've we've only just finished phase two that maybe we could reassess dates."
+  },
+  {
+   "idx": 34,
+   "speaker": 0,
+   "startMs": 351750,
+   "endMs": 354230,
+   "text": "Mhmm. Yep. Yep."
+  },
+  {
+   "idx": 35,
+   "speaker": 0,
+   "startMs": 362925,
+   "endMs": 366045,
+   "text": "Is this who who is gonna make that reassessment?"
+  },
+  {
+   "idx": 36,
+   "speaker": 2,
+   "startMs": 368840,
+   "endMs": 377160,
+   "text": "Yeah. Well, I'm not sure. I I don't know how the new structure is going to work, and and, you know, everything's kind of in the air at the moment as far as I can see."
+  },
+  {
+   "idx": 37,
+   "speaker": 2,
+   "startMs": 379845,
+   "endMs": 382245,
+   "text": "Mhmm. So yeah. Good question."
+  },
+  {
+   "idx": 38,
+   "speaker": 0,
+   "startMs": 386805,
+   "endMs": 401980,
+   "text": "Okay. Yeah. I would I would consider someone from group organization to step up for that one. Of course, Nick and I can can always give you a hint as well."
+  },
+  {
+   "idx": 39,
+   "speaker": 2,
+   "startMs": 406860,
+   "endMs": 410860,
+   "text": "For what? Determining timelines"
+  },
+  {
+   "idx": 40,
+   "speaker": 0,
+   "startMs": 409905,
+   "endMs": 415345,
+   "text": "or the sharding work? How many timelines and communicating with teams about what's next? Yeah."
+  },
+  {
+   "idx": 41,
+   "speaker": 2,
+   "startMs": 419665,
+   "endMs": 425505,
+   "text": "Okay. I mean, I don't mind doing that, getting involved. I can see how it's certainly an organization responsibility."
+  },
+  {
+   "idx": 42,
+   "speaker": 2,
+   "startMs": 428770,
+   "endMs": 440290,
+   "text": "I'm not across, like like I say, the broader planning. So if we're gonna come up with dates, I think it needs to come up needs to form in line with the the broader planning. So where where is that happening?"
+  },
+  {
+   "idx": 43,
+   "speaker": 0,
+   "startMs": 441445,
+   "endMs": 443445,
+   "text": "Yeah. So"
+  },
+  {
+   "idx": 44,
+   "speaker": 0,
+   "startMs": 445205,
+   "endMs": 453845,
+   "text": "that's happening on the sales stand up. But I think what what what I think I need is"
+  },
+  {
+   "idx": 45,
+   "speaker": 0,
+   "startMs": 457360,
+   "endMs": 467840,
+   "text": "a new a new set of dates that you think that the team should hit, and which set which set, like, maybe organization ID call columns or something else."
+  },
+  {
+   "idx": 46,
+   "speaker": 0,
+   "startMs": 472035,
+   "endMs": 480355,
+   "text": "And then that date becomes a date that we can communicate to other teams saying, oh, hey. We need this sharding keyword completed by this,"
+  },
+  {
+   "idx": 47,
+   "speaker": 0,
+   "startMs": 482835,
+   "endMs": 490460,
+   "text": "because of why. And then we can start the ball rolling again, right, if if it's not already rolling."
+  },
+  {
+   "idx": 48,
+   "speaker": 1,
+   "startMs": 493900,
+   "endMs": 494300,
+   "text": "Right."
+  },
+  {
+   "idx": 49,
+   "speaker": 1,
+   "startMs": 500515,
+   "endMs": 509875,
+   "text": "Yeah. I'll go over the organization. I did go on some personal update somewhere. So at at least we know where we are with this one."
+  },
+  {
+   "idx": 50,
+   "speaker": 0,
+   "startMs": 515820,
+   "endMs": 522060,
+   "text": "So it's it's not ETA. It's when when when when the organization team needs a shouting key to be done by."
+  },
+  {
+   "idx": 51,
+   "speaker": 0,
+   "startMs": 524380,
+   "endMs": 526700,
+   "text": "We don't have an ETA. But yeah."
+  },
+  {
+   "idx": 52,
+   "speaker": 0,
+   "startMs": 530255,
+   "endMs": 540175,
+   "text": "Okay. I want to I'm conscious of time, so I wanna move on to the next one, which will affect this one as well. So"
+  },
+  {
+   "idx": 53,
+   "speaker": 0,
+   "startMs": 542390,
+   "endMs": 546230,
+   "text": "for the for that issue of categorization, I have"
+  },
+  {
+   "idx": 54,
+   "speaker": 0,
+   "startMs": 547990,
+   "endMs": 550710,
+   "text": "added some proposed criteria to the issue."
+  },
+  {
+   "idx": 55,
+   "speaker": 0,
+   "startMs": 553910,
+   "endMs": 556790,
+   "text": "Sorry for the late notice, but,"
+  },
+  {
+   "idx": 56,
+   "speaker": 0,
+   "startMs": 558415,
+   "endMs": 562255,
+   "text": "yeah, have have a quick read and see what you think."
+  },
+  {
+   "idx": 57,
+   "speaker": 2,
+   "startMs": 574560,
+   "endMs": 595695,
+   "text": "Think, Kras, maybe you had the same query as me. But in terms of criteria, is there anything more definitive that we could you know, if if these things are valid, then this is the the expected schema?"
+  },
+  {
+   "idx": 58,
+   "speaker": 2,
+   "startMs": 603230,
+   "endMs": 610830,
+   "text": "Because that's what we want. Right? That that's what you're proposing. Yeah. That we have some kind of, like, automated process that can give us some"
+  },
+  {
+   "idx": 59,
+   "speaker": 2,
+   "startMs": 612395,
+   "endMs": 622955,
+   "text": "some system around this. Whether it's a 100% or not is another question, but but I think is that what you're asking on this issue? Yeah. Yeah. So"
+  },
+  {
+   "idx": 60,
+   "speaker": 0,
+   "startMs": 624795,
+   "endMs": 625915,
+   "text": "detection is one thing."
+  },
+  {
+   "idx": 61,
+   "speaker": 0,
+   "startMs": 627780,
+   "endMs": 631140,
+   "text": "Which schema it lands on is is another thing."
+  },
+  {
+   "idx": 62,
+   "speaker": 0,
+   "startMs": 635700,
+   "endMs": 640180,
+   "text": "There's there's actually three options to do it. One is to"
+  },
+  {
+   "idx": 63,
+   "speaker": 0,
+   "startMs": 643755,
+   "endMs": 680515,
+   "text": "decide that, hey. This is actually a cell table and then use a sharding key. So that's that's one. That's one outcome. The other outcome is that this is this is really a cluster white table, and therefore, it needs to be synced to all tables. That's the second outcome. And then the third very ambiguous option is that it's it's a it's a cluster white table, but we don't need to sync it to all tables in sales 1.0. That part, I think, it's it's kinda confusing to everyone. So,"
+  },
+  {
+   "idx": 64,
+   "speaker": 0,
+   "startMs": 682275,
+   "endMs": 692040,
+   "text": "ideally, we have some sort of attribute or or or make a new schema so that so that that is not confusing to people."
+  },
+  {
+   "idx": 65,
+   "speaker": 0,
+   "startMs": 697160,
+   "endMs": 708505,
+   "text": "So a good example is the, users table. It is a cluster wide table, but it doesn't need to be synced to all tables,"
+  },
+  {
+   "idx": 66,
+   "speaker": 0,
+   "startMs": 710985,
+   "endMs": 726600,
+   "text": "in sales. For sales. For sales 1.0 because we're we're creating a new user in a new cell, and the user is effectively conf confined to only one organization. Right? So there is no need to sync the users table at all."
+  },
+  {
+   "idx": 67,
+   "speaker": 0,
+   "startMs": 728545,
+   "endMs": 734865,
+   "text": "So how how do you distinguish that, very clearly to another table like the plans table?"
+  },
+  {
+   "idx": 68,
+   "speaker": 0,
+   "startMs": 736385,
+   "endMs": 737585,
+   "text": "I don't know."
+  },
+  {
+   "idx": 69,
+   "speaker": 0,
+   "startMs": 739905,
+   "endMs": 743265,
+   "text": "Perhaps we could have a new schema called g l m in user"
+  },
+  {
+   "idx": 70,
+   "speaker": 0,
+   "startMs": 744960,
+   "endMs": 763265,
+   "text": "to very clearly distinguish between the plus white tables that needs to be synced to all the sales versus tables like user. That's one that's one option. Another option is to have another attribute that says sync to ourselves. So"
+  },
+  {
+   "idx": 71,
+   "speaker": 2,
+   "startMs": 765585,
+   "endMs": 804480,
+   "text": "I think there's there's quite a few things mixed into the same issue, and they they are related but could be tackled separately, I think. The the the thread that for me, it seemed like the the initial priority was just detecting miscategorizations so that we could kind of clear up that organization isolation, sharding work stream where we we've taken a first pass at the moment, and teams have looked at tables and they've categorized. But maybe maybe some were just wrong. Maybe some teams misunderstood what was going on, and they're wrong. So"
+  },
+  {
+   "idx": 72,
+   "speaker": 2,
+   "startMs": 805840,
+   "endMs": 813360,
+   "text": "I thought that we would maybe be able to devise some set of rules around catching obvious mistakes."
+  },
+  {
+   "idx": 73,
+   "speaker": 2,
+   "startMs": 815125,
+   "endMs": 820805,
+   "text": "And then what you're talking about in terms of syncing, that that seems like a a second kind of set of problems."
+  },
+  {
+   "idx": 74,
+   "speaker": 0,
+   "startMs": 821045,
+   "endMs": 821685,
+   "text": "Mhmm."
+  },
+  {
+   "idx": 75,
+   "speaker": 2,
+   "startMs": 822965,
+   "endMs": 825205,
+   "text": "Mhmm. So maybe we should kind of tackle,"
+  },
+  {
+   "idx": 76,
+   "speaker": 2,
+   "startMs": 827040,
+   "endMs": 830800,
+   "text": "first of put them into separate issues and then tackle them one at a time."
+  },
+  {
+   "idx": 77,
+   "speaker": 0,
+   "startMs": 834640,
+   "endMs": 858800,
+   "text": "Sure. Sure. I mean, like, I've deliberately left that issue to be just around detecting. What we do with with miscategorization is that it is can be another issue. But if you wanna further split the the detection into smaller issues, I'm I'm fine with that as well. Yeah. I'm looking at the proposed criteria. I think three out of four,"
+  },
+  {
+   "idx": 78,
+   "speaker": 1,
+   "startMs": 859680,
+   "endMs": 883610,
+   "text": "which means all excluding the right activity. We can write tests and, like, automate this because we have the foreign keys views in the database and while and we have the yeah. We can start with like, if it's cost of white table, make sure it's not referencing any cell table and the other way around, and make sure it's not"
+  },
+  {
+   "idx": 79,
+   "speaker": 1,
+   "startMs": 885290,
+   "endMs": 916420,
+   "text": "medium or large table because we now have that in the dictionary too. So those three could be implemented as tests, and then we'll find out how many violations we currently have and go from there. The right activity is trickier because that's a different data source. We can we have to look at this in Prometheus, but it should be simple query once we have all the table names to just make a chart with their"
+  },
+  {
+   "idx": 80,
+   "speaker": 1,
+   "startMs": 918420,
+   "endMs": 929305,
+   "text": "rights so we can see, like, where where we are. It just can be implemented as, like, part of CI, I think. Should be manual review."
+  },
+  {
+   "idx": 81,
+   "speaker": 1,
+   "startMs": 931465,
+   "endMs": 937705,
+   "text": "So I guess I can take those three and write a test for them for cross reference and stable size."
+  },
+  {
+   "idx": 82,
+   "speaker": 0,
+   "startMs": 942480,
+   "endMs": 944800,
+   "text": "Yep. That sounds good. Yep."
+  },
+  {
+   "idx": 83,
+   "speaker": 2,
+   "startMs": 947040,
+   "endMs": 961535,
+   "text": "Is is this it it seems like it's it it is detection to a degree, but there's also just general analysis that maybe we haven't really looked at this properly yet. But but but"
+  },
+  {
+   "idx": 84,
+   "speaker": 2,
+   "startMs": 963150,
+   "endMs": 990665,
+   "text": "architecturally, like, from a a a logical perspective, you know, data relation perspective, these this is how the data falls out, and these are the tables that are cluster wide. These ones are so local and but maybe in terms of this criteria that you've got listed that maybe some tables are just so big that, like, there's a conflict here that but it's not a miscategorization. It's just, like, it's a problem a problem that we have to deal with."
+  },
+  {
+   "idx": 85,
+   "speaker": 1,
+   "startMs": 992070,
+   "endMs": 1022250,
+   "text": "Actually, Tom, what do you mean by the last ones? References from cell table to cluster wide table must be checked to see if there is split brained or not. I mean, like, we can detect such references, but I guess I guess we'll have many calls, many tables, for example, are referencing users. Yeah. So do we just need a list for this or what? Because if it's just a test that's failing, then, yeah, it will be failing for sure. And what do you mean by the split brain part? So"
+  },
+  {
+   "idx": 86,
+   "speaker": 0,
+   "startMs": 1023450,
+   "endMs": 1038755,
+   "text": "I think we we can as I say, we can do a test for the four zero k, right, and then detect it. And and a human would definitely need to check that whether that makes sense or not."
+  },
+  {
+   "idx": 87,
+   "speaker": 0,
+   "startMs": 1041875,
+   "endMs": 1061750,
+   "text": "And if they think it makes sense Yeah. But what do you mean by it makes sense? Like, is it needed? Or I need to allow this or something. So I for example, I there is, like, a foreign key between, users table and issues. Right? Mhmm. That's one. Will it result in a sprint win?"
+  },
+  {
+   "idx": 88,
+   "speaker": 0,
+   "startMs": 1063445,
+   "endMs": 1075365,
+   "text": "No. Because, when when you create a reference to a user ID, the users are unique. There there is no no no chance for a sprint win."
+  },
+  {
+   "idx": 89,
+   "speaker": 0,
+   "startMs": 1077260,
+   "endMs": 1086700,
+   "text": "The opposite case is when you create a new Gilab subscription and you have a foreign key to a plan ID."
+  },
+  {
+   "idx": 90,
+   "speaker": 0,
+   "startMs": 1090220,
+   "endMs": 1090460,
+   "text": "So"
+  },
+  {
+   "idx": 91,
+   "speaker": 0,
+   "startMs": 1092235,
+   "endMs": 1096235,
+   "text": "that's also another FK. Right? And if you look at it, you"
+  },
+  {
+   "idx": 92,
+   "speaker": 0,
+   "startMs": 1098155,
+   "endMs": 1101835,
+   "text": "can see that in two different cells,"
+  },
+  {
+   "idx": 93,
+   "speaker": 0,
+   "startMs": 1103515,
+   "endMs": 1111100,
+   "text": "there is no guarantee that plan ID refers to the same thing constantly. So the application actually expects,"
+  },
+  {
+   "idx": 94,
+   "speaker": 0,
+   "startMs": 1114940,
+   "endMs": 1118780,
+   "text": "say, plan ID seven to be ultimate plan or something like that."
+  },
+  {
+   "idx": 95,
+   "speaker": 0,
+   "startMs": 1122295,
+   "endMs": 1129895,
+   "text": "Versus another cell. There is no guarantee that the ultimate plan will be playing I d seven. That's what I mean by split brain."
+  },
+  {
+   "idx": 96,
+   "speaker": 1,
+   "startMs": 1130855,
+   "endMs": 1135415,
+   "text": "I think we had a similar case with"
+  },
+  {
+   "idx": 97,
+   "speaker": 1,
+   "startMs": 1137240,
+   "endMs": 1168030,
+   "text": "work item types or something where the basic ones, there was worked down to make sure they always have, like, the the constant IDs. But I don't know if that's yeah. Because the plans are usually looked up via, like, a key thing, but but then the the foreign keys are using the ID. Okay. I see what you mean now. Mhmm. Well, yeah, that definitely should be someone looking at them. So"
+  },
+  {
+   "idx": 98,
+   "speaker": 1,
+   "startMs": 1169630,
+   "endMs": 1191135,
+   "text": "we can automate just, like, generating the list, but then yeah. Yeah. That that will be quite a lot, I guess. Probably most of them will be fine, but you still need to go through them. Like, most of them will be the issues, users case you first described, but you still need to, like, go through them and check them."
+  },
+  {
+   "idx": 99,
+   "speaker": 0,
+   "startMs": 1191615,
+   "endMs": 1193000,
+   "text": "Yeah. Exactly."
+  },
+  {
+   "idx": 100,
+   "speaker": 2,
+   "startMs": 1193400,
+   "endMs": 1223440,
+   "text": "Yeah. Is like a this question is not so much the GitLab schema. It's it's kind of a subset of that problem. Right? Like, they're marked as cell, but they need to be cluster wired. But then we need to distinguish between on on a cluster wide level, like, those kind of reference type columns, tables versus others. So, like, there's there's there's more than just the scheme, and the scheme is a bit too broad. We need to understand within that level."
+  },
+  {
+   "idx": 101,
+   "speaker": 2,
+   "startMs": 1227280,
+   "endMs": 1229680,
+   "text": "Because it's not enough. Right? It's not enough. If we have"
+  },
+  {
+   "idx": 102,
+   "speaker": 2,
+   "startMs": 1231440,
+   "endMs": 1232080,
+   "text": "like you've said,"
+  },
+  {
+   "idx": 103,
+   "speaker": 2,
+   "startMs": 1234075,
+   "endMs": 1240075,
+   "text": "reference references from cell table to a customer wide table must be checked to see if there's a split brain or not. Okay. So"
+  },
+  {
+   "idx": 104,
+   "speaker": 2,
+   "startMs": 1241915,
+   "endMs": 1264565,
+   "text": "do we do we add some field to the database document to say that this table is something, like, you know, we we create a new category and we say, well, it's it's in the cluster wide schema, but it is this kind of table. It is like a a split brain vulnerable table or whatever name you've given. Is is that, like, the outcome of of this process?"
+  },
+  {
+   "idx": 105,
+   "speaker": 0,
+   "startMs": 1265125,
+   "endMs": 1272005,
+   "text": "No. Like I like I said in the beginning, the outcome in a process can be one of three options."
+  },
+  {
+   "idx": 106,
+   "speaker": 0,
+   "startMs": 1274750,
+   "endMs": 1296165,
+   "text": "One is that it shouldn't be a cast to white table. It needs to be, become a cell table, and therefore, we need to add a sharding key to it. So that's when we are dealing with it. Another way we're dealing with it is that, we decide, like, it's a user's table, so it should be safe to just ignore it for sales 1.0. Do nothing."
+  },
+  {
+   "idx": 107,
+   "speaker": 0,
+   "startMs": 1300360,
+   "endMs": 1304680,
+   "text": "By the way, there is a a linked issue that I linked"
+  },
+  {
+   "idx": 108,
+   "speaker": 0,
+   "startMs": 1306440,
+   "endMs": 1326475,
+   "text": "to suggest a whole new schema called gulab main user so that maybe, you know, that's easy way to, manage this because they're about 40 tables. So that's another option. And then the third option is that, oh, it is really a Gillette main. It is really a class white table, and it needs to be the same rows in all cells."
+  },
+  {
+   "idx": 109,
+   "speaker": 2,
+   "startMs": 1327920,
+   "endMs": 1339280,
+   "text": "Yeah. Yeah. I understand. But, like, in in your list of three things, two of them are potentially cluster wide. And and Yes. So"
+  },
+  {
+   "idx": 110,
+   "speaker": 2,
+   "startMs": 1341255,
+   "endMs": 1345175,
+   "text": "in in terms of"
+  },
+  {
+   "idx": 111,
+   "speaker": 2,
+   "startMs": 1349975,
+   "endMs": 1377275,
+   "text": "like, is it a matter of betting all the tables? So we have let's start and say you have an issue and you've listed all the tables, and there's just a checkbox ticked off all of them. Okay. We've confirmed they're all correct. Like, is is that enough, or do we need to say this is what we've determined? It's in, like, a database document or something, and then the the YAML files that is. So that then we've captured that information on the table."
+  },
+  {
+   "idx": 112,
+   "speaker": 0,
+   "startMs": 1377995,
+   "endMs": 1383980,
+   "text": "No. I would imagine you will open new new issues to address those problem tables that you detected."
+  },
+  {
+   "idx": 113,
+   "speaker": 2,
+   "startMs": 1394395,
+   "endMs": 1399195,
+   "text": "Because I I think it might be worth thinking through, at least initially."
+  },
+  {
+   "idx": 114,
+   "speaker": 2,
+   "startMs": 1401035,
+   "endMs": 1404635,
+   "text": "Because the rules kind of change between one point zero and one point five. Right? How"
+  },
+  {
+   "idx": 115,
+   "speaker": 2,
+   "startMs": 1406235,
+   "endMs": 1413170,
+   "text": "the the reference tables are always reference tables. But like you said, the the organization the the user tables are"
+  },
+  {
+   "idx": 116,
+   "speaker": 2,
+   "startMs": 1414850,
+   "endMs": 1431565,
+   "text": "we we don't really have a plan for 1.5. So one one point zero, kind of just everything's so local effectively, But they're not really so local. They're they're considered cluster wide because we know we have to deal with them at some point."
+  },
+  {
+   "idx": 117,
+   "speaker": 0,
+   "startMs": 1436125,
+   "endMs": 1438765,
+   "text": "What was your question? Sorry. I don't Or is it"
+  },
+  {
+   "idx": 118,
+   "speaker": 2,
+   "startMs": 1439840,
+   "endMs": 1440480,
+   "text": "the"
+  },
+  {
+   "idx": 119,
+   "speaker": 2,
+   "startMs": 1443920,
+   "endMs": 1453315,
+   "text": "the the categorize the categorization concept is I wonder if it changes between one point zero and one point five, whether the"
+  },
+  {
+   "idx": 120,
+   "speaker": 2,
+   "startMs": 1455715,
+   "endMs": 1465715,
+   "text": "the the the rules change between one point zero and one point five. So what we consider that the category in 1.0, does it change from 1.5?"
+  },
+  {
+   "idx": 121,
+   "speaker": 0,
+   "startMs": 1470250,
+   "endMs": 1474970,
+   "text": "I think we are I am proposing that we we change it slightly right now."
+  },
+  {
+   "idx": 122,
+   "speaker": 0,
+   "startMs": 1481130,
+   "endMs": 1485135,
+   "text": "That's essentially what I'm proposing. So"
+  },
+  {
+   "idx": 123,
+   "speaker": 0,
+   "startMs": 1487695,
+   "endMs": 1491295,
+   "text": "the background story to this is that we"
+  },
+  {
+   "idx": 124,
+   "speaker": 0,
+   "startMs": 1492815,
+   "endMs": 1495135,
+   "text": "do not want 80 cluster white tables."
+  },
+  {
+   "idx": 125,
+   "speaker": 0,
+   "startMs": 1497810,
+   "endMs": 1508850,
+   "text": "It's unmanageable, and it's not clear immediately clear whether the cluster white tables means that it needs to be synced or not."
+  },
+  {
+   "idx": 126,
+   "speaker": 0,
+   "startMs": 1510530,
+   "endMs": 1518595,
+   "text": "So that's the background to it. And then there's a side effect is that if we decide that this table is better not being across the white table,"
+  },
+  {
+   "idx": 127,
+   "speaker": 0,
+   "startMs": 1520195,
+   "endMs": 1535610,
+   "text": "it needs to be a cell table. Therefore, the sharding key new work needs to start now. Right? Because that's that's like a mandatory stops, and it takes multiple milestones to to start sharding keys."
+  },
+  {
+   "idx": 128,
+   "speaker": 2,
+   "startMs": 1535850,
+   "endMs": 1564080,
+   "text": "So that's the background to that story, if you will. But but so so you're coming from kind of, like, this this infrastructure level where the motivation for the categorization of a table is driven by the number of rows or the amount of IO on that table. But there's also another facet, which is, I think, where we've categorized currently, where it's based on just the the data relationships, whether it makes sense to be from a,"
+  },
+  {
+   "idx": 129,
+   "speaker": 2,
+   "startMs": 1566000,
+   "endMs": 1577475,
+   "text": "you know, from, like, a data modeling perspective, whether it makes sense to be so local or or cluster wide. So I I kind of can't reconcile the two of them there. Like, they seem like two different things. It's both?"
+  },
+  {
+   "idx": 130,
+   "speaker": 0,
+   "startMs": 1578115,
+   "endMs": 1578835,
+   "text": "It is both."
+  },
+  {
+   "idx": 131,
+   "speaker": 0,
+   "startMs": 1584080,
+   "endMs": 1586720,
+   "text": "It is both. So I don't"
+  },
+  {
+   "idx": 132,
+   "speaker": 2,
+   "startMs": 1588560,
+   "endMs": 1615100,
+   "text": "what what Like it of a decent if if from the the data modeling perspective, we think something is cluster wide, We we've made that decision because it's essentially shared data. And then if you say, well, it can't be cluster wide because the IO is too big or the table's too big. Well, just making it so local, it what what does that mean? What is the implication of that?"
+  },
+  {
+   "idx": 133,
+   "speaker": 0,
+   "startMs": 1617340,
+   "endMs": 1631545,
+   "text": "That's I think you're several steps ahead, firstly, because this issue is about detecting based on the data modeling and also the right activity. What we do with it, you we really have to open an issue and and figure it out."
+  },
+  {
+   "idx": 134,
+   "speaker": 0,
+   "startMs": 1633465,
+   "endMs": 1643010,
+   "text": "And Krasz hasn't really agreed to take on the right activity yet, which I agree. It might be difficult to look at."
+  },
+  {
+   "idx": 135,
+   "speaker": 0,
+   "startMs": 1645570,
+   "endMs": 1653730,
+   "text": "Yeah. So I can't really answer your question because it's quite hypothetical right now. But we we definitely do look at the data."
+  },
+  {
+   "idx": 136,
+   "speaker": 1,
+   "startMs": 1655475,
+   "endMs": 1674620,
+   "text": "Oh, I said let's start with, I don't know, trying to build a list based on those criteria and go from there, like, many we have. Yeah. Let's we'll definitely have to make a decision and, like, answer these questions, but doesn't seem like we can do it now. So"
+  },
+  {
+   "idx": 137,
+   "speaker": 0,
+   "startMs": 1679740,
+   "endMs": 1694005,
+   "text": "I'll ask something else as well. I'll ask that you you look at the criteria and and see whether I'm missing anything or or I'm adding too much. Okay."
+  },
+  {
+   "idx": 138,
+   "speaker": 1,
+   "startMs": 1696725,
+   "endMs": 1699930,
+   "text": "I will think about when I'm pitching the data."
+  },
+  {
+   "idx": 139,
+   "speaker": 1,
+   "startMs": 1717945,
+   "endMs": 1729340,
+   "text": "Yeah. It's a bit unclear to figure out what's the problem and what's not given. We have no idea how the syncing is going to happen and, like, how how it's going to cope with"
+  },
+  {
+   "idx": 140,
+   "speaker": 1,
+   "startMs": 1731020,
+   "endMs": 1737180,
+   "text": "updates at the same time, and we would even be able to cope with that. Yeah. Yeah. Exactly."
+  },
+  {
+   "idx": 141,
+   "speaker": 0,
+   "startMs": 1738140,
+   "endMs": 1756080,
+   "text": "Yeah. Exactly. So if we end up that's why I do not want 80 tables to to have to synchronize. Mhmm. Yeah. It'll be it'll be high likelihood that we we can't create a a syncing process that that that is performant enough."
+  },
+  {
+   "idx": 142,
+   "speaker": 0,
+   "startMs": 1758880,
+   "endMs": 1765520,
+   "text": "So but the good news is that it is very likely that audio, those 80 tables, we do not need to,"
+  },
+  {
+   "idx": 143,
+   "speaker": 0,
+   "startMs": 1767135,
+   "endMs": 1773215,
+   "text": "like, sync because they are users. So by definition, we do not need to sync it. So yeah."
+  },
+  {
+   "idx": 144,
+   "speaker": 0,
+   "startMs": 1778175,
+   "endMs": 1786540,
+   "text": "We don't need to sync them now, but eventually, we have to Eventually, we had to sync them, yeah, at at some point in sales 1.5."
+  },
+  {
+   "idx": 145,
+   "speaker": 1,
+   "startMs": 1786780,
+   "endMs": 1791500,
+   "text": "Yeah. Once we start, like, having users"
+  },
+  {
+   "idx": 146,
+   "speaker": 0,
+   "startMs": 1791660,
+   "endMs": 1800095,
+   "text": "crossing between sales, then we'll have to. Yeah. We have to find a way to sync those. Yeah. Should be another challenge. Which"
+  },
+  {
+   "idx": 147,
+   "speaker": 2,
+   "startMs": 1800655,
+   "endMs": 1829225,
+   "text": "is which is why I think it's worth recording this on the table somewhere or or having something somewhere defined. Like, if we're gonna go through the effort of categorizing each table, it it'd be worth recording that on the table document itself so that, you know, we know that in in self 1.5, we know it's it is a users table, for example. And even though we've categorized it as as cell local for 1.0,"
+  },
+  {
+   "idx": 148,
+   "speaker": 0,
+   "startMs": 1829865,
+   "endMs": 1847000,
+   "text": "it's going to have to change for 1.5. No. No. I I I wouldn't I wouldn't categorize user's table as cell local. I'll I'll either keep it as custom white with a special thing that says users or categorize it as GitLab main users. I wouldn't switch it to cell because it's not a cell based data."
+  },
+  {
+   "idx": 149,
+   "speaker": 2,
+   "startMs": 1850275,
+   "endMs": 1862115,
+   "text": "I didn't mean users specifically. I meant, like, the the user related tables. So so, like, something like a user details table Yes. Yes. Which is a one to one mapping for a user. Yes. Exactly. Exactly. So"
+  },
+  {
+   "idx": 150,
+   "speaker": 0,
+   "startMs": 1863400,
+   "endMs": 1885635,
+   "text": "my my idea for that, if we decide those things, those are indeed user tables is to create a new schema called git admin user, and then mark all those user related tables as git admin user. So that way, we do record it in the database dictionary that yeah. Those those are user related tables,"
+  },
+  {
+   "idx": 151,
+   "speaker": 0,
+   "startMs": 1887395,
+   "endMs": 1892580,
+   "text": "and we it will be synced later in 1.5 when we come to it."
+  },
+  {
+   "idx": 152,
+   "speaker": 1,
+   "startMs": 1894980,
+   "endMs": 1906225,
+   "text": "Yeah. Definitely, I agree. We should we'll definitely have the market in time. I don't know how I feel about overloading the Gitlobes schema one more time another meeting. So but, you know, we can just, like,"
+  },
+  {
+   "idx": 153,
+   "speaker": 1,
+   "startMs": 1907745,
+   "endMs": 1921790,
+   "text": "give a tax attribute and tag those tables. Like, there are many ways to do it once we decide how to do Exactly. Yeah. Yeah. Or or have a tag that says sync in Salesforce point five. Yeah. Yeah. Or scoped to users or something that can okay."
+  },
+  {
+   "idx": 154,
+   "speaker": 1,
+   "startMs": 1925470,
+   "endMs": 1931395,
+   "text": "Okay. I'll I'll try to build a list with all those cluster white tables and, like,"
+  },
+  {
+   "idx": 155,
+   "speaker": 1,
+   "startMs": 1934835,
+   "endMs": 1952930,
+   "text": "identify how they, like do they meet or fail those proposed criteria? And while doing this, think about are we missing or giving too many of these criteria. Can ping you, I guess, sometime next beginning of next week, see where we are."
+  },
+  {
+   "idx": 156,
+   "speaker": 1,
+   "startMs": 1955090,
+   "endMs": 1958130,
+   "text": "I guess, we'll post on the issue, and we'll go from there."
+  },
+  {
+   "idx": 157,
+   "speaker": 0,
+   "startMs": 1967055,
+   "endMs": 1977857,
+   "text": "Okay. Oh, we're out of time. Thank you very much for robust discussion. Yeah. I'll post this online. Thanks. Have a good day."
+  },
+  {
+   "idx": 158,
+   "speaker": 2,
+   "startMs": 1978417,
+   "endMs": 1979697,
+   "text": "Thanks. Yeah."
+  }
+ ]
+}

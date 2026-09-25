@@ -1,0 +1,572 @@
+{
+ "durationMs": 1526652,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 1520,
+   "endMs": 10240,
+   "text": "This is the GitLab pods public stream, and Josh has the first item on the agenda. Thanks for that, Josh. Take it away."
+  },
+  {
+   "idx": 1,
+   "speaker": 1,
+   "startMs": 11120,
+   "endMs": 46875,
+   "text": "Yep. Thanks, Sid. Just wanted to highlight a couple of the investigation streams just for awareness of what we're kinda working on. I'm working on getting documentation on some high level strategy, alignments, some iteration strategies, and we'll continue to work on documenting, you know, the kind of non detest option just so we can get that further written down. And then, probably, I understand are currently working on getting data on cross namespace workflows so we can have an informed data on that, which will be critical, I think. And then, also,"
+  },
+  {
+   "idx": 2,
+   "speaker": 1,
+   "startMs": 47435,
+   "endMs": 54700,
+   "text": "we'll likely be working on with the test option as well as we go further through. So so brief heads up there."
+  },
+  {
+   "idx": 3,
+   "speaker": 1,
+   "startMs": 56700,
+   "endMs": 77565,
+   "text": "I went through and and documented the principles on slide three just to provide a set of, you know, goals and guardrails as we think through this. These are the ones we discussed last week. I also added one about having a minimally basically, not impacting self managed too significantly with this work, which will also be important too."
+  },
+  {
+   "idx": 4,
+   "speaker": 1,
+   "startMs": 82940,
+   "endMs": 89660,
+   "text": "From there, I also tried to reflow some of the first few slides just to make the narrative a little more clear and"
+  },
+  {
+   "idx": 5,
+   "speaker": 1,
+   "startMs": 92355,
+   "endMs": 98595,
+   "text": "flow a a little better. So folks can take a look and let me know if I accomplished that goal or or not."
+  },
+  {
+   "idx": 6,
+   "speaker": 1,
+   "startMs": 101155,
+   "endMs": 108460,
+   "text": "And then the next one is I did add a slide on or more clear slide on why we don't believe we need a shard within a pod"
+  },
+  {
+   "idx": 7,
+   "speaker": 1,
+   "startMs": 110380,
+   "endMs": 113820,
+   "text": "as this does seem to come up from sometimes a question. So"
+  },
+  {
+   "idx": 8,
+   "speaker": 1,
+   "startMs": 116865,
+   "endMs": 119905,
+   "text": "I added that here. Eric, do have a a point on this one?"
+  },
+  {
+   "idx": 9,
+   "speaker": 2,
+   "startMs": 120385,
+   "endMs": 151275,
+   "text": "Yeah. I guess now that I read it, it may have fit better under four than five, but because four directly addresses decomposition. So the way I'm thinking of it is is that we've we've got some self managed customers that are on the managed DB services of the big public clouds, and that that database doesn't work for them. So I'm envisioning that the functional decomposition we're doing isn't temporary or isn't just for .com. It's it's already relevant for large self managed customers, and that's that's important. I mean, you're"
+  },
+  {
+   "idx": 10,
+   "speaker": 2,
+   "startMs": 151755,
+   "endMs": 172985,
+   "text": "you could have an exponential amount of CI data compared to your user and issue data, And that doesn't seem like it's I think those those two things are diverging. They're not coming back together. So I I think it's I think we need to do both. I think I I would expect them to be sort of forever decisions, and they're both they're both beneficial."
+  },
+  {
+   "idx": 11,
+   "speaker": 0,
+   "startMs": 174425,
+   "endMs": 185305,
+   "text": "I don't think it's one one or the other. So, Eric, I think it's worthwhile talking about it. But, like, if we look at the size of what which run being able to run Postgres, it's 10 x,"
+  },
+  {
+   "idx": 12,
+   "speaker": 0,
+   "startMs": 188420,
+   "endMs": 197620,
+   "text": "at least 10 x we're we're running into with this specific managed service. Decomposition will buy us two x. So, like,"
+  },
+  {
+   "idx": 13,
+   "speaker": 0,
+   "startMs": 200195,
+   "endMs": 207075,
+   "text": "there's a 10 x problem, and you get a a a solution for 2020% of it. So I'm I'm not"
+  },
+  {
+   "idx": 14,
+   "speaker": 0,
+   "startMs": 208915,
+   "endMs": 218950,
+   "text": "I can argue. Like, yes. It will help a little bit, but it's it's think there's a bigger underlying problem. Like, why is that cloud service so slow?"
+  },
+  {
+   "idx": 15,
+   "speaker": 0,
+   "startMs": 221110,
+   "endMs": 245600,
+   "text": "And, anyway, like, a two x with this customer, like, it's probably not gonna buy us enough headroom to to even keep them on that. So I I think we'll still have to solve the the 10 x problem with the customer. And the the second point is it depends on how good we make kind of cross namespace workflows, and we we don't know yet. They might be very they might be hard, but that's the the other point."
+  },
+  {
+   "idx": 16,
+   "speaker": 2,
+   "startMs": 248320,
+   "endMs": 257840,
+   "text": "Steve, do you recall the I thought two x is less than the the benefit we're hoping to get from the functional decomposition of CI data."
+  },
+  {
+   "idx": 17,
+   "speaker": 3,
+   "startMs": 260765,
+   "endMs": 263165,
+   "text": "I I think that it is"
+  },
+  {
+   "idx": 18,
+   "speaker": 3,
+   "startMs": 265005,
+   "endMs": 296595,
+   "text": "I think that it's it's more than that. I think we'll have to go back to that. I I think the you know, one of the things with functional decomposition is that the I mean, doing that with the the CI data, but is is one step. But then kind of also considering decomposition in parallel with some of these other things as we move forward for other datasets, you know, also may get us, you know, two x in in other areas where where maybe there are other things not as"
+  },
+  {
+   "idx": 19,
+   "speaker": 0,
+   "startMs": 297395,
+   "endMs": 307120,
+   "text": "not as kind of, like, low hanging fruit as the CI data. But what's the other say four x? I I think that the CI data is causing more than a quarter of our rights."
+  },
+  {
+   "idx": 20,
+   "speaker": 5,
+   "startMs": 308080,
+   "endMs": 310080,
+   "text": "Causing around 45%."
+  },
+  {
+   "idx": 21,
+   "speaker": 0,
+   "startMs": 310240,
+   "endMs": 312240,
+   "text": "45%. So that's two x."
+  },
+  {
+   "idx": 22,
+   "speaker": 0,
+   "startMs": 316085,
+   "endMs": 323205,
+   "text": "So how do you I don't I don't follow your calculation, Steve, at all. Well, I think what I what I'm suggesting is that the"
+  },
+  {
+   "idx": 23,
+   "speaker": 3,
+   "startMs": 324725,
+   "endMs": 335720,
+   "text": "like, in you may be right. I mean, maybe out of the the CI data, we're only getting a a two x jump there. I I guess what I'm suggesting is with, like, considering functional decomposition"
+  },
+  {
+   "idx": 24,
+   "speaker": 0,
+   "startMs": 336200,
+   "endMs": 362340,
+   "text": "in the future, not only for CI data, but there potentially are other options for us to decompose data out of the database. And I I can under I understand that you can decompose more. So you can you can decompose in 20 different databases. But if one of those databases has 45 of your rights, then that's your scaling limit. So you're you're not scaling you you don't keep scaling two x with everything you do because you have a biggest"
+  },
+  {
+   "idx": 25,
+   "speaker": 0,
+   "startMs": 364100,
+   "endMs": 383695,
+   "text": "decomposed thing. You have a biggest function, and that's limiting your scaling. So is that 45%? It's zero it's one divided by point 45, which is just over two x. Hence, the two x scaling. I don't see how then you decompose something that's 10% of your rights. It doesn't help you because it's not splitting up that big chunk."
+  },
+  {
+   "idx": 26,
+   "speaker": 2,
+   "startMs": 384810,
+   "endMs": 417860,
+   "text": "So for for background, Steve, Sid's concerned with making the application more complicated than it needs to be particularly as an as an open source project. So it's very much about that decision to head down the road of the a functional decomposition. So we're doing CI. We think that's doing the short term. The question is is that is that something we eventually undo when we go back to a single database, or is that something where we've got these two types of data and two databases forever, or would we continue to go down that road as one strategy amongst the others? Or is is podding going to cover all the needs, and we don't need to to bite off that application level complexity?"
+  },
+  {
+   "idx": 27,
+   "speaker": 3,
+   "startMs": 418500,
+   "endMs": 455925,
+   "text": "Yeah. I mean, I guess with the so, I mean, one path there is to suggest that, like, podding would cover all of those needs. I guess the the maybe the concern I would have there is that we would still end up with a customer, you know, potentially even ourselves where where podding isn't sufficient, and we still have to do others. And it just it leads me to it leads me to to say that, you know, we kind of need to do all of these things, but but maybe there needs to be an optional way of configuring so that we're we're not placing the burden of, you know, our large multi tenant experience"
+  },
+  {
+   "idx": 28,
+   "speaker": 3,
+   "startMs": 456325,
+   "endMs": 480910,
+   "text": "or or a huge fleet of, you know, you know, single tenant hosted experiences, the burden of configuration onto our customers. And instead, giving them the option, for example, if they want to have, you know, their CI data just part of the the same the the same database and having Can I interrupt for a minute? Yeah. I'm I'm sorry, Seth. So functional decomposition"
+  },
+  {
+   "idx": 29,
+   "speaker": 4,
+   "startMs": 481475,
+   "endMs": 511560,
+   "text": "was always ambition as a bridge to shard. Meaning, in order to reduce the complexity of sharding, which is hard, you take a portion. CI bills was chosen because it it is a large chunk of the database, about 45%. So you decompose that, and then we start building charts on that. Then we chart that data, which is only a small portion of the data, and then you start charting it into those created charts. But functional decomposition was always a bridge."
+  },
+  {
+   "idx": 30,
+   "speaker": 4,
+   "startMs": 512225,
+   "endMs": 545615,
+   "text": "We never wanted to go into the microservices rabbit hole. It was just a way to say, if we take CI, which is a big chunk, it buys us a fair amount of time, we put it on the side, then we shard that, and we only focus on sharding CI. But then we start taking the remainder of the database and turn it into shards or pods. So functional isn't was never intended to be the long term. Let's just functionally decompose everything. It was always a bridge to sort of create a boundary around where we started building the sharding capabilities."
+  },
+  {
+   "idx": 31,
+   "speaker": 0,
+   "startMs": 546175,
+   "endMs": 553055,
+   "text": "Yeah. I I understood it as such as well, but that's not what I've seen and observed in how people talk about decomposition."
+  },
+  {
+   "idx": 32,
+   "speaker": 0,
+   "startMs": 553055,
+   "endMs": 598170,
+   "text": "People say, oh, we just decompose more to make it more performant. We split it off more. People are talking about two phase commits and things like that. It's leading us down this route that contains a lot of a lot of the baggage. And even if you make things optional, you still have all that baggage in your code base, and it's it's will slow down the speed with which speech people can contribute to it. And maybe there's a maybe there's a distinction. And, Jerry, I'd be interested in in your thoughts about the like, I I agree. Like, ideally, you know, we we decompose part of the data. We shard out that CI data, and then we begin to move, you know, other other parts of the data, other tables into that that sharded environment. I I think, you know, my thought about that is is that the"
+  },
+  {
+   "idx": 33,
+   "speaker": 3,
+   "startMs": 598570,
+   "endMs": 626650,
+   "text": "in practice, it's hard to ever get there, I guess, to the to the point where you no longer have any charted data because along the way, for one reason or another, we're creating data that's uncharted. We're acquiring companies that that come in and are, you know, not part of that. And so so I agree. From a But given the constraints Yeah. That was the chosen path because we didn't wanna change the behavior of gitlap.com."
+  },
+  {
+   "idx": 34,
+   "speaker": 0,
+   "startMs": 626650,
+   "endMs": 630570,
+   "text": "So what what what what do you mean with we're acquiring companies?"
+  },
+  {
+   "idx": 35,
+   "speaker": 3,
+   "startMs": 632545,
+   "endMs": 640545,
+   "text": "On the so so in in the case of, like, when we when we would do acquisitions and let's say we would do an integration of"
+  },
+  {
+   "idx": 36,
+   "speaker": 3,
+   "startMs": 642305,
+   "endMs": 647105,
+   "text": "another existing environment or another existing service, it's gonna have"
+  },
+  {
+   "idx": 37,
+   "speaker": 3,
+   "startMs": 649120,
+   "endMs": 664965,
+   "text": "basically, what ends up being a decomposed database of its own that's need going to need to be integrated in potentially integrated into that same charting strategy, or we'll need a different charting strategy and if it's a completely kind of different profile of data."
+  },
+  {
+   "idx": 38,
+   "speaker": 0,
+   "startMs": 665365,
+   "endMs": 678120,
+   "text": "Every every time, Steve, we acquire a company, we have them shut down the product and integrate into our single data store. It's a core part of what we sell. It's a core part of who we are, and it's a core part of our strategy."
+  },
+  {
+   "idx": 39,
+   "speaker": 3,
+   "startMs": 679240,
+   "endMs": 691495,
+   "text": "So we're we don't seem to be aligned on that. Yeah. I I think if we're I mean, if we are able to accomplish that, that I think that that is great. I'm I think I'm looking forward We're we're accomplishing that except for the decomposition."
+  },
+  {
+   "idx": 40,
+   "speaker": 0,
+   "startMs": 691735,
+   "endMs": 699335,
+   "text": "Yeah. So we're we're we're, like, we're we're we're leaving in very important pattern that has made us very successful behind."
+  },
+  {
+   "idx": 41,
+   "speaker": 2,
+   "startMs": 701740,
+   "endMs": 737310,
+   "text": "Well, so we we so I I have it in the agenda. We can skip ahead to it. I wanted to bring everybody together here because we've got people executing stuff. We've got this podding group, which is developing, was becoming a pretty opinionated strategy, and then we've got a number of people with previous experience to other companies. And it's in three different contexts. I think we have to start to get on the the same page, and it's it's not all gonna happen in one meeting. But that's why I wanted to to add add people No. I think I think this is a great this is great. This is a conversation we should have because we weren't covering a ton. We're uncovering that the estimates of decomposition are overrated,"
+  },
+  {
+   "idx": 42,
+   "speaker": 0,
+   "startMs": 737470,
+   "endMs": 746430,
+   "text": "that there's assumptions about integrating new products that will not conform to our our single data model policy. I think it's super worthwhile."
+  },
+  {
+   "idx": 43,
+   "speaker": 2,
+   "startMs": 747275,
+   "endMs": 761835,
+   "text": "So, like, what what Steve was just espousing, you you had asked for Steve's previous experiences at his prior company. He just described his prior experience at that company. That's how they integrated acquisitions. So I'm I'm much more interested in in the the pods,"
+  },
+  {
+   "idx": 44,
+   "speaker": 0,
+   "startMs": 762450,
+   "endMs": 774370,
+   "text": "what Steve thinks about pods and the feasibility of that, like splitting customer data across multiple databases so that if one database goes down, not all your not all your customers go down."
+  },
+  {
+   "idx": 45,
+   "speaker": 5,
+   "startMs": 775785,
+   "endMs": 812645,
+   "text": "Yeah. And so I just wanted to, sorry, clarify one thing. I'm pretty close to the team that is working on decomposing the CI tables, and there is no work going on that is not focused on CI or on other parts of the application. And to the best of my knowledge, we have not made any decision following that. We're working on this because that's, as Jerry said, you know, like a large chunk of the database that is envisioned as, you know, the iterative step forward to allow us to scale gitnet.com, you know, given the size constraints that we have. But there"
+  },
+  {
+   "idx": 46,
+   "speaker": 0,
+   "startMs": 813285,
+   "endMs": 847850,
+   "text": "that's it. There's nothing to my knowledge of decomposing other tables right now. It's solely focused on CI. I agree, but there's already people talking about it. And at the same time, I've seen proposals that make parts harder in the future, like normalizing tables that would make potting them, splitting them up between customers harder. So there's there's I'm not saying stop any work that's currently in progress. Say, hey. This is a really important subject to get a line done, and there seems to be a lot of space between"
+  },
+  {
+   "idx": 47,
+   "speaker": 0,
+   "startMs": 848970,
+   "endMs": 856250,
+   "text": "between different people, including, like, about our company strategy and and the the perceived benefits of decomposition"
+  },
+  {
+   "idx": 48,
+   "speaker": 0,
+   "startMs": 857850,
+   "endMs": 859130,
+   "text": "of future decomposition."
+  },
+  {
+   "idx": 49,
+   "speaker": 2,
+   "startMs": 860235,
+   "endMs": 878270,
+   "text": "So that's one of the big questions, Phoebe. And do you mind going and getting an estimate from the the team working on it what the what the expected headroom is? It seems like we're we're since feeling it's two x. We've heard five or 10 x. Let's develop, like, a"
+  },
+  {
+   "idx": 50,
+   "speaker": 5,
+   "startMs": 879310,
+   "endMs": 911550,
+   "text": "Yeah. I can I can certainly do that? I think I don't know, but I think one of the bits of confusion is in our database is not at a 100% right now. So, you know, I think sometimes there's a difference between the net benefit that decomposition brings to the overall capacity of scaling in the database system. Those are two different different things. The the And so we have to be careful. Having is that people say 10 x headroom, which is like the headroom increases by 10 x, which is only two x scaling."
+  },
+  {
+   "idx": 51,
+   "speaker": 0,
+   "startMs": 912110,
+   "endMs": 947505,
+   "text": "And what we've been saying with the goal of this project, as agreed with you, Eric, is to scale to 10,000,000 users. That's not 10 x headroom. That's 10 x scaling. Decomposition will not bring that by itself. And there's an argument. Decomposition will allow sharding, and sharding will allow the scaling. And I think we should have I don't disagree that sharding is in our future. I want to shard via pod strategy. There's other ways of sharding. Maybe maybe there's I'm using the wrong word. But, like, how to shard is the question."
+  },
+  {
+   "idx": 52,
+   "speaker": 0,
+   "startMs": 948225,
+   "endMs": 966680,
+   "text": "Do we do that via pods or via table shards? That that is the big question we have to answer, and and it's not necessary. Like, decomposition might help, but it's not necessary. And if you know you're gonna shard in a different way, in a pods way, it actually it makes everything more complicated"
+  },
+  {
+   "idx": 53,
+   "speaker": 4,
+   "startMs": 968200,
+   "endMs": 985935,
+   "text": "code base wise. So to answer your question, all I need to know is that it's okay for somebody in one pod not to see stuff on the other pod. That's great. If I get that, then pots, based on the work that I've done in the past, is the way to go. But that was not an option."
+  },
+  {
+   "idx": 54,
+   "speaker": 0,
+   "startMs": 986820,
+   "endMs": 992580,
+   "text": "Well, great. Finally, I did an analysis. Let's go into that. What's the preliminary set of that?"
+  },
+  {
+   "idx": 55,
+   "speaker": 5,
+   "startMs": 993540,
+   "endMs": 1030180,
+   "text": "Yes. So I've done a bit of work that is very much enabled by preliminary work from Andrea's database group and with Stan's help. This is we did this today, so we have to really check these things. But, essentially, what we're looking at right now is understanding how users interact with different top level namespaces. And the interaction right now can be essentially anything. So it's not the specific workflow. We are not at that level of granularity. But what we found is that 97% of users of all users interact with only one top level namespace."
+  },
+  {
+   "idx": 56,
+   "speaker": 5,
+   "startMs": 1030655,
+   "endMs": 1059865,
+   "text": "And then if you stratify this and you look at users that have access to paid namespaces, so on an a gold plan or a silver plan, 97% of users interact with two or fewer top level namespaces. I think that pattern is explained by us not extracting personal namespaces. They count into this as well. So we'll have to do that work, but the indication right now is that cross namespace"
+  },
+  {
+   "idx": 57,
+   "speaker": 0,
+   "startMs": 1059865,
+   "endMs": 1084500,
+   "text": "queries or usage of that is quite uncommon. So not very many users do this. So so so let me let me draw that out for everyone in the call. 97% of all users use only one namespace. That means that 3% of our users need to be in the same pod. That means we can scale 33 x. That means we have 3000% no. 30000% headroom."
+  },
+  {
+   "idx": 58,
+   "speaker": 5,
+   "startMs": 1087535,
+   "endMs": 1107550,
+   "text": "I want to call out some limitations here just because this is really preliminary. First, this is across all users in the system. So that's not not the active users. So that, I think, can skew the pattern. We have to extract that. We haven't been able to separate our personal namespaces yet,"
+  },
+  {
+   "idx": 59,
+   "speaker": 5,
+   "startMs": 1107950,
+   "endMs": 1141275,
+   "text": "and I think it's also important to note that it's difficult for us to say, it's like, why don't users do this? Right? And I think the easy assumption is to say, well, they don't benefit from these features, and I think that is maybe true for customers who pay us, enterprise customers. But I think we need to keep in mind that maybe there are some strategically important workflows such as, you know, like, forking in open source projects that we want to maintain. That's so I I totally agree. So let's let's assume that it's 10% of the users that need to be on the same pods. That's 10 x headroom."
+  },
+  {
+   "idx": 60,
+   "speaker": 0,
+   "startMs": 1141915,
+   "endMs": 1164230,
+   "text": "And all the while, we're working on the two x headroom thing that is decomposition. So I want us to not stop any work that's in progress, but this is the big thing I want I want more people to be aware of. Parts can be a 10 xer, and the two xer will make will lead us down a different path."
+  },
+  {
+   "idx": 61,
+   "speaker": 5,
+   "startMs": 1168225,
+   "endMs": 1200395,
+   "text": "Another comment that I would like to make here is that I think there's there's some more room in in analyzing this and looking at specific workflows. I think there's also like, I would like to talk to a few customers and understand how they, like, how they perceive this. I've heard anecdotal talk from technical account managers for specific segments where people really don't want any interaction. We know that that is a use case where people want to be more isolated. And so I think we have to be mindful"
+  },
+  {
+   "idx": 62,
+   "speaker": 5,
+   "startMs": 1200795,
+   "endMs": 1218930,
+   "text": "what we what we disrupt, but it may be a case that in some instances, the trade offs are also worth for our customers because they say, hey. I have more isolation. I have less blast radius. I'm not so interested in some of these workflows, and that may be acceptable. I think this is the the preliminary data here."
+  },
+  {
+   "idx": 63,
+   "speaker": 2,
+   "startMs": 1220155,
+   "endMs": 1246830,
+   "text": "Fabian, could you also run a report like the the 3% of users that use more than one namespace? What percentage of all namespaces are they across? That would validate the kind of like, hey. We could put them all in one pod sort of thing. The other extreme would be if 3% of users are somehow spread across a 100% of the remaining projects, then there is no one pod we could we could put them on. I'm just curious where on that spectrum we would land."
+  },
+  {
+   "idx": 64,
+   "speaker": 5,
+   "startMs": 1248035,
+   "endMs": 1259235,
+   "text": "Okay. I'll I'll look at that. This is this is a little bit difficult to obtain in terms of the data. I think without that, it wouldn't be possible, but I'll I'll try to tease it out."
+  },
+  {
+   "idx": 65,
+   "speaker": 0,
+   "startMs": 1260270,
+   "endMs": 1267630,
+   "text": "I'm very impressed that you have produced this data since the last meeting, and it's super helpful, Fabienne. Thank you, and thanks, Stan."
+  },
+  {
+   "idx": 66,
+   "speaker": 0,
+   "startMs": 1269550,
+   "endMs": 1270350,
+   "text": "And Andreas?"
+  },
+  {
+   "idx": 67,
+   "speaker": 5,
+   "startMs": 1285195,
+   "endMs": 1287915,
+   "text": "Yeah. That's all I have for now. I wish I had more, but"
+  },
+  {
+   "idx": 68,
+   "speaker": 0,
+   "startMs": 1288710,
+   "endMs": 1298630,
+   "text": "No. This is super helpful. It's it's the best case, and so 33 x is best case. But at least there's a two x in there, and probably there's a 10 x in there."
+  },
+  {
+   "idx": 69,
+   "speaker": 1,
+   "startMs": 1306695,
+   "endMs": 1325320,
+   "text": "I think in addition, even people who do use it, right, the question is how valuable is it? So if you've linked something, a comment or an issue or something like that, right, like, how important is it that the merged closed status shows up? You know, all all these workflows could be relatively low value, and if we disrupt them,"
+  },
+  {
+   "idx": 70,
+   "speaker": 0,
+   "startMs": 1326840,
+   "endMs": 1349640,
+   "text": "might not might not alter people's overall user experience significantly, if at all. So You know, but but we don't we don't even need to go there, like, as long as we can put 90% of the new users in a new pod. Like, we don't even have to migrate anybody. As long as the new users can go into a new 90% of them can go into a new pod, we're we're good. Yep. No. I just just kinda wanna see further on. Yeah. I think"
+  },
+  {
+   "idx": 71,
+   "speaker": 5,
+   "startMs": 1350120,
+   "endMs": 1374585,
+   "text": "is yeah. Oh, sorry. Go ahead. No. I think Jerry is is right in the sense that if we as a product are okay with, you know, making some of these queries no longer accessible or a little bit harder, I think that can drive the technical implementation. I think that's the the way I'm trying to think about it."
+  },
+  {
+   "idx": 72,
+   "speaker": 1,
+   "startMs": 1383680,
+   "endMs": 1389760,
+   "text": "Cool. I have a bunch of stuff up here. Those are all slide updates. I think if they're on the call, we can maybe go to nine."
+  },
+  {
+   "idx": 73,
+   "speaker": 1,
+   "startMs": 1393405,
+   "endMs": 1395805,
+   "text": "Eric, or did we cover that one already?"
+  },
+  {
+   "idx": 74,
+   "speaker": 2,
+   "startMs": 1397965,
+   "endMs": 1419430,
+   "text": "Yeah. I kind of already voiced this over. Just everybody can contribute, so I invited myself to this meeting and brought brought some of the folks I wanted us to coordinate with. And Steve yesterday wrote up his prior experience to the desk for it, and Jerry had previously written up his exposure to a variety of different flavors of scaling and way to do pods and stuff like that."
+  },
+  {
+   "idx": 75,
+   "speaker": 3,
+   "startMs": 1420355,
+   "endMs": 1429475,
+   "text": "One thing I I didn't put in there, but I'll add into the doc is I mean, I in in general, I'm just gonna to state that I think there's there's"
+  },
+  {
+   "idx": 76,
+   "speaker": 3,
+   "startMs": 1431555,
+   "endMs": 1466020,
+   "text": "hurdles with that, you know, that will hit or whatever, things will come around where there's a flavor of kind of all of these things that we'll need to do to to meet different situations. And that's the, I guess, the experience that I have is that, you know, potting does a lot, and and is a a huge thing, but still ran into practically, you know, situations where an entire pod an entire dedicated database to a a single prospect or account wasn't enough. And so other things needed to be done as far as"
+  },
+  {
+   "idx": 77,
+   "speaker": 3,
+   "startMs": 1466740,
+   "endMs": 1499950,
+   "text": "decomposition into other data sources or more sharding of of specific data. And so you know? But that's not that's not the problem that is necessarily facing us right now. Might be one down the road. One thing with podding, though, I'd say that that in the last experience was one of the most valuable things that we did over many, many years was the fact that by dedicating a pod to our own use, and just like here at GitLab, we were kind of our own biggest customer, and putting that at the front of the production deployment chain,"
+  },
+  {
+   "idx": 78,
+   "speaker": 3,
+   "startMs": 1501310,
+   "endMs": 1512255,
+   "text": "we found so many problems that never made it to the other pods that our customers were on. And so there's a huge benefit potentially for us in in a different area here out of podding."
+  },
+  {
+   "idx": 79,
+   "speaker": 0,
+   "startMs": 1512575,
+   "endMs": 1516095,
+   "text": "That's a great point. Let's add that to the slide slide deck."
+  },
+  {
+   "idx": 80,
+   "speaker": 0,
+   "startMs": 1517757,
+   "endMs": 1524557,
+   "text": "We're at time. Thanks, Eric, Steve, and Jarir for joining. I think the meeting was much better because of it. Thanks, everyone."
+  }
+ ]
+}

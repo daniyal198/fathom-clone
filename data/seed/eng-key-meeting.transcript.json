@@ -1,0 +1,621 @@
+{
+ "durationMs": 1450116,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 2080,
+   "endMs": 9040,
+   "text": "Hi. This is Eric Johnson. It's 02/18/2021, and this is the engineering key review at GitLab."
+  },
+  {
+   "idx": 1,
+   "speaker": 0,
+   "startMs": 10720,
+   "endMs": 35230,
+   "text": "So I've got number four in the agenda, which is a proposal to break up this meeting into four department key reviews. So currently, this is engineering, development quality, security, and UX infrastructure and support do their own queue views already. I have the reasons why increase visibility, able to go deeper,"
+  },
+  {
+   "idx": 2,
+   "speaker": 0,
+   "startMs": 36990,
+   "endMs": 62380,
+   "text": "increase the objectivity with which my reports can manage their groups, allow me more time to focus on new markets, and allow me to shift into more of a question asker mode than generating content and answering questions in these meetings. And but to avoid adding three net new meetings to stakeholders' calendars, I propose we do a sort of two month rotation. So month one, development quality go. Month two, security and UX would go."
+  },
+  {
+   "idx": 3,
+   "speaker": 0,
+   "startMs": 65100,
+   "endMs": 66780,
+   "text": "How do people feel about that proposal?"
+  },
+  {
+   "idx": 4,
+   "speaker": 1,
+   "startMs": 68615,
+   "endMs": 90670,
+   "text": "I think in the group conversations, it's working really well. So I'm I'm supportive. And this is the smallest thing. Maybe we need four meetings a month. Like, it's the biggest department. It's super essential. But you proposed this. I don't I could see either way, so let's stick with the proposal."
+  },
+  {
+   "idx": 5,
+   "speaker": 0,
+   "startMs": 92270,
+   "endMs": 99495,
+   "text": "Cool. We'll try it and we'll we can be flexible. I mean, the development is larger. Maybe they get more frequently or something like that. We'll see how see how it goes."
+  },
+  {
+   "idx": 6,
+   "speaker": 0,
+   "startMs": 101015,
+   "endMs": 107015,
+   "text": "Alright. And then I've got number five, which is we've got"
+  },
+  {
+   "idx": 7,
+   "speaker": 0,
+   "startMs": 108615,
+   "endMs": 134925,
+   "text": "r and d overall MR rate, and we also have r and d wider MR rate both as top level KPIs for engineering. So the difference between them in the simplest sense is that r and d wider MR rate includes both community contributions and community MRs. The problems I see with this are that one, the wider MR rate, the one that includes internal and external MRs,"
+  },
+  {
+   "idx": 8,
+   "speaker": 1,
+   "startMs": 135165,
+   "endMs": 153530,
+   "text": "it duplicates the overall MR rate which is Wait. Wait. Sorry. Sorry. Sorry. The the the wider MR rate should just be external. Right? And then overall should be narrow plus wider. Oh, yeah. It's like we say the wider community."
+  },
+  {
+   "idx": 9,
+   "speaker": 0,
+   "startMs": 155105,
+   "endMs": 157265,
+   "text": "Right. Right. Right. Okay. So there's"
+  },
+  {
+   "idx": 10,
+   "speaker": 0,
+   "startMs": 159665,
+   "endMs": 161505,
+   "text": "I have to check the taxonomy."
+  },
+  {
+   "idx": 11,
+   "speaker": 2,
+   "startMs": 164385,
+   "endMs": 169665,
+   "text": "Lily, can you, can you confirm Sid's re that's that's Sid's reasoning is my my understanding as well."
+  },
+  {
+   "idx": 12,
+   "speaker": 3,
+   "startMs": 170900,
+   "endMs": 176500,
+   "text": "Yeah. I believe wider MR rate just captures community contributions."
+  },
+  {
+   "idx": 13,
+   "speaker": 1,
+   "startMs": 177380,
+   "endMs": 185780,
+   "text": "Only and no internal. Yeah. And the reason we measure that is that, like, one of the most likely failure modes is that we lose the community."
+  },
+  {
+   "idx": 14,
+   "speaker": 0,
+   "startMs": 186955,
+   "endMs": 187595,
+   "text": "Yeah."
+  },
+  {
+   "idx": 15,
+   "speaker": 2,
+   "startMs": 187915,
+   "endMs": 209860,
+   "text": "So So where it gets Eric, where it gets goofy is is that when you look at a specific team within the company, there could be contributions outside of that that aren't community contributions. They would be viewed community contributions by that group, but effectively, they're not from outside the company. So that's why we use wider to kinda reflect that. And narrow is very specific to the team."
+  },
+  {
+   "idx": 16,
+   "speaker": 0,
+   "startMs": 210660,
+   "endMs": 216235,
+   "text": "The are you saying that if someone in plan contributes to verify, it's viewed as wider?"
+  },
+  {
+   "idx": 17,
+   "speaker": 2,
+   "startMs": 216955,
+   "endMs": 230720,
+   "text": "Not quite that. Plan plan and verify are just fine. It's when you look at, like, the development versus infrastructure. Infrastructure will oftentimes contribute to developments work, but it won't be counted, as MRs."
+  },
+  {
+   "idx": 18,
+   "speaker": 0,
+   "startMs": 231680,
+   "endMs": 241600,
+   "text": "Okay. That's a that's a potential bit of funkiness that we should talk about separately. I didn't have that in my sort of critique of this, but that that doesn't necessarily make intuitive sense to me."
+  },
+  {
+   "idx": 19,
+   "speaker": 0,
+   "startMs": 243335,
+   "endMs": 278715,
+   "text": "So so then I think part of my critique of this can be thrown out because it's not as duplicative as I thought. But I still think there's a problem with r and d wider MR rate, which is this thing doesn't really move in part because it's a it's a rate. So it feels like the way to drive this up is to specifically drive community authors to contribute more than one MR per month. That's how this moves up because it's a it's a productivity rate like we use internally. And that doesn't necessarily feel like the right thing because there's scenarios in which this goes up. We've actually got less contributions overall and less contributors overall."
+  },
+  {
+   "idx": 20,
+   "speaker": 1,
+   "startMs": 278795,
+   "endMs": 308855,
+   "text": "Wait. Wait. Wait. Wait a second. So you you're saying that r and d wider MR rate is number MRs per external contributor? Oh my goodness. That should not be the thing. It should be contributions per GitLab team member. So the country those the the the thing above the division is the external ones. The thing below is the number of team members at GitLab."
+  },
+  {
+   "idx": 21,
+   "speaker": 0,
+   "startMs": 310295,
+   "endMs": 311815,
+   "text": "Is that the case, Lily?"
+  },
+  {
+   "idx": 22,
+   "speaker": 3,
+   "startMs": 313095,
+   "endMs": 314295,
+   "text": "I'm checking right now."
+  },
+  {
+   "idx": 23,
+   "speaker": 1,
+   "startMs": 317370,
+   "endMs": 325130,
+   "text": "I think so in our numerator merged per team member. So unless we start calling people outside the company team member, then it shouldn't be done."
+  },
+  {
+   "idx": 24,
+   "speaker": 3,
+   "startMs": 325930,
+   "endMs": 338605,
+   "text": "Yeah. Just clarifying here. So our numerator is community contributions, and then our denominator is GitLab team members. So it's not per external member."
+  },
+  {
+   "idx": 25,
+   "speaker": 0,
+   "startMs": 347140,
+   "endMs": 347780,
+   "text": "So we"
+  },
+  {
+   "idx": 26,
+   "speaker": 1,
+   "startMs": 349220,
+   "endMs": 362580,
+   "text": "so what we're doing there, Eric, is we're we're not trying to say how many how many MRs does someone send if they send something. We're saying how many MRs from external do we get for the size of our organization."
+  },
+  {
+   "idx": 27,
+   "speaker": 0,
+   "startMs": 376060,
+   "endMs": 380060,
+   "text": "Sorry. I have a childhood emergency outside the door. Okay."
+  },
+  {
+   "idx": 28,
+   "speaker": 1,
+   "startMs": 382460,
+   "endMs": 398545,
+   "text": "So so the maybe explain the context behind this. The context is as we grow as a company, we should make sure we we keep the community up. Like, the logical thing is for the community to flatline and the size of the org to go, and before you know it, you've kind of outgrown the wider community."
+  },
+  {
+   "idx": 29,
+   "speaker": 0,
+   "startMs": 400945,
+   "endMs": 431325,
+   "text": "Yeah. And what I'm seeing is we we created this pretty sophisticated taxonomy with prefixes and postfixes to talk about these things. But in reality, we've only got two of them, and it's we keep forgetting. We have a hard time discussing this thing. So I'd rather just name them simply some two names for what they are rather than than using the taxonomy. But also, like, in f, I have this proposal of, like, what if we just track as a KPI the percentage of total MRs that come from the community over time? And we would see that drop."
+  },
+  {
+   "idx": 30,
+   "speaker": 1,
+   "startMs": 431645,
+   "endMs": 434390,
+   "text": "I love that. I love that. Let's do that instead."
+  },
+  {
+   "idx": 31,
+   "speaker": 0,
+   "startMs": 434710,
+   "endMs": 435350,
+   "text": "Okay."
+  },
+  {
+   "idx": 32,
+   "speaker": 1,
+   "startMs": 435670,
+   "endMs": 455555,
+   "text": "But the the the thing the thing why we have this complex thing is because you can game that. You you wanna game that? You just produce fewer MRs with the engineers at GitLab. So if you drive that really hard and say, this is your number one goal, it's very easy to achieve. Just tell all your engineers to produce half."
+  },
+  {
+   "idx": 33,
+   "speaker": 0,
+   "startMs": 456995,
+   "endMs": 490090,
+   "text": "Yeah. So we have we have different metrics to prevent that from happening the same way that, like, support SLAs and SSAT kind of buttress one another. I think we're we're robust to that, but simplifying this would make these conversations go If if you, as our CTO, don't even understand them, we went overboard. So I'm very supportive. I didn't understand them, and I forgot. And I was agreeing to start this morning. I'm like, there's a problem with this, and then you just remind me of the context. So, yeah, if I can't hold up my head more The percentage that come from the community, I love that. It's what all our investors ask about. Let's do that. Okay. Cool. So,"
+  },
+  {
+   "idx": 34,
+   "speaker": 0,
+   "startMs": 491130,
+   "endMs": 502490,
+   "text": "Lily, if you can work with Max to make that transition, that would be great. And I'll pull the one that we're talking about. That's Room Number 3. Thanks. Sounds good. I'm on a call. Sorry. It was a bit late."
+  },
+  {
+   "idx": 35,
+   "speaker": 4,
+   "startMs": 503515,
+   "endMs": 514395,
+   "text": "Timeline, we do have PIs on the raw number of community MRs, and we can make make the shift. And wider confirming from the definition, think wider only counts for community,"
+  },
+  {
+   "idx": 36,
+   "speaker": 4,
+   "startMs": 516480,
+   "endMs": 517280,
+   "text": "definition is."
+  },
+  {
+   "idx": 37,
+   "speaker": 0,
+   "startMs": 519360,
+   "endMs": 524000,
+   "text": "Cool. Alright. So, number six then, Christopher."
+  },
+  {
+   "idx": 38,
+   "speaker": 2,
+   "startMs": 527840,
+   "endMs": 546400,
+   "text": "Sorry. I was looking up to see if I had the percentage graph because I think we played around with this at one point and had a draft of that, probably about five months back, if I can remember, Lily. Just an FYI, the month of February, if you were looking at any particular metrics, particularly in development and MRA,"
+  },
+  {
+   "idx": 39,
+   "speaker": 2,
+   "startMs": 548080,
+   "endMs": 561625,
+   "text": "we haven't had updates in four days. So there's apparently a lag issue that's been, problematic, for the data team to basically get updated mess mess updated metrics, and they're working on that."
+  },
+  {
+   "idx": 40,
+   "speaker": 5,
+   "startMs": 562505,
+   "endMs": 565145,
+   "text": "I'm sorry, Mac. You got the next one."
+  },
+  {
+   "idx": 41,
+   "speaker": 4,
+   "startMs": 567785,
+   "endMs": 577360,
+   "text": "So, yeah, I I there's some some color there on on the on mitigation, the the lag later on. Onto onto seven,"
+  },
+  {
+   "idx": 42,
+   "speaker": 5,
+   "startMs": 577600,
+   "endMs": 611420,
+   "text": "we can as an FYI, in addition to the KPI status. I'm sorry, Mac. I wanna just touch on the Postgres replication issue there real quick. I I'm trying to get my arms wrapped around it. Do we have the right attention to this? This is kind of Eric, I don't know if you were commenting on hinting towards this in the last meeting around some of the infrastructure improvements on the product side. I'm just not quite sure whose responsibility it is to focus on getting a handle on some of the constraints we have in replication."
+  },
+  {
+   "idx": 43,
+   "speaker": 0,
+   "startMs": 612700,
+   "endMs": 629245,
+   "text": "Yeah. The what I was mentioning in the in the product queue review about an hour ago is, I think, is sort of, like, unrelated. And so I think the DRI needs to be your kind of data engineering team, but, of course, there's a dependency on infrastructure because that's where the data is being piped from. They they do own that data source."
+  },
+  {
+   "idx": 44,
+   "speaker": 6,
+   "startMs": 630450,
+   "endMs": 640130,
+   "text": "Yeah. I'll I'll say for the replication lag on that slave host where I'm sorry. Not the on the the secondary host where"
+  },
+  {
+   "idx": 45,
+   "speaker": 6,
+   "startMs": 641810,
+   "endMs": 656665,
+   "text": "the data is being pulled from, like, infrastructure would be the DRI for that. And so any escalations, but I'll I'll own those. And I know we have an action plan for that as far as creating another dedicated host just for the the data team to pull from."
+  },
+  {
+   "idx": 46,
+   "speaker": 5,
+   "startMs": 658520,
+   "endMs": 687860,
+   "text": "Okay. I did ask I saw the issue, and I did talk to Craig Gomes a little bit as well on the database side just to see if there's some database improvements. And I'm still trying to figure out, you know, if it's truly just dedicated computational sort of resources server or if there's actually some some database tuning that needs to occur. Do you have a sense of that? There's so I I'd say it's it's three different things."
+  },
+  {
+   "idx": 47,
+   "speaker": 6,
+   "startMs": 688340,
+   "endMs": 722500,
+   "text": "It's having a a dedicated host that doesn't have conflicting query traffic coming from other other workloads. There are some tuning performance or tuning improvements to be made. And then there's also improvements in and this is where it does maybe relate a little bit to what the topic was in the in the last review. Basically, the the overall demand on the database layer from from .com activities and and, like, improving those. So it's it's definitely not just one of those things."
+  },
+  {
+   "idx": 48,
+   "speaker": 6,
+   "startMs": 723140,
+   "endMs": 738285,
+   "text": "But one of the the most specific actions, we're gonna take, though, is separating out and having a dedicated host so that we're just dealing with the the profile of the data engineering traffic on there, and and not having conflicting query"
+  },
+  {
+   "idx": 49,
+   "speaker": 6,
+   "startMs": 740030,
+   "endMs": 746350,
+   "text": "conflicting queries affect the ability to to update the replication."
+  },
+  {
+   "idx": 50,
+   "speaker": 5,
+   "startMs": 747390,
+   "endMs": 779840,
+   "text": "Steve, I definitely wanna partner with you on this one because I don't I think the the demand on those databases is only going to increase. It's not going down. Yep. And I think we need to get I'm still unclear on where to focus in to get the biggest bang for the buck. I think if the computational resource dedication, that's gonna be a good thing, but it'll probably gonna squeeze the balloon, and then the next area will will unearth itself. Okay. And I'll tell you what, I'll put into the infra key review for next week. Okay. Just give me an update on on this issue. Thank you, Steve."
+  },
+  {
+   "idx": 51,
+   "speaker": 0,
+   "startMs": 785905,
+   "endMs": 791185,
+   "text": "So then back to Mecca on seven or yes."
+  },
+  {
+   "idx": 52,
+   "speaker": 4,
+   "startMs": 793980,
+   "endMs": 828380,
+   "text": "Thank you. And Rob was in the SaaS incident this morning as well, Brian, just so we have the attention there. Number seven, just to provide provide an update on previous conversations. We continue to improve, defect tracking and against SLOs. There is a first iteration p I that we are experimenting to show, percentage of defects meeting, the SLOs. Key findings s ones are hovering at 80%, s two at sixty. We've been focused, mostly on s one, s two at this point as hence why s three and s fours are are lower."
+  },
+  {
+   "idx": 53,
+   "speaker": 4,
+   "startMs": 829740,
+   "endMs": 856070,
+   "text": "And this this will likely be the case. We are also in point b are working on the measurement for average open bugs age. This would give us a a whole picture of what's what's left. If the age goes up or down, it'd be or cleaning the backlog, the average age should go down as well. There's no PI yet, but I just wanna update and ensure that beyond this it's not it's not a off track. Number c, Craig, on s two?"
+  },
+  {
+   "idx": 54,
+   "speaker": 7,
+   "startMs": 857350,
+   "endMs": 868795,
+   "text": "Yeah. Just was looking through the the the charts, and I I noted that there was a spike in meantime to close. Yeah. And just wanted to see if you had any insight into that for us. This is the s two. The s the s one looked fine. So"
+  },
+  {
+   "idx": 55,
+   "speaker": 4,
+   "startMs": 869675,
+   "endMs": 892275,
+   "text": "Yeah. This is where the point b on age and supplement those charts in the back end helps. So I haven't seen a dip in age nor the count overall. I I think I think it's the latter. We need to to dig in a bit deeper in that and also the data lag. I would like to reevaluate once we have the whole picture once everything is synced in as well. Christie, you have some insights."
+  },
+  {
+   "idx": 56,
+   "speaker": 8,
+   "startMs": 894915,
+   "endMs": 913330,
+   "text": "Yeah. I'm just wondering if part of this could be the fact that we changed the severity across the board for MRs to s two. And so we may have some older bugs in there that hadn't been addressed because they were at a lower severity. Now we've moved them to s two and maybe that caused a little spike."
+  },
+  {
+   "idx": 57,
+   "speaker": 4,
+   "startMs": 915165,
+   "endMs": 929130,
+   "text": "That that could be the case if we did it in a limited fashion. It won't be a huge volume. We also iterated after that to to pin on priority since product owns prioritization. So I I wouldn't account it entirely to that."
+  },
+  {
+   "idx": 58,
+   "speaker": 0,
+   "startMs": 929930,
+   "endMs": 933050,
+   "text": "I mean, this this isn't the infer key review, but"
+  },
+  {
+   "idx": 59,
+   "speaker": 0,
+   "startMs": 935130,
+   "endMs": 944805,
+   "text": "I know that they've gotten backed up on on those issues. So if some some good portion of those are are infer created or related, then that might be lifting it as well."
+  },
+  {
+   "idx": 60,
+   "speaker": 4,
+   "startMs": 947205,
+   "endMs": 955925,
+   "text": "I can take the the the the deeper dig in and then provide an update next time. I think we need extra debug slicing of the data here."
+  },
+  {
+   "idx": 61,
+   "speaker": 4,
+   "startMs": 962580,
+   "endMs": 964900,
+   "text": "Sid, you would like to go to point eight?"
+  },
+  {
+   "idx": 62,
+   "speaker": 1,
+   "startMs": 965940,
+   "endMs": 978735,
+   "text": "Yeah. We are now measuring s one s two SLO achievement with closed bugs. But if you then look at the the number of bugs, it's exponential growth."
+  },
+  {
+   "idx": 63,
+   "speaker": 1,
+   "startMs": 980815,
+   "endMs": 1013995,
+   "text": "And then it will be trivial to to achieve a 100% SLO achievement if you just look at closed bugs. Even though there would be a major problem in the company, 99% of all bugs are overdue. As long as I only close ones that are still within the SLO, I'll have great achievement. So I think we shouldn't be looking at the closed bugs. I think we should be looking at open bugs, the entire population or percentage of doses within the SLO time. I think we're doing it the wrong way."
+  },
+  {
+   "idx": 64,
+   "speaker": 4,
+   "startMs": 1015860,
+   "endMs": 1040460,
+   "text": "Thanks for the thanks for the feedbacks that hence why we wanted to have the average age to to measure what's outside in the open. We can make this iteration to measure also measure focus on the the age of all opened or including open bugs. This is all something we I have discussed with Christopher in the next iteration as well, and we're happy more than happy to adjust."
+  },
+  {
+   "idx": 65,
+   "speaker": 1,
+   "startMs": 1041100,
+   "endMs": 1070880,
+   "text": "So the the key yeah. Go ahead. So average age would get closer to it. It's not what I'm proposing. What I'm proposing is of the open box, what percentages outside of SLO. So display it as a percentage. You do now. Just do it about the open bugs, not the closed ones. Got it. Okay. The exceeding SLO for opened bugs. Yeah. Or open bugs that are within SLO. So you have a chart that should go up into the right like everything else."
+  },
+  {
+   "idx": 66,
+   "speaker": 4,
+   "startMs": 1073760,
+   "endMs": 1081265,
+   "text": "Sounds great. We can take it to the the next data metrics work stream to deliver with this. Cool. Thanks."
+  },
+  {
+   "idx": 67,
+   "speaker": 0,
+   "startMs": 1081585,
+   "endMs": 1102660,
+   "text": "These are pretty Yeah. I'm a little tricky, Mac. You'll have to figure out how to because we like to be able to have charts that we can historically reconstruct if we need to. So when tickets close out, you need to go through their history to figure out at best time when it was open, did it breach the SLO or not. That's a good point. This might be much harder computationally."
+  },
+  {
+   "idx": 68,
+   "speaker": 1,
+   "startMs": 1103060,
+   "endMs": 1105940,
+   "text": "So I I totally respect if we can do it for that reason."
+  },
+  {
+   "idx": 69,
+   "speaker": 0,
+   "startMs": 1112675,
+   "endMs": 1114115,
+   "text": "Cool. Nine, Craig?"
+  },
+  {
+   "idx": 70,
+   "speaker": 7,
+   "startMs": 1115875,
+   "endMs": 1126380,
+   "text": "Yeah. I just wanted to ask the team. Like, I I went through all the the key meeting metrics. Everything looked in line with prior periods and look good. Is there anything the team wants to call out, especially, that we should be watching?"
+  },
+  {
+   "idx": 71,
+   "speaker": 8,
+   "startMs": 1129100,
+   "endMs": 1165685,
+   "text": "Yeah. I'll call out Suss. So the good news is in q four, we had our smallest decline over several quarters. So we only went down by a tenth of a point. The per quarter previous was point six or six tenths of a point, and the quarter before that was a full point. So we see this as an improvement even though it was still a decline, but it's still a decline. Obviously, we want this actually tracking in upward direction. We also don't have enough data to know whether or not this is an actual real trend up. So I'm optimistic."
+  },
+  {
+   "idx": 72,
+   "speaker": 8,
+   "startMs": 1165925,
+   "endMs": 1185200,
+   "text": "I think this is a good thing. We have had a much keener focus on SaaS over the past several quarters. So that's why I think, okay. The work that we've done, I think, actually is catching up and and getting noticed in SaaS, but we gotta keep an eye on it. We can't we cannot assume that that's the case."
+  },
+  {
+   "idx": 73,
+   "speaker": 2,
+   "startMs": 1191135,
+   "endMs": 1214190,
+   "text": "Yeah. And and the bug discussion above, just kinda points out that, like, we have an underlying, problem right now in our metrics measurement. So if we change the measurements to reflect that, then hopefully we're in good shape. If we don't and we flatline and address it, so that we flatline, open s ones and s twos, you will see a temporary jump in in, us above SLOs, as we clear out that backlog over that period of time."
+  },
+  {
+   "idx": 74,
+   "speaker": 0,
+   "startMs": 1217655,
+   "endMs": 1235570,
+   "text": "And I have point c, which is similar to infrastructure. We need to get more security work prioritized. We're hearing that from the team, but neither that problem nor that activity is sort of currently reflected in our security metrics. So we have some work to do long term to to make sure the we we see things like that in the metrics and and the measurements that we're making."
+  },
+  {
+   "idx": 75,
+   "speaker": 0,
+   "startMs": 1242425,
+   "endMs": 1244585,
+   "text": "So back to you, Sid, Tim."
+  },
+  {
+   "idx": 76,
+   "speaker": 1,
+   "startMs": 1245465,
+   "endMs": 1260400,
+   "text": "Yeah. The narrow MR rate seems significantly below target, and maybe I I hope that it would bounce back from December. I think it bounced back, but not back on target. Any any context there? What's what's going on?"
+  },
+  {
+   "idx": 77,
+   "speaker": 2,
+   "startMs": 1263680,
+   "endMs": 1264800,
+   "text": "Yeah. So"
+  },
+  {
+   "idx": 78,
+   "speaker": 2,
+   "startMs": 1267520,
+   "endMs": 1305375,
+   "text": "with family and friends days, we actually had some heavier vacation days in January than we historically have. One thing to note is that, we are actually at a higher MR rate. If you look at if you go back to the last eighteen months, we're actually at a higher narrow MR rate than we were back in each month this year. So if you compare, October to October, November to November, and this and January I'm sorry. October November, December, and January, comparatively to last year, which you'll find us we're between a half point and a 1.5 MR rate above"
+  },
+  {
+   "idx": 79,
+   "speaker": 2,
+   "startMs": 1305775,
+   "endMs": 1341795,
+   "text": "where we were in the month of previous year. That's that's great context. Thank you, Christopher. Good work. Yeah. So the expectation is is that February is a short month. We are at, I think, 16 workdays with friends and family day and other things. Obviously, us having power outages in Texas doesn't help things either for the folks who are working in Texas. But, hopefully, the rest of the team is being effective. I was hoping to see a better result right now, but with four or five days, particularly around, release week, that's usually when we see do do see a little bit higher activity. So that's not accounted for yet."
+  },
+  {
+   "idx": 80,
+   "speaker": 2,
+   "startMs": 1343350,
+   "endMs": 1348630,
+   "text": "But, you know, March is March is when I'm expecting to kinda see a real rebound, much like we did last year."
+  },
+  {
+   "idx": 81,
+   "speaker": 1,
+   "startMs": 1349190,
+   "endMs": 1350550,
+   "text": "Awesome. Thanks."
+  },
+  {
+   "idx": 82,
+   "speaker": 0,
+   "startMs": 1351510,
+   "endMs": 1390615,
+   "text": "The other context I'll give is, we now do time series targets. So when we change the target, you'll see they're reflected in the line. So if we were to look back historically here, the goal here is actually lower. And Christopher was ambitious and we kept raising and we kept meeting that. So it should stair step here and we could go back and reconstruct that if we really wanted to. And then ignoring the sort of the the seasonal dip here, we raised it to, I think, 11, and then we realized we're kind of hitting that point of diminishing returns and the right thing to do business wise, and this is in our f y '22 direction, is hold the line at productivity but start to raise other things related to quality, security, availability,"
+  },
+  {
+   "idx": 83,
+   "speaker": 0,
+   "startMs": 1390775,
+   "endMs": 1404730,
+   "text": "and and whatnot. So that's kind of why why you're seeing this bump is we raised it and we realized, okay. That's not the we shouldn't raise it anymore, and we brought it back down to 10. So 10 will be the target going forward. I'm gonna try to get better at a lot of other things while preventing this from dipping."
+  },
+  {
+   "idx": 84,
+   "speaker": 1,
+   "startMs": 1405450,
+   "endMs": 1429450,
+   "text": "Cool. And I just wanna call out that it's not m higher MR rates should also help to address security and quality and other things because you're more productive so you can fix more things. So it's not necessarily opposite. But I I I agree with let's hold the line. 10 is 10 is a great number and and focus on other indicators to improve. That makes a ton of sense."
+  },
+  {
+   "idx": 85,
+   "speaker": 0,
+   "startMs": 1430890,
+   "endMs": 1432090,
+   "text": "Cool. Well said."
+  },
+  {
+   "idx": 86,
+   "speaker": 0,
+   "startMs": 1435610,
+   "endMs": 1438410,
+   "text": "Alright. That's it for the agenda. Anyone wanna vocalize anything else?"
+  },
+  {
+   "idx": 87,
+   "speaker": 0,
+   "startMs": 1442901,
+   "endMs": 1450181,
+   "text": "Great. Well, thanks, everybody. And I'm gonna go check on my four year old and see if she got what whatever she needed. So cheers, and talk soon. Thanks, Sarah."
+  }
+ ]
+}

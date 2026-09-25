@@ -1,0 +1,38 @@
+[
+ {
+  "key": 0,
+  "name": "Sid Sijbrandij",
+  "role": "CEO",
+  "confident": true
+ },
+ {
+  "key": 1,
+  "name": "Josh",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 2,
+  "name": "Eric",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 3,
+  "name": "Steve",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 4,
+  "name": "Jarir",
+  "role": null,
+  "confident": true
+ },
+ {
+  "key": 5,
+  "name": "Fabienne",
+  "role": null,
+  "confident": true
+ }
+]

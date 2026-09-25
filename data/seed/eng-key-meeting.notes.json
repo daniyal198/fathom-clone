@@ -1,0 +1,214 @@
+{
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "Eric Johnson proposed restructuring engineering reviews into department-specific rotations and simplifying community contribution metrics to a percentage-based KPI. The team also addressed data reporting lags caused by database replication issues and refined bug SLO tracking.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Engineering key reviews will move to a two-month rotation between departments to increase visibility and focus.",
+        "startMs": 36990
+       },
+       {
+        "text": "The R&D wider MR rate will be replaced by a KPI tracking the percentage of total MRs from the community.",
+        "startMs": 400945
+       },
+       {
+        "text": "A four-day lag in engineering metrics is being addressed by creating a dedicated database host for the data team.",
+        "startMs": 641810
+       },
+       {
+        "text": "Bug SLO tracking will shift to focus on the percentage of open bugs exceeding SLOs to prevent metric gaming.",
+        "startMs": 980815
+       },
+       {
+        "text": "The target for narrow MR rate is officially set to 10 to balance productivity with quality and security goals.",
+        "startMs": 1390775
+       }
+      ]
+     },
+     {
+      "heading": "Meeting Restructuring",
+      "bullets": [
+       {
+        "text": "Eric proposed splitting the meeting into four department reviews: Development, Quality, Security, and UX/Infrastructure/Support.",
+        "startMs": 10720
+       },
+       {
+        "text": "The new format will follow a two-month rotation to avoid adding excessive meetings to stakeholder calendars.",
+        "startMs": 36990
+       },
+       {
+        "text": "Sid approved the proposal, noting that similar structures are working well in group conversations.",
+        "startMs": 68615
+       }
+      ]
+     },
+     {
+      "heading": "MR Rate and Community Metrics",
+      "bullets": [
+       {
+        "text": "The team clarified that wider MR rate refers specifically to external community contributions per GitLab team member.",
+        "startMs": 278795
+       },
+       {
+        "text": "Eric and Sid agreed to replace complex taxonomy with a simple percentage of total MRs from the community KPI.",
+        "startMs": 456995
+       },
+       {
+        "text": "Lily and Mac will manage the transition of these metrics in the reporting dashboards.",
+        "startMs": 491130
+       }
+      ]
+     },
+     {
+      "heading": "Data Infrastructure and Replication Lag",
+      "bullets": [
+       {
+        "text": "Christopher reported that development metrics have not updated for four days due to a data lag issue.",
+        "startMs": 548080
+       },
+       {
+        "text": "Steve identified the cause as Postgres replication lag on the secondary host used for data pulling.",
+        "startMs": 630450
+       },
+       {
+        "text": "Infrastructure will create a dedicated host for the data team to eliminate conflicting query traffic.",
+        "startMs": 723140
+       }
+      ]
+     },
+     {
+      "heading": "Defect Tracking and SLOs",
+      "bullets": [
+       {
+        "text": "S1 defect SLO achievement is currently at 80 percent, while S2 achievement is at 60 percent.",
+        "startMs": 793980
+       },
+       {
+        "text": "Sid requested a new chart showing the percentage of open bugs currently within or outside of SLO.",
+        "startMs": 1041100
+       },
+       {
+        "text": "Mac will work with the data metrics stream to implement tracking for the age of all open bugs.",
+        "startMs": 1073760
+       }
+      ]
+     },
+     {
+      "heading": "Narrow MR Rate and Performance",
+      "bullets": [
+       {
+        "text": "The narrow MR rate is currently below target due to holidays, vacations, and power outages in Texas.",
+        "startMs": 1305775
+       },
+       {
+        "text": "Christopher expects a performance rebound in March, following historical seasonal trends.",
+        "startMs": 1343350
+       },
+       {
+        "text": "The FY22 target is fixed at 10 to prioritize quality, security, and availability over further productivity increases.",
+        "startMs": 1390775
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Lily and Mac must transition community contribution metrics to a percentage-based KPI.",
+        "startMs": 491130
+       },
+       {
+        "text": "Steve will create a dedicated database host for the data engineering team.",
+        "startMs": 641810
+       },
+       {
+        "text": "Mac will iterate on bug SLO metrics to include the status of open bugs.",
+        "startMs": 1073760
+       },
+       {
+        "text": "Steve will provide an update on database replication issues at the next infrastructure review.",
+        "startMs": 747390
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ },
+ "title": "Engineering Key Review - 02/18/2021",
+ "actionItems": [
+  {
+   "text": "Work with Max to transition the KPI to percentage of total MRs from the community.",
+   "assignee": "Lily",
+   "startMs": 491130
+  },
+  {
+   "text": "Own escalations for Postgres replication lag and create a dedicated host for the data team to pull from.",
+   "assignee": "Steve",
+   "startMs": 641810
+  },
+  {
+   "text": "Add the Postgres replication issue to the infra key review for next week.",
+   "assignee": "Guest 1",
+   "startMs": 747390
+  },
+  {
+   "text": "Provide an update on the Postgres replication issue at the infra key review next week.",
+   "assignee": "Steve",
+   "startMs": 747390
+  },
+  {
+   "text": "Perform a deeper dive into the S2 mean time to close spike and provide an update next time.",
+   "assignee": "Mac",
+   "startMs": 947205
+  },
+  {
+   "text": "Take the proposal to measure the percentage of open bugs outside of SLO to the next data metrics work stream.",
+   "assignee": "Mac",
+   "startMs": 1073760
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Meeting Introduction & Agenda Change",
+   "gist": "Eric Johnson introduced the meeting and proposed splitting the engineering key review into four department-specific reviews on a two-month rotation to increase visibility and allow deeper dives.",
+   "startMs": 0,
+   "endMs": 101015
+  },
+  {
+   "idx": 1,
+   "title": "R&D MR Rate KPI Review",
+   "gist": "The team discussed the definition and effectiveness of R&D overall and wider MR rates as KPIs, with Eric Johnson proposing a shift to tracking the percentage of total MRs from the community.",
+   "startMs": 101015,
+   "endMs": 577600
+  },
+  {
+   "idx": 2,
+   "title": "Postgres Replication Lag",
+   "gist": "Guest 1 raised concerns about Postgres replication lag, its ownership, and potential solutions, with Steve confirming infrastructure's DRI role and plans for a dedicated host.",
+   "startMs": 577600,
+   "endMs": 793980
+  },
+  {
+   "idx": 3,
+   "title": "Defect Tracking & SLOs",
+   "gist": "Mac provided an update on defect tracking against SLOs, noting S1s at 80% and S2s at 60%, while Sid critiqued the current measurement method for closed bugs and proposed focusing on open bugs.",
+   "startMs": 793980,
+   "endMs": 1115875
+  },
+  {
+   "idx": 4,
+   "title": "Key Metrics & Performance",
+   "gist": "The team reviewed overall key metrics, including a smaller decline in SSAT and context on the narrow MR rate, with discussions on historical trends, seasonal dips, and future targets.",
+   "startMs": 1115875,
+   "endMs": 1450181
+  }
+ ],
+ "model": "gemini-2.5-flash"
+}

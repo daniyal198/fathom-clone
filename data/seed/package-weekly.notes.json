@@ -1,0 +1,286 @@
+{
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "The team welcomed new front-end engineer Nico and discussed process updates including async issue weighting, removing weekend on-call shifts, and improving the back-end weekly call.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Nicolo Maria Mezzanzanica (Nico) joined the package team as a new front-end engineer.",
+        "startMs": 4560
+       },
+       {
+        "text": "The team will use Issue Herder for T-shirt sizing estimates by October 16 to finalize the next milestone.",
+        "startMs": 51105
+       },
+       {
+        "text": "A proposal is underway to remove weekend on-call requirements from the infra-dev escalation process.",
+        "startMs": 295865
+       },
+       {
+        "text": "GitLab may increase hiring across the organization during Q4.",
+        "startMs": 677660
+       }
+      ]
+     },
+     {
+      "heading": "New team member introduction",
+      "bullets": [
+       {
+        "text": "John Mason introduced Nicolo Maria Mezzanzanica (Nico) as the team's newest front-end engineer.",
+        "startMs": 4560
+       },
+       {
+        "text": "Nico previously worked at PuyLab and maintains open-source Vue.js packages.",
+        "startMs": 27330
+       }
+      ]
+     },
+     {
+      "heading": "Issue weighting process",
+      "bullets": [
+       {
+        "text": "Dan Jensen outlined a plan to complete T-shirt sizing for issues by October 16.",
+        "startMs": 51105
+       },
+       {
+        "text": "The team will finalize deliverables on October 17 before starting the new milestone on October 18.",
+        "startMs": 88010
+       },
+       {
+        "text": "John Mason offered to provide demos of the Issue Herder tool for team members.",
+        "startMs": 153935
+       }
+      ]
+     },
+     {
+      "heading": "Daylight savings and meeting attendance",
+      "bullets": [
+       {
+        "text": "Steve Abrams reminded the team that daylight savings changes at the end of October may affect meeting times.",
+        "startMs": 187105
+       },
+       {
+        "text": "Dan Jensen emphasized that members missing meetings should watch the recordings the next day to stay connected.",
+        "startMs": 222685
+       }
+      ]
+     },
+     {
+      "heading": "On-call process iteration",
+      "bullets": [
+       {
+        "text": "Dan Jensen shared a discussion about removing weekend on-call shifts from the infra-dev escalation process.",
+        "startMs": 255490
+       },
+       {
+        "text": "The change addresses legal considerations regarding unpaid weekend work in certain countries.",
+        "startMs": 295865
+       }
+      ]
+     },
+     {
+      "heading": "Community contribution for Composer",
+      "bullets": [
+       {
+        "text": "Gigi is reviewing a large community contribution for the Composer PHP package manager.",
+        "startMs": 342070
+       },
+       {
+        "text": "Dan Jensen is following the merge request to ensure the community contribution receives proper support.",
+        "startMs": 360185
+       }
+      ]
+     },
+     {
+      "heading": "Navigation improvements",
+      "bullets": [
+       {
+        "text": "Axel Boldt-Christmas created a merge request to consolidate and improve navigation for package features.",
+        "startMs": 386475
+       },
+       {
+        "text": "The team is encouraged to review the merge request and provide feedback.",
+        "startMs": 405940
+       }
+      ]
+     },
+     {
+      "heading": "Back-end weekly call",
+      "bullets": [
+       {
+        "text": "Dan Jensen encouraged back-end engineers to attend the weekly call held at UTC-7.",
+        "startMs": 416805
+       },
+       {
+        "text": "The organization plans to invest more in the back-end call by adding tips, tricks, and social elements.",
+        "startMs": 527615
+       },
+       {
+        "text": "John Mason suggested adopting monthly social themes similar to the front-end team's process.",
+        "startMs": 603565
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Dan Jensen asked the team to review the Issue Herder tool and provide feedback on the weighting process.",
+        "startMs": 101385
+       },
+       {
+        "text": "Team members are requested to add their daylight savings dates to the agenda.",
+        "startMs": 222685
+       },
+       {
+        "text": "Team members should review Axel's navigation merge request and provide feedback.",
+        "startMs": 405940
+       },
+       {
+        "text": "Engineering managers will meet soon to help seed content for the back-end weekly calls.",
+        "startMs": 643350
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  "standup": {
+   "content": {
+    "tldr": "The package team discussed lightweight issue sizing, navigation improvements, and updates on community contributions like the composer package manager. They also welcomed new team member Nico.",
+    "sections": [
+     {
+      "heading": "Nicolo Maria Mezzanzanica",
+      "bullets": [
+       {
+        "text": "Joined the package team as a new front end engineer.",
+        "startMs": 4560
+       },
+       {
+        "text": "Previously worked at PuyLab and maintains open source Vue.js packages.",
+        "startMs": 39025
+       }
+      ]
+     },
+     {
+      "heading": "Dan Jensen",
+      "bullets": [
+       {
+        "text": "Highlighted the new process for async issue weight estimates using t shirt sizing before finalizing deliverables.",
+        "startMs": 51105
+       },
+       {
+        "text": "Followed the PHP package manager composer community contribution merge request.",
+        "startMs": 342070
+       }
+      ]
+     },
+     {
+      "heading": "John Mason",
+      "bullets": [
+       {
+        "text": "Offered to give a walk through of the IssueHerder tool for async issue weighting.",
+        "startMs": 153935
+       },
+       {
+        "text": "Shared that the front end weekly call uses monthly themed discussions to maintain social interaction at scale.",
+        "startMs": 603565
+       }
+      ]
+     },
+     {
+      "heading": "Steve Abrams",
+      "bullets": [
+       {
+        "text": "Raised the topic of upcoming daylight savings time changes and how they might affect meeting times.",
+        "startMs": 187105
+       }
+      ]
+     },
+     {
+      "heading": "Axel Boldt-Christmas",
+      "bullets": [
+       {
+        "text": "Created a merge request to improve navigation of package features.",
+        "startMs": 386475
+       }
+      ]
+     },
+     {
+      "heading": "Blockers needing help",
+      "bullets": [
+       {
+        "text": "No specific blockers were raised during the meeting.",
+        "startMs": 587130
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ },
+ "title": "Weekly Package Team Meeting",
+ "actionItems": [
+  {
+   "text": "Review the IssuerHerder tool for async issue weighting.",
+   "assignee": null,
+   "startMs": 101385
+  },
+  {
+   "text": "Add personal daylight savings dates to the meeting agenda.",
+   "assignee": null,
+   "startMs": 222685
+  },
+  {
+   "text": "Review the infra-dev escalation process thread regarding removing weekend on-call.",
+   "assignee": null,
+   "startMs": 323645
+  },
+  {
+   "text": "Review and provide feedback on the package feature navigation merge request.",
+   "assignee": null,
+   "startMs": 405940
+  },
+  {
+   "text": "Attend or review the backend weekly call (UTC-7).",
+   "assignee": "Steve Abrams",
+   "startMs": 452490
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Welcome Nicolo Maria Mezzanzanica",
+   "gist": "The team welcomes Nicolo Maria Mezzanzanica as a new front-end engineer.",
+   "startMs": 0,
+   "endMs": 51105
+  },
+  {
+   "idx": 1,
+   "title": "Issue Weighting and Process Iteration",
+   "gist": "Dan Jensen outlines the plan for async issue weighting and t-shirt sizing for the upcoming milestone.",
+   "startMs": 51105,
+   "endMs": 255490
+  },
+  {
+   "idx": 2,
+   "title": "On-call Changes and Community Contributions",
+   "gist": "The team discusses removing weekend on-call shifts and tracks progress on the Composer package manager contribution.",
+   "startMs": 255490,
+   "endMs": 416805
+  },
+  {
+   "idx": 3,
+   "title": "Backend Calls and Q4 Hiring",
+   "gist": "Dan Jensen encourages participation in backend weekly calls and notes a potential increase in hiring for Q4.",
+   "startMs": 416805,
+   "endMs": 740149
+  }
+ ],
+ "model": "gemini-3-flash-preview"
+}

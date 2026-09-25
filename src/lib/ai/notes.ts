@@ -1,4 +1,4 @@
-import { generateJSON } from "./gemini";
+import { generateJSON, type Tier } from "./gemini";
 import { templateByKey } from "./templates";
 import type { Chapter, Participant, SummaryContent, Utterance } from "../types";
 
@@ -39,9 +39,10 @@ const bulletSchema = {
 
 type RawSummary = { tldr: string; sections: { heading: string; bullets: { text: string; line: number | null }[] }[] };
 
-export async function generateSummary(templateKey: string, title: string, utts: Utterance[], people: Participant[]) {
+export async function generateSummary(templateKey: string, title: string, utts: Utterance[], people: Participant[], tier: Tier = "fast") {
   const t = templateByKey(templateKey);
   const { data, model } = await generateJSON<RawSummary>({
+    tier,
     system: SYSTEM,
     prompt: `Meeting: "${title}"
 Participants: ${people.map((p) => p.name).join(", ")}
@@ -85,10 +86,11 @@ type RawInsights = {
   chapters: { title: string; line: number; gist: string }[];
 };
 
-export async function generateInsights(title: string, utts: Utterance[], people: Participant[]) {
+export async function generateInsights(title: string, utts: Utterance[], people: Participant[], tier: Tier = "fast") {
   const durationMs = utts.at(-1)?.endMs ?? 0;
   const targetChapters = Math.max(3, Math.min(12, Math.round(durationMs / 1000 / 60 / 5)));
   const { data, model } = await generateJSON<RawInsights>({
+    tier,
     system: SYSTEM,
     prompt: `Meeting: "${title}"
 Participants: ${people.map((p) => p.name).join(", ")}

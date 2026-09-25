@@ -1,0 +1,299 @@
+{
+ "durationMs": 742824,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 0,
+   "endMs": 1040,
+   "text": "Okay."
+  },
+  {
+   "idx": 1,
+   "speaker": 1,
+   "startMs": 4560,
+   "endMs": 26355,
+   "text": "Alright. Good to go. You wanna lead us off? John, I think you have the first item. Yeah. Thanks, Dan. So hey. Welcome, everybody. We'd like to give Nico a warm welcome. Nico is joining us today as a new front end engineer on the package team. We're very excited to have you, Nico. Nico, I know you just did this, but would you mind just giving us a real quick snippet about yourself, please? Sure. Not a problem."
+  },
+  {
+   "idx": 2,
+   "speaker": 2,
+   "startMs": 27330,
+   "endMs": 37330,
+   "text": "So I'm Nico. My name is Nicolo, but Nico is perfect for everybody. Before GitLab, I was working in PuyLab, so I guess, Lap sticks with me."
+  },
+  {
+   "idx": 3,
+   "speaker": 2,
+   "startMs": 39025,
+   "endMs": 45265,
+   "text": "I'm really in love with UJS, and I maintain some open source packages, and I'm really excited to start."
+  },
+  {
+   "idx": 4,
+   "speaker": 1,
+   "startMs": 46625,
+   "endMs": 50705,
+   "text": "Nico, we are super excited you're here. Thank you for that, and welcome."
+  },
+  {
+   "idx": 5,
+   "speaker": 0,
+   "startMs": 51105,
+   "endMs": 87450,
+   "text": "Awesome. Thanks, Dan. Over to you. Welcome, Nico. It's it's great to have you on the team. And I next item was issue heard of for doing async issue weight estimates. So we've been walking through, you know, adding to a very lightweight process as we need to add it. As we're seeing gaps, the plan is to sort of do as little effort as we can and then just start working on things. And as we see gaps, we're gonna start adding, you know, processes if if we feel like they're necessary. Recently, we agreed to do sort of t shirt sizing on all our issues. That was going to happen the day before the seventeenth to the sixteenth,"
+  },
+  {
+   "idx": 6,
+   "speaker": 0,
+   "startMs": 88010,
+   "endMs": 94090,
+   "text": "and we're going to finalize what's deliverable on the seventeenth before we actually kick off work on the eighteenth of our new milestones."
+  },
+  {
+   "idx": 7,
+   "speaker": 0,
+   "startMs": 95705,
+   "endMs": 99385,
+   "text": "Yeah. I would like to see everyone's feedback, and I see people have already commented"
+  },
+  {
+   "idx": 8,
+   "speaker": 0,
+   "startMs": 101385,
+   "endMs": 139650,
+   "text": "in the agenda. But I think what we wanna do is sort of decide if we feel like this is helpful. Happy to wait for the next milestone to see if people are, like, really concerned about the way we decided to already do the the lightweight issue waiting effort that we have. I prefer to iterate on things and not just add a whole bunch of process unless there's clear reason why we're adding it. And that's kind of why I'm sort of saying, hey. Go take a look at this tool. John's used it so John can answer questions better than I can with the issue header. And so, yeah, just flag that for everyone. Go take a look at that tool. If you don't have access, Darby or myself,"
+  },
+  {
+   "idx": 9,
+   "speaker": 0,
+   "startMs": 140050,
+   "endMs": 142530,
+   "text": "I have to reach out to Darby for people if I need to."
+  },
+  {
+   "idx": 10,
+   "speaker": 0,
+   "startMs": 144930,
+   "endMs": 148130,
+   "text": "Cool. I think you have the next item as well."
+  },
+  {
+   "idx": 11,
+   "speaker": 0,
+   "startMs": 149810,
+   "endMs": 153650,
+   "text": "And if people wanna discuss that further, just sort of"
+  },
+  {
+   "idx": 12,
+   "speaker": 1,
+   "startMs": 153935,
+   "endMs": 181110,
+   "text": "issue her to further, just sort of hit up John and package channel to he said he'd do a demo for us. Do have the next item, John? Yeah. Thanks, Dan. Yeah. Plea please reach out for IssuerHerder. I can give you a walk through of how why we built it, what it does, all that good stuff. Next point is just a a a silly Chuck or a silly point we're saying hi to Chuck. Chuck is a is a good friend who's been sometimes follows our meetings on YouTube. So hi, Chuck. Hi, Chuck."
+  },
+  {
+   "idx": 13,
+   "speaker": 1,
+   "startMs": 182870,
+   "endMs": 185190,
+   "text": "Over to Steve. Thanks, everybody."
+  },
+  {
+   "idx": 14,
+   "speaker": 3,
+   "startMs": 187105,
+   "endMs": 215725,
+   "text": "Yeah. I was just thinking over the last week, I realized that some of us might have daylight savings coming up and realized that maybe not all of ours line up. So thought it'd be maybe a good idea to know when that might happen for some people and whether or not that affects any of these meeting times in any particular way. But looks like some people have started to just post their dates, and just something to keep in mind as we kind of reach the end of October in a month or so."
+  },
+  {
+   "idx": 15,
+   "speaker": 0,
+   "startMs": 217325,
+   "endMs": 220845,
+   "text": "Cool. Yeah. It's a good call out, Steve. Thanks for that. Nice job."
+  },
+  {
+   "idx": 16,
+   "speaker": 0,
+   "startMs": 222685,
+   "endMs": 254575,
+   "text": "I will add mine as well if people wanna go through and add that to the agenda. I mean, it will just happen with meetings and everything in terms of them sliding, but I they won't move automatically. So it's a good it's a really good point. We do have async meetings for a reason. So if they turn into a time that doesn't work for people, then we should be able to attend as best as we can with the meeting notes and then watching the meeting. Just for anyone that can't make a meeting, just as the friendly reminder that you should consider that meeting the next day that you're available or working,"
+  },
+  {
+   "idx": 17,
+   "speaker": 0,
+   "startMs": 255490,
+   "endMs": 294340,
+   "text": "you should consider that a meeting that you watch as your your meeting and and take that time, thirty minutes or whatever it is, twenty five minutes to sit down and actually review what's in the agenda and then what actually happened in the call. Just because if you don't, you're just gonna lose connection with what's happening in the team, and that's why we have the async setup. So okay. And the next item is mine. There's a discussion that I linked to here of going around iterating on our infrared dev escalation process to remove the weekend on call element of that for now. There are a lot of if you look through that thread hi, Tim."
+  },
+  {
+   "idx": 18,
+   "speaker": 0,
+   "startMs": 295865,
+   "endMs": 322110,
+   "text": "If you look through that thread, you'll find that the initial issue was raised to say, hey. Let's iterate and remove this because there are a bunch of actual legal considerations around people working on weekends in some countries without, you know, being paid. And so there's a lot of considerations to the iteration that are being proposed is to remove the weekend element of on call, which might make some people feel a little happier because they don't have to be on call on weekends."
+  },
+  {
+   "idx": 19,
+   "speaker": 0,
+   "startMs": 323645,
+   "endMs": 336045,
+   "text": "I don't blame people for feeling happier that way. So go check that out if you're interested. Don't spend a heap of time on it, but there's already a consensus by looking at that we we may be pulling the weekend on call out."
+  },
+  {
+   "idx": 20,
+   "speaker": 0,
+   "startMs": 338470,
+   "endMs": 339350,
+   "text": "And then"
+  },
+  {
+   "idx": 21,
+   "speaker": 0,
+   "startMs": 342070,
+   "endMs": 359945,
+   "text": "we're looking at the the next item I had was the the way to move forward on the community contribution for composer, which is PHP package manager. Gigi's taking a look at that, and I did see a massive commit going to that over the weekend."
+  },
+  {
+   "idx": 22,
+   "speaker": 0,
+   "startMs": 360185,
+   "endMs": 385675,
+   "text": "So many there's so many commits, just like huge emails, so so maybe that's gonna stop moving. I'm following that MR so that I can get notifications when stuff happens on it because I really would love to see that move move forward because, you know, when the community spends time contributing, it's obviously important that we that we support them as best as we can. So I feel like that one's pretty well answered so far. And on to you, Axel."
+  },
+  {
+   "idx": 23,
+   "speaker": 4,
+   "startMs": 386475,
+   "endMs": 404340,
+   "text": "Yeah. Thanks. So on Friday, I put together merge request about improving the navigation of the of the package features. So right now, they are all under one roof because before, they were scheduled all over the place. So I think this is gonna improve things as Tim suggested."
+  },
+  {
+   "idx": 24,
+   "speaker": 4,
+   "startMs": 405940,
+   "endMs": 416165,
+   "text": "I bring the issue, the merge request, and I review up if you want to check it out and leave some feedback. I don't know. So, yeah, that's it from me."
+  },
+  {
+   "idx": 25,
+   "speaker": 0,
+   "startMs": 416805,
+   "endMs": 449930,
+   "text": "That's great. Thank you very much for that, Axel, and welcome to, I think, the first meeting you've been to. Yep. That's not sure. Yay. It's nice to have you here. Welcome. Yeah. Yeah. Then I have the last thing. There is a back end weekly call that goes on. It's tomorrow morning my time, which is UTC minus seven. If you look at the team meetings, you'll actually be able to find that. And this is mostly for you, Steve, and Gigi as Gigi's watching this. Hi, Gigi."
+  },
+  {
+   "idx": 26,
+   "speaker": 0,
+   "startMs": 452490,
+   "endMs": 492345,
+   "text": "Just go check that meeting out. It's worth going to Tim Zalman raised this with me that we should be thinking about investing in that, and they're gonna start broadening the scope of it. Hopefully, to perhaps be maybe something that's like, ah, here's some tips and tricks. Here's how this works. Here's, like, that type of, like, environment set up for that. So definitely go check that out. I'm probably gonna go to a few of those if I can as well just to sort of see how it flows. But it's something that we don't have a lot of clear comms about across the org. So just flagging that for people. If you can't find it, I'll I will let's let's chat in package. There's a there's also a link in the"
+  },
+  {
+   "idx": 27,
+   "speaker": 3,
+   "startMs": 493465,
+   "endMs": 499625,
+   "text": "the description of the back end channel. There's a link for the back end call, which includes the agenda document."
+  },
+  {
+   "idx": 28,
+   "speaker": 0,
+   "startMs": 500025,
+   "endMs": 507640,
+   "text": "K. Have you been going to that? Mhmm. Nice. And and how is that something that you find helpful so far?"
+  },
+  {
+   "idx": 29,
+   "speaker": 3,
+   "startMs": 508360,
+   "endMs": 520655,
+   "text": "Yeah. I mean, it it's very back and forth. Like, some weeks, it doesn't even really happen because nobody puts anything on the agenda. And then other weeks, a few people will show up and and read from some other people's notes."
+  },
+  {
+   "idx": 30,
+   "speaker": 3,
+   "startMs": 522255,
+   "endMs": 527135,
+   "text": "But it's I I like it just to, you know, get a little face time with some people in other areas."
+  },
+  {
+   "idx": 31,
+   "speaker": 0,
+   "startMs": 527615,
+   "endMs": 559215,
+   "text": "Nice. Yeah. So I would say that it sounds like as an org, we're gonna try and invest a little bit more in that meeting. So maybe you have a think about what you think could be really useful there. There's a suggestion of, like I said, tips and tricks and whatnot, and even making it somewhat of a social thing. If if there wasn't any tips and tricks, I think there's problems with scaling once you get the tipping points once you go through scaling of social things where it gets to, like, 10 people and it there's just too many people for anyone to really feel like they're getting social value out or something, I think."
+  },
+  {
+   "idx": 32,
+   "speaker": 0,
+   "startMs": 561030,
+   "endMs": 582955,
+   "text": "But that's something definitely worth looking at. Thank you for that. And maybe think about any other items you wanna suggest for that, like, in that realm of, like, hey. How should this work? You know, maybe there's ideas of, like, here's a cool MR or here's an issue. Here is our resolve this. Whatever ideas you think would be useful, or maybe put them forward in the back end channel. I don't have to be the conduit for that. Cool."
+  },
+  {
+   "idx": 33,
+   "speaker": 0,
+   "startMs": 587130,
+   "endMs": 592970,
+   "text": "Questions for anyone? That's the end of our items in our agenda. Does anyone have anything else they wanna raise?"
+  },
+  {
+   "idx": 34,
+   "speaker": 0,
+   "startMs": 599885,
+   "endMs": 602045,
+   "text": "Awkward amount of silence. Yes."
+  },
+  {
+   "idx": 35,
+   "speaker": 1,
+   "startMs": 603565,
+   "endMs": 638135,
+   "text": "I'll add something. For the we have a front end weekly call as well. And, Dan, it is hard to kinda scale on that social level. So one thing we've been doing recently is every month, we'll do a front end themed call where it gives everybody an opportunity to like like, someone will pick, like, what's your favorite movie, what's your favorite book, and everybody will list that stuff out. And then everybody votes and chooses the winner, and then the winner picks the next the next theme for next month. So it's been kind of a fun way to to have some social interaction on a larger scale. So just wanted to throw that out there as as an idea."
+  },
+  {
+   "idx": 36,
+   "speaker": 0,
+   "startMs": 638855,
+   "endMs": 640935,
+   "text": "Yeah. Tim mentioned that to me as well."
+  },
+  {
+   "idx": 37,
+   "speaker": 0,
+   "startMs": 643350,
+   "endMs": 675580,
+   "text": "Yeah. I mean, I'm I'm I'm not trying to set what people do in there and what people find interesting out of those calls, but I think that's a good suggestion. Tim said that we there's there's probably gonna be an effort maybe in a couple of weeks to get a few engineering managers together to sort of help start seeding what's in the back end calls because it sounds like the back end call isn't a sort of a mature as as mature a process or interaction as the front end call is. So there might be some effort getting put towards that here in a couple of weeks or soon."
+  },
+  {
+   "idx": 38,
+   "speaker": 0,
+   "startMs": 677660,
+   "endMs": 704720,
+   "text": "Yeah. I think the other update, I guess, is that we may be increasing our hiring generally across GitLab in q four. There's a little flag, which it may not impact the package team beyond what we already are, but there might be extra peeps at a higher rate of peeps coming on board. So and if it wasn't already a lot of peeps already. So cool."
+  },
+  {
+   "idx": 39,
+   "speaker": 0,
+   "startMs": 706400,
+   "endMs": 709440,
+   "text": "Anything else anyone wants to discuss today?"
+  },
+  {
+   "idx": 40,
+   "speaker": 0,
+   "startMs": 714145,
+   "endMs": 735429,
+   "text": "And awkward silence. Yes. Alright. I think that's good to wrap up, and I think I just wanted to say thank you so much for everyone joining us. And, Axel, lovely to see you, and thank you so much for your hard work. And I hope everyone has a good rest of however much is rest of their day. Liz left of their day, I should say. Thanks."
+  },
+  {
+   "idx": 41,
+   "speaker": 2,
+   "startMs": 736549,
+   "endMs": 740149,
+   "text": "Thanks, everyone. Okay. Bye bye. Thank you. Bye. Bye."
+  }
+ ]
+}

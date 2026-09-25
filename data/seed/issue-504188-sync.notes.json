@@ -1,0 +1,384 @@
+{
+ "summaries": {
+  "general": {
+   "content": {
+    "tldr": "The meeting addressed the unrealistic November due date for sharding keys, with a focus on prioritizing organization ID columns. It also discussed proposed criteria for categorizing tables to detect miscategorizations and reduce the number of cluster-wide tables, with Krasimir taking action to automate detection.",
+    "sections": [
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "The November due date for all sharding keys is unrealistic, with a more realistic ETA of May 2025 based on current progress.",
+        "startMs": 187155
+       },
+       {
+        "text": "Sharding keys for organization ID columns are a higher priority and are nearing completion.",
+        "startMs": 104715
+       },
+       {
+        "text": "A reassessment of sharding key due dates is needed, potentially led by someone from the group organization.",
+        "startMs": 339350
+       },
+       {
+        "text": "Proposed criteria aim to detect miscategorizations and reduce the number of cluster-wide tables from 80 to a more manageable number.",
+        "startMs": 1492815
+       },
+       {
+        "text": "Krasimir will automate tests for three of the four proposed categorization criteria (cross-reference, table size) and generate a list of violations.",
+        "startMs": 931465
+       },
+       {
+        "text": "The 'right activity' criterion for categorization is more complex and may require manual review using Prometheus data.",
+        "startMs": 885290
+       }
+      ]
+     },
+     {
+      "heading": "Sharding Keys Due Date",
+      "bullets": [
+       {
+        "text": "Krasimir updated the stand-up agenda with past discussions regarding sharding keys.",
+        "startMs": 27730
+       },
+       {
+        "text": "Guest 1 was not aware of the specific details for sharding key due dates for teams.",
+        "startMs": 67580
+       },
+       {
+        "text": "Sharding keys for organization ID columns are considered more important than others.",
+        "startMs": 104715
+       },
+       {
+        "text": "The November deadline for all sharding keys was unrealistic, with over 70 tables still not done.",
+        "startMs": 131645
+       },
+       {
+        "text": "Guest 1 estimated a realistic ETA for all sharding keys as May 2025, based on the progress graph.",
+        "startMs": 187155
+       },
+       {
+        "text": "Tom will seek more information about the sharding key due dates.",
+        "startMs": 259250
+       },
+       {
+        "text": "Sharding keys are not actually required until Phase 7, while Phase 2 was just completed.",
+        "startMs": 297955
+       },
+       {
+        "text": "Guest 1 suggested reassessing the due dates given the overall roadmap.",
+        "startMs": 339350
+       },
+       {
+        "text": "Tom suggested someone from group organization should lead the reassessment of sharding work timelines.",
+        "startMs": 386805
+       },
+       {
+        "text": "Guest 1 is willing to get involved in determining timelines and communicating with teams.",
+        "startMs": 419665
+       }
+      ]
+     },
+     {
+      "heading": "Categorization Criteria",
+      "bullets": [
+       {
+        "text": "Tom added proposed criteria to the categorization issue for review.",
+        "startMs": 547990
+       },
+       {
+        "text": "Guest 1 asked for more definitive criteria to enable an automated detection process.",
+        "startMs": 574560
+       },
+       {
+        "text": "Tom outlined three potential outcomes for table categorization: cell table (add sharding key), cluster-wide (sync all tables), or cluster-wide but not synced in Sales 1.0 (e.g., users table).",
+        "startMs": 643755
+       },
+       {
+        "text": "Tom suggested a new schema like 'gitlab_main_user' or an attribute 'sync to all cells' to clarify cluster-wide table distinctions.",
+        "startMs": 739905
+       },
+       {
+        "text": "Guest 1 proposed splitting the issue into detecting miscategorizations and then addressing syncing problems separately.",
+        "startMs": 805840
+       },
+       {
+        "text": "Krasimir can automate tests for cross-reference and table size criteria using existing database views and the dictionary.",
+        "startMs": 859680
+       },
+       {
+        "text": "The 'right activity' criterion is more challenging and may require manual review using Prometheus data.",
+        "startMs": 885290
+       },
+       {
+        "text": "Tom explained 'split brain' as when a foreign key like 'plan_id' does not guarantee the same meaning across different cells.",
+        "startMs": 1122295
+       },
+       {
+        "text": "Tom is proposing a slight change to categorization to avoid having 80 unmanageable cluster-wide tables.",
+        "startMs": 1492815
+       },
+       {
+        "text": "The motivation for categorization considers both infrastructure factors (IO, table size) and data modeling relationships.",
+        "startMs": 1535850
+       },
+       {
+        "text": "Tom suggested creating a new 'gitlab_main_user' schema for user-related tables to record their special status.",
+        "startMs": 1863400
+       },
+       {
+        "text": "Krasimir suggested using a tag attribute instead of a new schema for user-related tables.",
+        "startMs": 1907745
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Krasimir will go over the organization ID sharding keys and post an update.",
+        "startMs": 500515
+       },
+       {
+        "text": "Krasimir will automate tests for cross-reference and table size categorization criteria and generate a list of violations.",
+        "startMs": 931465
+       },
+       {
+        "text": "Krasimir will review the proposed categorization criteria for completeness and provide feedback to Tom by early next week.",
+        "startMs": 1934835
+       },
+       {
+        "text": "Krasimir will post updates on the categorization issue.",
+        "startMs": 1955090
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-2.5-flash"
+  },
+  "project": {
+   "content": {
+    "tldr": "The meeting addressed the unrealistic November deadline for sharding keys and discussed proposed criteria for categorizing database tables. Krasimir S. will investigate categorization criteria and Tom Quigley will follow up on sharding key timelines.",
+    "sections": [
+     {
+      "heading": "Status",
+      "bullets": [
+       {
+        "text": "Krasimir S. updated the stand-up agenda with past discussions regarding sharding keys.",
+        "startMs": 27730
+       },
+       {
+        "text": "Significant progress has been made on organization ID sharding keys, with completion expected soon.",
+        "startMs": 131645
+       },
+       {
+        "text": "Approximately 70 tables still lack sharding keys, with some not yet started.",
+        "startMs": 131645
+       },
+       {
+        "text": "Tom Quigley added proposed categorization criteria to the relevant issue.",
+        "startMs": 547990
+       }
+      ]
+     },
+     {
+      "heading": "Decisions made",
+      "bullets": [
+       {
+        "text": "Krasimir S. will write tests for three categorization criteria: cross-reference, table size, and foreign keys.",
+        "startMs": 931465
+       },
+       {
+        "text": "Krasimir S. will build a list of cluster-wide tables and assess them against the proposed criteria.",
+        "startMs": 1925470
+       }
+      ]
+     },
+     {
+      "heading": "Blockers & risks",
+      "bullets": [
+       {
+        "text": "The November deadline for all sharding keys is unrealistic, with a more realistic ETA of May 2025 based on the progress graph (Guest 1).",
+        "startMs": 187155
+       },
+       {
+        "text": "There is a concern that easier sharding key tasks will be completed first, deferring harder ones indefinitely (Guest 1).",
+        "startMs": 197560
+       },
+       {
+        "text": "The 'right activity' criterion for categorization is trickier to automate as it requires looking at Prometheus data (Krasimir S.).",
+        "startMs": 885290
+       },
+       {
+        "text": "Syncing 80 cluster-wide tables is unmanageable and likely not performant enough (Tom Quigley).",
+        "startMs": 1738140
+       }
+      ]
+     },
+     {
+      "heading": "Open questions",
+      "bullets": [
+       {
+        "text": "What specific work depends on the organization ID sharding keys (Krasimir S.)?",
+        "startMs": 115490
+       },
+       {
+        "text": "Who will make the reassessment of sharding key due dates (Tom Quigley)?",
+        "startMs": 362925
+       },
+       {
+        "text": "How to clearly distinguish between cluster-wide tables that need syncing and those that don't, like the users table (Tom Quigley)?",
+        "startMs": 728545
+       },
+       {
+        "text": "Should the categorization issue be split further into detection and handling of miscategorizations (Guest 1)?",
+        "startMs": 827040
+       },
+       {
+        "text": "How to handle references from cell tables to cluster-wide tables that might lead to 'split brain' issues (Krasimir S.)?",
+        "startMs": 165165
+       },
+       {
+        "text": "Should a new field or tag be added to the database document to record table categorization decisions (Guest 1)?",
+        "startMs": 1241915
+       },
+       {
+        "text": "Will the categorization concept and rules change between Cells 1.0 and 1.5 (Guest 1)?",
+        "startMs": 1443920
+       },
+       {
+        "text": "How to reconcile infrastructure-driven categorization (IO, table size) with data modeling-driven categorization (data relationships) (Guest 1)?",
+        "startMs": 1535850
+       },
+       {
+        "text": "Are there any missing or excessive criteria in Tom Quigley's proposed list (Tom Quigley)?",
+        "startMs": 1679740
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Tom Quigley will follow up with Nick regarding the new due date for sharding keys.",
+        "startMs": 165165
+       },
+       {
+        "text": "Tom Quigley will find out more about sharding key due dates.",
+        "startMs": 259250
+       },
+       {
+        "text": "Guest 1 is willing to get involved in determining sharding timelines and communicating with teams.",
+        "startMs": 739905
+       },
+       {
+        "text": "Krasimir S. will go over the organization ID sharding key issues and post an update.",
+        "startMs": 500515
+       },
+       {
+        "text": "Tom Quigley needs a new set of dates for sharding keys, specifying which columns (e.g., organization ID).",
+        "startMs": 815125
+       },
+       {
+        "text": "Krasimir S. will consider if any criteria are missing or excessive while analyzing the data.",
+        "startMs": 1934835
+       },
+       {
+        "text": "Krasimir S. will post an update on the issue, likely early next week.",
+        "startMs": 1955090
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-2.5-flash"
+  }
+ },
+ "title": "Sharding Keys and Table Categorization Sync",
+ "actionItems": [
+  {
+   "text": "Go through the organization ID issues and post an update on their progress.",
+   "assignee": "Krasimir S.",
+   "startMs": 131645
+  },
+  {
+   "text": "Find out more about the sharding key due date.",
+   "assignee": "Tom Quigley",
+   "startMs": 259250
+  },
+  {
+   "text": "Propose a new set of dates for sharding key completion, distinguishing between organization ID columns and other keys.",
+   "assignee": "Guest 1",
+   "startMs": 445205
+  },
+  {
+   "text": "Implement tests for cross-reference and table size criteria for categorization detection.",
+   "assignee": "Krasimir S.",
+   "startMs": 931465
+  },
+  {
+   "text": "Build a list of cluster-wide tables, identify if they meet or fail the proposed categorization criteria, and evaluate the criteria for completeness/relevance.",
+   "assignee": "Krasimir S.",
+   "startMs": 1925470
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Split-Brain and Schema Implications",
+   "gist": "The group discussed how to detect split-brain scenarios with foreign keys and the need for new schemas or attributes to clarify table types and syncing requirements.",
+   "startMs": 0,
+   "endMs": 0
+  },
+  {
+   "idx": 1,
+   "title": "Next Steps for Categorization",
+   "gist": "Krasimir S. committed to building a list of cluster-wide tables based on the proposed criteria and evaluating the criteria for future categorization.",
+   "startMs": 0,
+   "endMs": 3360
+  },
+  {
+   "idx": 2,
+   "title": "Meeting Introduction",
+   "gist": "Tom Quigley introduced the meeting topics: sharding keys and categorization.",
+   "startMs": 3360,
+   "endMs": 18515
+  },
+  {
+   "idx": 3,
+   "title": "Sharding Key Due Dates",
+   "gist": "The group discussed the unrealistic November due date for all sharding keys and the importance of organization ID columns.",
+   "startMs": 18515,
+   "endMs": 177000
+  },
+  {
+   "idx": 4,
+   "title": "Reassessing Sharding Key Timelines",
+   "gist": "Guest 1 suggested a May 2025 ETA for sharding keys based on progress and proposed reassessing current due dates given the project's phase.",
+   "startMs": 177000,
+   "endMs": 635700
+  },
+  {
+   "idx": 5,
+   "title": "Assigning Sharding Key Date Reassessment",
+   "gist": "Tom Quigley suggested someone from group organization, possibly Guest 1, should lead the reassessment of sharding key timelines and communication with teams.",
+   "startMs": 635700,
+   "endMs": 1090220
+  },
+  {
+   "idx": 6,
+   "title": "Categorization Criteria for Tables",
+   "gist": "Tom Quigley presented proposed criteria for table categorization, leading to a discussion about separating detection from syncing problems.",
+   "startMs": 1090220,
+   "endMs": 1679740
+  },
+  {
+   "idx": 7,
+   "title": "Automating Categorization Detection",
+   "gist": "Krasimir S. offered to implement tests for cross-reference and table size criteria to automate categorization detection.",
+   "startMs": 1679740,
+   "endMs": 1979697
+  }
+ ],
+ "model": "gemini-2.5-flash"
+}
