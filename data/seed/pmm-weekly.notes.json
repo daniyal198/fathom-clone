@@ -1,0 +1,155 @@
+{
+ "summaries": {},
+ "title": "Product Marketing Meeting 2020-04-12",
+ "actionItems": [
+  {
+   "text": "Link his MR in the agenda and share his screen to show it to the team.",
+   "assignee": "Brian",
+   "startMs": 349605
+  },
+  {
+   "text": "Create an MR to stub out a checklist for sales play launch readiness.",
+   "assignee": "Cindy",
+   "startMs": 964115
+  },
+  {
+   "text": "Reach out to Hannah, Chris Wang, and Kelly (SMB enablement) regarding SDR enablement requirements and schedule time with them.",
+   "assignee": "Samia",
+   "startMs": 1009830
+  },
+  {
+   "text": "Double-check with Darren on the runner team for 14.o plans and follow up with Brian.",
+   "assignee": "Parker",
+   "startMs": 1297620
+  },
+  {
+   "text": "Query PM counterparts about their plans for 14.o.",
+   "assignee": null,
+   "startMs": 1307060
+  },
+  {
+   "text": "Sync with the new C-level regarding 14.o plans.",
+   "assignee": "Brian",
+   "startMs": 1323405
+  },
+  {
+   "text": "Plan the activities for the 14.o launch.",
+   "assignee": "Brian",
+   "startMs": 1374425
+  },
+  {
+   "text": "Open an MR to update the release post managers page to reflect the 14.o launch ownership change.",
+   "assignee": "Parker",
+   "startMs": 1387750
+  },
+  {
+   "text": "Create a slide for the Group Conversation (GC) deck focusing on outcomes and measurement for GTM motions.",
+   "assignee": "William",
+   "startMs": 1826425
+  },
+  {
+   "text": "Create an overview of how all GTM motions are measuring success.",
+   "assignee": "William",
+   "startMs": 1881215
+  },
+  {
+   "text": "Add thoughts to the issue regarding the partner vs. competitor strategy.",
+   "assignee": "Alida",
+   "startMs": 2119960
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Meeting Start & Agenda",
+   "gist": "William opened the weekly product marketing meeting for April 12th with a light agenda.",
+   "startMs": 0,
+   "endMs": 14795
+  },
+  {
+   "idx": 1,
+   "title": "Sales Plays Timeline Discussion",
+   "gist": "William raised concerns about the sales plays timeline, noting that team members might not have committed to the proposed dates.",
+   "startMs": 14795,
+   "endMs": 134775
+  },
+  {
+   "idx": 2,
+   "title": "DRI for Sales Play Dates",
+   "gist": "Cindy suggested that the DRI for sales play schedules and work plans should be the lead for each GTM motion, with PMM ensuring alignment.",
+   "startMs": 134775,
+   "endMs": 226530
+  },
+  {
+   "idx": 3,
+   "title": "DevOps Platform Sales Play Status",
+   "gist": "Cormac discussed ongoing discussions about the DevOps platform sales play, suggesting finishing the play but potentially tabling the associated campaign due to lack of sales appetite.",
+   "startMs": 226530,
+   "endMs": 349605
+  },
+  {
+   "idx": 4,
+   "title": "Brand Messaging vs. Use Case Separation",
+   "gist": "Brian shared his work on separating brand messaging from the use case, which has caused confusion, and William requested he link the MR and share his screen.",
+   "startMs": 349605,
+   "endMs": 601945
+  },
+  {
+   "idx": 5,
+   "title": "Sales Play Launch Definition",
+   "gist": "Samia questioned what constitutes 'launching a sales play,' prompting Cindy to suggest creating an MR template with a launch readiness checklist.",
+   "startMs": 601945,
+   "endMs": 782305
+  },
+  {
+   "idx": 6,
+   "title": "SDR Enablement Contacts",
+   "gist": "Samia asked for global SDR enablement contacts, and William identified Hannah and Chris Wang, with Cindy adding Kelly for SMB enablement.",
+   "startMs": 782305,
+   "endMs": 1049315
+  },
+  {
+   "idx": 7,
+   "title": "14.0 Release Launch Ownership",
+   "gist": "William proposed Brian own the 14.o launch, which is a major release typically involving press announcements, and confirmed Samia and Parker's availability for other releases.",
+   "startMs": 1049315,
+   "endMs": 1276810
+  },
+  {
+   "idx": 8,
+   "title": "14.0 Release Content Ideas",
+   "gist": "Brian discussed potential content for 14.o, including a breaking changes blog and a year-end review, and the team discussed coordinating with PMs and Natasha for special activities.",
+   "startMs": 1276810,
+   "endMs": 1482375
+  },
+  {
+   "idx": 9,
+   "title": "Group Conversation Deck Format",
+   "gist": "William expressed dissatisfaction with the current Group Conversation (GC) deck format, advocating for a shift from reporting activities to outcomes and results.",
+   "startMs": 1482375,
+   "endMs": 1944515
+  },
+  {
+   "idx": 10,
+   "title": "Partner vs. Competitor Strategy",
+   "gist": "Alida sought input on the strategy for handling vendors who are both partners and have overlapping capabilities, specifically whether to have only a comparison page, only a partner page, or both.",
+   "startMs": 1944515,
+   "endMs": 2466485
+  },
+  {
+   "idx": 11,
+   "title": "Analyst/Third-Party Input for Scoring",
+   "gist": "Alida proposed consulting analysts or hiring a third-party firm to help with competitive scoring, while William strongly criticized the current comparison graphic for its lack of credibility.",
+   "startMs": 2466485,
+   "endMs": 2907860
+  },
+  {
+   "idx": 12,
+   "title": "Scalability of Competitive Page Updates",
+   "gist": "William suggested a tiered approach to competitive pages, where PMMs would update 1-3 top tools quarterly as a core competency, making the process more scalable and reasonable than updating 80+ tools.",
+   "startMs": 2907860,
+   "endMs": 3193040
+  }
+ ],
+ "model": "gemini-2.5-flash"
+}

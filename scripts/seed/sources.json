@@ -1,0 +1,9 @@
+[
+  { "id": "pmm-weekly", "youtube": "uE4HwpsreEE", "type": "team", "template": "general" },
+  { "id": "ceo-pods-sync", "youtube": "Q7sxtxoRgT4", "type": "exec", "template": "general" },
+  { "id": "steak-discovery", "youtube": "QsJyiY_P5UQ", "type": "sales", "template": "sales" },
+  { "id": "issue-504188-sync", "youtube": "VV1Bjazv0dk", "type": "sync", "template": "project" },
+  { "id": "k8s-sig-network", "youtube": "3DNmDpTenCU", "type": "community", "template": "general" },
+  { "id": "eng-key-meeting", "youtube": "qGFoZ8yodc4", "type": "review", "template": "general" },
+  { "id": "package-weekly", "youtube": "Of39LKmX6iM", "type": "standup", "template": "standup" }
+]

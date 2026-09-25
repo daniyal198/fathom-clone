@@ -1,0 +1,1265 @@
+{
+ "durationMs": 3196044,
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": 0,
+   "startMs": 2720,
+   "endMs": 12640,
+   "text": "This is the, weekly product marketing meeting for April 12. So not a ton on the agenda today."
+  },
+  {
+   "idx": 1,
+   "speaker": 0,
+   "startMs": 14795,
+   "endMs": 23115,
+   "text": "So the one bullet point I have here is, have you all seen the timeline for sales plays?"
+  },
+  {
+   "idx": 2,
+   "speaker": 0,
+   "startMs": 26075,
+   "endMs": 32050,
+   "text": "So I put a link I am not. To this issue. Issue. And,"
+  },
+  {
+   "idx": 3,
+   "speaker": 0,
+   "startMs": 34130,
+   "endMs": 43490,
+   "text": "so the the intention behind this one issue, I believe, was to coordinate across"
+  },
+  {
+   "idx": 4,
+   "speaker": 0,
+   "startMs": 45095,
+   "endMs": 51175,
+   "text": "across GTM motions to have a unified timeline. But,"
+  },
+  {
+   "idx": 5,
+   "speaker": 0,
+   "startMs": 52855,
+   "endMs": 54535,
+   "text": "if I am"
+  },
+  {
+   "idx": 6,
+   "speaker": 0,
+   "startMs": 56460,
+   "endMs": 73455,
+   "text": "if I'm correct so so, ideally, this is this is what I would like to see that I don't think we've totally seen altogether. I think we're getting there as far as go to market motions in general and sales plays in particular. But, ideally, for example,"
+  },
+  {
+   "idx": 7,
+   "speaker": 0,
+   "startMs": 75375,
+   "endMs": 110145,
+   "text": "if somebody signs you up for a deadline, ideally, or a due date. Ideally, they ask you and they say, hey. Can you deliver thing x by this date? And then you would say, yes. I can. I I commit to doing that date. I don't think that that happened in this case, which is why I wanted to raise it to the entire group, where I think that's maybe some depending on which go to market team you're on, I think that maybe some folks were aware, yes, that was a date, and we discussed it as a team, and we committed to it. But I wanted to kinda raise it to the whole group to say,"
+  },
+  {
+   "idx": 8,
+   "speaker": 0,
+   "startMs": 111585,
+   "endMs": 123160,
+   "text": "hey. If you have not, like, look at the date, look at the stuff that's due for your your go to market team. If you have not committed to that date, you know, leave a comment on the issue."
+  },
+  {
+   "idx": 9,
+   "speaker": 0,
+   "startMs": 126760,
+   "endMs": 126920,
+   "text": "Honestly,"
+  },
+  {
+   "idx": 10,
+   "speaker": 0,
+   "startMs": 129735,
+   "endMs": 133255,
+   "text": "kind of even just evaluating it too, I'm"
+  },
+  {
+   "idx": 11,
+   "speaker": 0,
+   "startMs": 134775,
+   "endMs": 150390,
+   "text": "kinda thinking to myself, I don't I don't necessarily know who would be the DRI for these dates. And I I think it should be us, and I think it I think it's probably you, Cindy. Does that sound right to you?"
+  },
+  {
+   "idx": 12,
+   "speaker": 2,
+   "startMs": 151270,
+   "endMs": 174080,
+   "text": "That, like I think the dates should be by each team lead for each of the GTM motions. I think PMM needs to look at it and make sure it makes sense. And if it doesn't, have a conversation in those team meetings. But I think the DRI for the schedule and the work plan is the whoever's leading each of them, the GTM motions."
+  },
+  {
+   "idx": 13,
+   "speaker": 0,
+   "startMs": 174800,
+   "endMs": 177520,
+   "text": "So do we do we need this issue then?"
+  },
+  {
+   "idx": 14,
+   "speaker": 2,
+   "startMs": 178240,
+   "endMs": 190155,
+   "text": "Yeah. I think it helps keep us it gives us something to for visibility. I didn't realize the dates of of GitOps and the platform. So that's good to know."
+  },
+  {
+   "idx": 15,
+   "speaker": 3,
+   "startMs": 191035,
+   "endMs": 215475,
+   "text": "Yeah. And even if we end up landing a play in a different week, it's good to know what the ballpark is, like, the sort of expectations are that have been set. We we haven't actually in our team fully committed to, you know, a Gantt chart that's gonna land in that first week in June with the sales play. But could we? Sure. I mean, it's a couple months from now. We could do that. It's just good to know what the expectations are. And maybe when we Gantt it out, we're actually a week early or late or something like that."
+  },
+  {
+   "idx": 16,
+   "speaker": 2,
+   "startMs": 217155,
+   "endMs": 225315,
+   "text": "I'm kinda surprised why the platform is so late. It seems like we ought to be able to pull that in closer."
+  },
+  {
+   "idx": 17,
+   "speaker": 4,
+   "startMs": 226530,
+   "endMs": 245985,
+   "text": "Yeah. Well, we've been having some discussions on that. We're gonna have some more this week. But, I I dropped a comment into the, platform channel on Friday about that. There was there was some discussion about whether a DevOps platform"
+  },
+  {
+   "idx": 18,
+   "speaker": 4,
+   "startMs": 247745,
+   "endMs": 254910,
+   "text": "how much a DevOps platform sales play was needed right now or certainly the campaign. So"
+  },
+  {
+   "idx": 19,
+   "speaker": 4,
+   "startMs": 256510,
+   "endMs": 270685,
+   "text": "my my suggestion was just, like, let's finish the sales play. Let's give sales something that they need when they want to sell the value of a single app because we know they're going to wanna do that. But everything else might wind up tabled."
+  },
+  {
+   "idx": 20,
+   "speaker": 2,
+   "startMs": 271405,
+   "endMs": 275805,
+   "text": "It's Why? I don't understand. It seems like that was I thought that was"
+  },
+  {
+   "idx": 21,
+   "speaker": 4,
+   "startMs": 276365,
+   "endMs": 310200,
+   "text": "I mean, that's the key to our message. That was a big brand launch. Why would we not follow that with a campaign? The question is, like, is is there a product campaign based on there there was there there was some conflating of the brand message and the and the the GTM motion, and that was confusing to a lot of people, including some of us, I think, myself certainly being one of them. And and Brian actually did some work on on separating those as well. So"
+  },
+  {
+   "idx": 22,
+   "speaker": 4,
+   "startMs": 311240,
+   "endMs": 346570,
+   "text": "I my my belief that I could be wrong and this is being recorded, so don't quote me on this, although I I guess it's quotable now, is that there were some folks who were thinking that there would be a campaign around the brand message that was going to come out of our team, which doesn't really make sense because it's a brand campaign. And I I wasn't in all of the meetings, but there were some talks that our team lead, Zach, had had with others, and it looks like there wasn't a whole lot of appetite from sales for where we were headed on the campaign side. So yeah."
+  },
+  {
+   "idx": 23,
+   "speaker": 4,
+   "startMs": 348250,
+   "endMs": 348970,
+   "text": "Yeah. Maybe"
+  },
+  {
+   "idx": 24,
+   "speaker": 0,
+   "startMs": 349605,
+   "endMs": 368860,
+   "text": "I was gonna say on that topic, Brian, do you mind linking your MR in the agenda? And, actually, do you mind just sharing screen for a moment and kinda showing it to the team, and then we could encourage this kinda team to review it and then share it with some broader folks as well. Let's see here."
+  },
+  {
+   "idx": 25,
+   "speaker": 3,
+   "startMs": 380325,
+   "endMs": 415945,
+   "text": "Now we've got a series of other changes to the use case page, aka the go to market strategy page that are not in, what you're looking at right now in this branch just because we started working them separately. But, yeah, you can see we actually felt the need to go to the trouble of having a section that specs out the differences between the brand messaging and the use case. And I think that's useful to do if if not for anything else, then for future reference or for folks who are not"
+  },
+  {
+   "idx": 26,
+   "speaker": 3,
+   "startMs": 416345,
+   "endMs": 456340,
+   "text": "inside of our conversations every day. We've got individuals like Val who are inside of both conversations, the brand messaging and the go to market team. The number of folks who are only on one side of the other, so it's useful for us internally. But I think going forward, it'd be even more useful to separate those out. I will link to it in the agenda, but that's just to show that we've started working on it. We're going to pass this around, some more. William and Cormack and I have particularly contributed, but we also are feeding into these conversations with, you know, Becky and Zach and a lot of other folks from one or the other side of this."
+  },
+  {
+   "idx": 27,
+   "speaker": 3,
+   "startMs": 457220,
+   "endMs": 494855,
+   "text": "So a lot of other threads have been sort of woven together there. And as far as not needing a sales play, I think what we really needed was to flesh out a little bit more of the use case, and we're still doing that. So we're gonna sew that patient up, this week. And then the more sort of needed yeah. This is definitely an open patient still, but the more needed play, it felt like, was one of the competitive plays. And so that's our next decision as a team is which of those competitive plays to focus on, to Cindy's question. There just wasn't a real practical demand for a DevOps platform sales play"
+  },
+  {
+   "idx": 28,
+   "speaker": 3,
+   "startMs": 495495,
+   "endMs": 507550,
+   "text": "so long as the use case itself was was fleshed out. Obviously, that's our our key differentiator, and it's it's underwriting almost every conversation we have. But that doesn't mean it needs a play per se."
+  },
+  {
+   "idx": 29,
+   "speaker": 4,
+   "startMs": 508830,
+   "endMs": 526335,
+   "text": "And the the so far, what's been discussed for the the competitive play next would be either some sort of GitHub takeout or potentially something agile related because that's being recorded because there are some things coming up"
+  },
+  {
+   "idx": 30,
+   "speaker": 4,
+   "startMs": 527855,
+   "endMs": 556125,
+   "text": "in the in the coming weeks that that will that will probably help with that and also increase interest in that. But there's also possibility I I saw something mentioned in one of the meetings last week, said that that may feed into the premium to ultimate story, in which case that if if that's being handled elsewhere, then that could free us up to work on one of the the more direct takeouts. Yeah."
+  },
+  {
+   "idx": 31,
+   "speaker": 0,
+   "startMs": 558500,
+   "endMs": 593480,
+   "text": "Cool. And so there's there's an MR there that just has a little section. What's the difference between the, you know, DevOps platform as a use case for using GitLab and open DevOps platform, which is our brand message. And, probably right now, it has a certain opinion, but, obviously, you know, looping in the the brand folks and Todd and and the the org to to kinda come up with a a sharp way to articulate this to alleviate some of that confusion. So,"
+  },
+  {
+   "idx": 32,
+   "speaker": 0,
+   "startMs": 595720,
+   "endMs": 600360,
+   "text": "Samia, looks like you had a question about launching a sales play."
+  },
+  {
+   "idx": 33,
+   "speaker": 5,
+   "startMs": 601945,
+   "endMs": 627570,
+   "text": "Yeah. And and perhaps Cindy can help me with this. So the MR that William linked in the second point calls for launching the sales play on a specific date. I'd like to understand what entitles launching the sales play. Is it just having all your sales playbook assets together, do a sales enablement during that week, and,"
+  },
+  {
+   "idx": 34,
+   "speaker": 5,
+   "startMs": 629095,
+   "endMs": 655320,
+   "text": "you know, make sure that sales is equipped to go and sell? Or is there something else? I mean, do we have, like, a set of things that we definitely need to have when we say that we're launching the sales play. I I've linked to your definition of a sales play over here as well. So is that the bomb that we need to go with when we say we're gonna be launching the sales play in a specific week?"
+  },
+  {
+   "idx": 35,
+   "speaker": 2,
+   "startMs": 656315,
+   "endMs": 678310,
+   "text": "Well, that I mean, that's a very good point because each sales play is gonna be a little bit different in terms of like, for instance, you're going you're gonna be doing some enablement for the SDRs whereas the CI one is not because it's an expand and the SDRs aren't really involved. So it's more of an FYI for them."
+  },
+  {
+   "idx": 36,
+   "speaker": 2,
+   "startMs": 680710,
+   "endMs": 686685,
+   "text": "So very good question. Maybe I need to add a checklist of, like, launch readiness or something."
+  },
+  {
+   "idx": 37,
+   "speaker": 5,
+   "startMs": 688685,
+   "endMs": 704390,
+   "text": "Yeah. I think I think that would be useful just so that everybody in the org also knows what we actually mean by launching the sales play and also looking at David Somers note in the GTM motions"
+  },
+  {
+   "idx": 38,
+   "speaker": 5,
+   "startMs": 706390,
+   "endMs": 743255,
+   "text": "channel where he said that we don't have I think it was last week sometime that we don't have a clarity on where we're going with the sales play launch. Right? We haven't reached a reconciliation on what we wanna call as a sales play or a sales playbook. So this was probably before your discussions with David. Subsequently, you've had some discussions with him because I saw some threads around that. But I just wanna make sure that we're all on the same page when we say that this is what we're gonna be doing when we are gonna launch a sales play."
+  },
+  {
+   "idx": 39,
+   "speaker": 6,
+   "startMs": 743655,
+   "endMs": 767470,
+   "text": "Yeah. And it may be tough. So we used to do this. We used to launch go to market. We use a smart sheet, and we call it we had a minor and a major launch, and they all had different items. And you could pick and choose what would make up the launch. So I don't ever think it's gonna be a one to one relationship. But we also don't have a main checklist like that. So maybe that's a good thing. And I did not like using Smartsheets, by the way."
+  },
+  {
+   "idx": 40,
+   "speaker": 2,
+   "startMs": 768625,
+   "endMs": 781905,
+   "text": "Yeah. No. I think I would say let's have an MR template Yeah. With the checklist. And so you've got an actual MR for the actual launch, and it would have a checklist of things."
+  },
+  {
+   "idx": 41,
+   "speaker": 5,
+   "startMs": 782305,
+   "endMs": 809375,
+   "text": "Yeah. That makes sense, actually. And another follow on question on that related to SDR enablement and SDR related material, like the outreach sequence and so on. The feedback that I got from Elsha was that, normally, what they do is they take what we provide them as a part of assets and sales playbooks and so on, and they would create their own, you know, outreach sequences."
+  },
+  {
+   "idx": 42,
+   "speaker": 5,
+   "startMs": 811560,
+   "endMs": 841335,
+   "text": "In your sales play definition, we do have an SDR outreach sequence as a bullet point. So maybe Elsha came from a regional point of view where, you know, in every region, they probably modify it based on what the requirement is for the region. But who would be a global counterpart, so to say, or a leader for SDR enablement that we can talk to and make sure that we we kind of give them what they actually require?"
+  },
+  {
+   "idx": 43,
+   "speaker": 2,
+   "startMs": 842160,
+   "endMs": 845120,
+   "text": "There's So"
+  },
+  {
+   "idx": 44,
+   "speaker": 0,
+   "startMs": 846000,
+   "endMs": 861055,
+   "text": "there's there's two to loop in. So one is Hannah who leads the entire SDR globally, I believe. Yeah. And then the other one is Chris Wang who is, specifically responsible for SDR enablement."
+  },
+  {
+   "idx": 45,
+   "speaker": 2,
+   "startMs": 863375,
+   "endMs": 869720,
+   "text": "Okay. There's also actually, he's supposed to there's there's another"
+  },
+  {
+   "idx": 46,
+   "speaker": 2,
+   "startMs": 872680,
+   "endMs": 882600,
+   "text": "maybe it's SMB enablement. O'Nell told me to work with someone. I think her name is Melissa. No. That's not right. Kelly."
+  },
+  {
+   "idx": 47,
+   "speaker": 2,
+   "startMs": 884655,
+   "endMs": 894495,
+   "text": "There's a Kelly that does enablement for the SMB. So I get I how much she has to do with the SDRs, I'm not sure. It's k e l l e y."
+  },
+  {
+   "idx": 48,
+   "speaker": 2,
+   "startMs": 898420,
+   "endMs": 904420,
+   "text": "Maybe on the checklist, I have a list of names of who to contact to."
+  },
+  {
+   "idx": 49,
+   "speaker": 0,
+   "startMs": 908660,
+   "endMs": 916335,
+   "text": "Yeah. I I was just gonna say I think that the the idea behind launching the sales play"
+  },
+  {
+   "idx": 50,
+   "speaker": 0,
+   "startMs": 918495,
+   "endMs": 957450,
+   "text": "is that, one, it's probably Somers' calendar. That's that's the big constraint in the sense that we don't wanna say, like, hey. We're gonna ship these three things and then enable sales all of them all in the same week. So that's probably the major constraint. And then the the secondary constraint would be is if there are any associated marketing campaigns that need to be executed in conjunction with that sales play, then those similarly need to be on a calendar. And so I think that's the intention behind this issue that I linked in particular is that, from the perspective of marketing campaigns,"
+  },
+  {
+   "idx": 51,
+   "speaker": 0,
+   "startMs": 957850,
+   "endMs": 961450,
+   "text": "they need to know what date sales plays are gonna hit."
+  },
+  {
+   "idx": 52,
+   "speaker": 0,
+   "startMs": 964115,
+   "endMs": 972995,
+   "text": "So and then maybe there's a few others. So, Cindy, are are you taking an action item to create an MR to kinda stub out that checklist? Mhmm. Yep. Awesome. Thank you."
+  },
+  {
+   "idx": 53,
+   "speaker": 5,
+   "startMs": 974115,
+   "endMs": 985320,
+   "text": "Just to close out on that. So, Cindy, will you be reaching out to Hannah, and Christopher Wong Christopher Wong, or should should I reach out to them? If"
+  },
+  {
+   "idx": 54,
+   "speaker": 2,
+   "startMs": 985960,
+   "endMs": 1008630,
+   "text": "you need it done quickly, go ahead and do that, and then let you and I reconcile to fold in what you learn into the the overall MR. I I this needs to be pretty collaborative. So what I'm gonna do is I'll come up with a boilerplate for a checklist, and then I think everybody's gonna have to weigh in on it to add to it and flush it out a bit."
+  },
+  {
+   "idx": 55,
+   "speaker": 5,
+   "startMs": 1009830,
+   "endMs": 1027445,
+   "text": "Okay. Sounds good. I'll try to async reach out to the three of them, and then maybe later this week, try to schedule some time with them. If you're able to I'll keep you in the in sync. So if you're able to reach out to them earlier, that's fine as well. Okay."
+  },
+  {
+   "idx": 56,
+   "speaker": 2,
+   "startMs": 1030085,
+   "endMs": 1040180,
+   "text": "What I'd probably do is just ping them on the MR and ask them to weigh in on the MR Mhmm. For me. But you might wanna talk to them specifically about your campaign."
+  },
+  {
+   "idx": 57,
+   "speaker": 5,
+   "startMs": 1040420,
+   "endMs": 1041860,
+   "text": "Yeah. I'll do that."
+  },
+  {
+   "idx": 58,
+   "speaker": 5,
+   "startMs": 1045540,
+   "endMs": 1047860,
+   "text": "Okay. William? Cool."
+  },
+  {
+   "idx": 59,
+   "speaker": 0,
+   "startMs": 1049315,
+   "endMs": 1086525,
+   "text": "Then 14.o is coming up, which is very exciting. And, typically, on a major release and, you know, in terms of semantic versioning, where, you know, we're we're revving from 13.something to 14.o. We tend to, do a little bit more. There tends to be we did tend to try to do some type of press announcement because the we'll get some good press coverage usually with our media partners. And so the, the question would be, how about if Brian owns that 14.o launch?"
+  },
+  {
+   "idx": 60,
+   "speaker": 0,
+   "startMs": 1087405,
+   "endMs": 1092260,
+   "text": "And, Sami, it sounds like maybe you were on the docket for it, but that's, that works out for you?"
+  },
+  {
+   "idx": 61,
+   "speaker": 2,
+   "startMs": 1092980,
+   "endMs": 1096340,
+   "text": "It it's push. We added a launch in there."
+  },
+  {
+   "idx": 62,
+   "speaker": 0,
+   "startMs": 1096900,
+   "endMs": 1107045,
+   "text": "And that's that's right. So do we need to, is there a link to the, yeah, the release post managers? Let's just take a is this page up to date with the latest,"
+  },
+  {
+   "idx": 63,
+   "speaker": 0,
+   "startMs": 1111125,
+   "endMs": 1112485,
+   "text": "let me see if I can"
+  },
+  {
+   "idx": 64,
+   "speaker": 0,
+   "startMs": 1115550,
+   "endMs": 1117790,
+   "text": "is this one here?"
+  },
+  {
+   "idx": 65,
+   "speaker": 0,
+   "startMs": 1119390,
+   "endMs": 1127150,
+   "text": "Yeah. Is this is this accurate? We have a May and then fourteen dot o is in June, or is this out of date? That's accurate."
+  },
+  {
+   "idx": 66,
+   "speaker": 4,
+   "startMs": 1127390,
+   "endMs": 1127870,
+   "text": "Okay."
+  },
+  {
+   "idx": 67,
+   "speaker": 0,
+   "startMs": 1129035,
+   "endMs": 1148090,
+   "text": "Cool. Then for 14.o so, Sami, it looks like you are currently slotted for 1312 in May. Does that still work for you? Yeah. That works for me. Okay. And then, Parker, if we move Brian here on the fourteen o, does that work for you?"
+  },
+  {
+   "idx": 68,
+   "speaker": 6,
+   "startMs": 1149610,
+   "endMs": 1153370,
+   "text": "Yeah. That's that's fine. I don't know. Pretty flexible. These are,"
+  },
+  {
+   "idx": 69,
+   "speaker": 0,
+   "startMs": 1154795,
+   "endMs": 1158155,
+   "text": "yeah. That's fine. Okay. Cool. And then"
+  },
+  {
+   "idx": 70,
+   "speaker": 6,
+   "startMs": 1158555,
+   "endMs": 1171960,
+   "text": "maybe we can look in the rotation and add add some other folks for the upcoming ones. K. Would I so I would be are you you were after me. So I would flip flop with Brian. That would be August 22?"
+  },
+  {
+   "idx": 71,
+   "speaker": 6,
+   "startMs": 1173560,
+   "endMs": 1206610,
+   "text": "I think so. Unless you want to take July, which That's cool. No. I think yeah. Yeah. I don't think either way matters. I just saw that you were on for July. So, yeah, I guess either one of those swaps is fine with me. You've got wedding stuff, Parker. Do you need to Oh, yeah. That? When is your not not your wedding necessarily, but ones that you're in. Oh, that's that's the end of this month, luckily. Okay. So, yeah, that one is in the end of April. So it'll be the end of this month when I'm headed to to New Orleans. So when is your wedding? Do you know that? It is April of next year. Okay."
+  },
+  {
+   "idx": 72,
+   "speaker": 6,
+   "startMs": 1207645,
+   "endMs": 1214765,
+   "text": "Actually, it'll be the day after we release on April 22. It'll be a GitLab release day and then Parker marriage day."
+  },
+  {
+   "idx": 73,
+   "speaker": 0,
+   "startMs": 1215165,
+   "endMs": 1218045,
+   "text": "That's exciting."
+  },
+  {
+   "idx": 74,
+   "speaker": 4,
+   "startMs": 1220230,
+   "endMs": 1225750,
+   "text": "I just realized this fourteen three overlap contribute."
+  },
+  {
+   "idx": 75,
+   "speaker": 6,
+   "startMs": 1226150,
+   "endMs": 1237105,
+   "text": "Oh, no. Contributes on the ninth. Right? Oh, is it? That could be I mean, that's a good thing to ask though while we're on the topic. We had a we had a launch,"
+  },
+  {
+   "idx": 76,
+   "speaker": 2,
+   "startMs": 1237745,
+   "endMs": 1247670,
+   "text": "I think, in Cape Town, and a bunch of people just sat in the corner and knocked out the release post while we were there."
+  },
+  {
+   "idx": 77,
+   "speaker": 4,
+   "startMs": 1251590,
+   "endMs": 1265905,
+   "text": "So contribute is the nineteenth through twenty fourth. So, yeah, we've got the release right in the middle of it. Okay. Although it'll be easy for easy to track down anyone who Yep. Hasn't pushed something."
+  },
+  {
+   "idx": 78,
+   "speaker": 6,
+   "startMs": 1266545,
+   "endMs": 1271265,
+   "text": "True. Like, put that drink with an umbrella down. We gotta push this more. Exactly."
+  },
+  {
+   "idx": 79,
+   "speaker": 3,
+   "startMs": 1276810,
+   "endMs": 1295885,
+   "text": "There's a there's a breaking changes blog in the works, and I'm gonna do a version thirteen year end review in the weeks leading up to 14.o. But is there anything that was already, like, special and in the works for 14.o, Samir or Parker, that you'd heard of?"
+  },
+  {
+   "idx": 80,
+   "speaker": 6,
+   "startMs": 1297620,
+   "endMs": 1306660,
+   "text": "Nothing really. Okay. Darren on the runner team might have something. Let me double check on that, and I'll follow-up with you. I'm gonna take a note to remember to do that. Great."
+  },
+  {
+   "idx": 81,
+   "speaker": 0,
+   "startMs": 1307060,
+   "endMs": 1321885,
+   "text": "Yeah. I was gonna say if, across the the team, if you all could, as you sync with your kind of PM counterparts, query into that for, like, kinda what what are they planning for 14.o. And,"
+  },
+  {
+   "idx": 82,
+   "speaker": 0,
+   "startMs": 1323405,
+   "endMs": 1331180,
+   "text": "and then, Brian, it might be able to good be good for you to, sync with the new see kinda if if he has anything that's,"
+  },
+  {
+   "idx": 83,
+   "speaker": 3,
+   "startMs": 1332700,
+   "endMs": 1359010,
+   "text": "in mind. Yeah. Yeah. Last year, we recorded Cindy, that was you, last year, and and that was Scott. Right? I think who recorded a video for 13.o. Yeah. That was all we did. In twelve dot o, we actually produced, like, a little show. It was like a thirty or forty five minute show with a SID AMA and and a bunch of other stuff. I don't know if there's anything special in the works for fourteen dot o. We should do something. There's usually PR."
+  },
+  {
+   "idx": 84,
+   "speaker": 2,
+   "startMs": 1359090,
+   "endMs": 1362930,
+   "text": "So you need to coordinate with Natasha and see what the plan is."
+  },
+  {
+   "idx": 85,
+   "speaker": 4,
+   "startMs": 1363490,
+   "endMs": 1373705,
+   "text": "Well and and with the the new brand messaging, there's probably I think we have enough of we have enough runway, I think, to ramp up something that supports that too."
+  },
+  {
+   "idx": 86,
+   "speaker": 0,
+   "startMs": 1374425,
+   "endMs": 1383590,
+   "text": "Yeah. And and, Brian, I would think it's it's your launch. So what do you what do you think should be a part of it? Like, plan the, plan the activities."
+  },
+  {
+   "idx": 87,
+   "speaker": 3,
+   "startMs": 1384150,
+   "endMs": 1386630,
+   "text": "That's right. Awesome."
+  },
+  {
+   "idx": 88,
+   "speaker": 6,
+   "startMs": 1387750,
+   "endMs": 1405005,
+   "text": "Do we need to open an MR to switch, or were you planning on that or what? Yeah. Actually, Parker, could you open an MR to that page? Yeah. I'm happy to. And that way we can And then there's there's no one else that needs to be swapped. Right? Sorry. Just me and Brian. Samya still stays thirteen twelve. Okay."
+  },
+  {
+   "idx": 89,
+   "speaker": 4,
+   "startMs": 1406525,
+   "endMs": 1411550,
+   "text": "Alright. Yeah. What But we can I mean, we can fill out? Oh, yeah."
+  },
+  {
+   "idx": 90,
+   "speaker": 6,
+   "startMs": 1412030,
+   "endMs": 1419470,
+   "text": "I guess I mean, who's who's volunteering for the twenty second? I was like, oh, we can We might as well put someone in there for September and October while I'm in here."
+  },
+  {
+   "idx": 91,
+   "speaker": 0,
+   "startMs": 1420510,
+   "endMs": 1425015,
+   "text": "Yeah. Because September, that one's the one that'll overlap with contribute."
+  },
+  {
+   "idx": 92,
+   "speaker": 5,
+   "startMs": 1426215,
+   "endMs": 1437575,
+   "text": "Yeah. Is that '17. Throw me in there if I I'm I'm up next anyway because I just did thirteen ten. So Well, if if I'm not gonna be able to make it, then I'll take it from your callback."
+  },
+  {
+   "idx": 93,
+   "speaker": 4,
+   "startMs": 1439070,
+   "endMs": 1442590,
+   "text": "That's that's fair. Yeah. Well, hopefully, you can."
+  },
+  {
+   "idx": 94,
+   "speaker": 5,
+   "startMs": 1443150,
+   "endMs": 1451950,
+   "text": "Yeah. Well, I don't know if yeah. I may not get I don't know if I'll get a vaccine by then. So if I do get, then maybe I'd come. Otherwise, I wouldn't."
+  },
+  {
+   "idx": 95,
+   "speaker": 6,
+   "startMs": 1452190,
+   "endMs": 1465845,
+   "text": "Yeah. I wonder if GitLab so GitLab said they'll help reimburse. Right? Is there a way that you could, find one that maybe isn't waiting for, you know, the government to come around and and have a two other ways that you could go and find one and get reimbursed by GitLab maybe?"
+  },
+  {
+   "idx": 96,
+   "speaker": 5,
+   "startMs": 1467340,
+   "endMs": 1478540,
+   "text": "No. It's it's not about the cost. It's just that they're not giving anybody below 45 years. Right? Availability? Okay. Yep. Alrighty. Well, we got our fingers crossed. Me too."
+  },
+  {
+   "idx": 97,
+   "speaker": 0,
+   "startMs": 1482375,
+   "endMs": 1489655,
+   "text": "There is a point six, which is that the GC deck is next Monday."
+  },
+  {
+   "idx": 98,
+   "speaker": 0,
+   "startMs": 1492710,
+   "endMs": 1504790,
+   "text": "So I will share this that, Ty and Tracy, and I, and Todd have had a little bit of conversation on the way we format this."
+  },
+  {
+   "idx": 99,
+   "speaker": 0,
+   "startMs": 1506315,
+   "endMs": 1524030,
+   "text": "And for this next coming GC, we'll we will kind of keep to our like, the format that we've always had, which is basically any anything that you shipped kind of like we're gonna have a slide and the goal is for that slide to have all of the stuff."
+  },
+  {
+   "idx": 100,
+   "speaker": 0,
+   "startMs": 1527070,
+   "endMs": 1551910,
+   "text": "My so this might be a good topic for discussion. My opinion on that format is that I don't like it. And the reason why is because it's a heavy emphasis on, activities and and not results. And so I would love to see a shift in the way that we do group conversation from outputs to outcomes."
+  },
+  {
+   "idx": 101,
+   "speaker": 0,
+   "startMs": 1555030,
+   "endMs": 1589995,
+   "text": "And so this would like, I would love to see something like, these are the outcomes, the results that we're aiming for. Like, let's say, for example, in our GTM motions, or otherwise for, like, other projects that we're on, these are the these are the outcomes we're aiming for, and then, and then how we're tracking to those. So that that's what I would love to see for a group conversation, but I thought I would, for this next GC, same as always, kind of, like, do the same thing we've always done, add all of your links to the deck."
+  },
+  {
+   "idx": 102,
+   "speaker": 0,
+   "startMs": 1590395,
+   "endMs": 1616330,
+   "text": "Please do that ASAP. I think that one of the reasons I don't like the old format is because there's always a scramble, you have to go and it's kind of like logging your work twice. But the sooner you can add your stuff to that deck, then the better it makes it on Fern, who will be kind of has to make a video for that GC. So please get your stuff into him so he has it early. But, on the topic of kinda shipping out the format, any kind of thoughts on that from the team?"
+  },
+  {
+   "idx": 103,
+   "speaker": 2,
+   "startMs": 1617290,
+   "endMs": 1629275,
+   "text": "How do you measure, like, for customer meetings? How do we measure outcomes for that when, they may not be known for a while?"
+  },
+  {
+   "idx": 104,
+   "speaker": 0,
+   "startMs": 1630555,
+   "endMs": 1632155,
+   "text": "Right. So my"
+  },
+  {
+   "idx": 105,
+   "speaker": 0,
+   "startMs": 1633835,
+   "endMs": 1637390,
+   "text": "my thought is that we"
+  },
+  {
+   "idx": 106,
+   "speaker": 0,
+   "startMs": 1640830,
+   "endMs": 1645230,
+   "text": "probably wouldn't we wouldn't just report on the the meetings that we attended."
+  },
+  {
+   "idx": 107,
+   "speaker": 0,
+   "startMs": 1648045,
+   "endMs": 1663005,
+   "text": "So I think it's okay. Like, so for example, for this next GC, I think it's okay to say, like, here are a bunch of customer meetings we attended. And I think that's okay to report that, but I think what might be ideal would be"
+  },
+  {
+   "idx": 108,
+   "speaker": 0,
+   "startMs": 1665990,
+   "endMs": 1680715,
+   "text": "to ask the question, like, why do we attend those meetings? Right? Like, what's the result that we're we're trying to enact? And then, how do we know if we achieve that result or not? And so the idea would be"
+  },
+  {
+   "idx": 109,
+   "speaker": 0,
+   "startMs": 1682555,
+   "endMs": 1710315,
+   "text": "that that's that's what we would report on. That's what we would kinda share with the with the organization is that, like, here's a result that we're tracking to or here's, you know, here's, and we could talk about, like, these are activities that we did to in order to achieve that result, but it's just a shift kinda from we're we're doing this activity because it's an activity we do, to this is the result we're trying to derive, and the activities that we perform may change."
+  },
+  {
+   "idx": 110,
+   "speaker": 2,
+   "startMs": 1710955,
+   "endMs": 1745970,
+   "text": "I agree with your with your direction. Not just not sure how we measure. Because, like, motions, why you know, we're dumping a ton of time and energy into those. What are the intended outcomes, and how do you measure them today? It seems like our intended outcome would be, you know, if you took each of the GTM motions, they've each got a target of what they're planning on on growing revenue wise, but that's not gonna be achieved for six months at least. So how do you measure"
+  },
+  {
+   "idx": 111,
+   "speaker": 2,
+   "startMs": 1746610,
+   "endMs": 1752610,
+   "text": "you almost have to, like, say this is what our intent is. We'll tell you what we actually achieve six months from now."
+  },
+  {
+   "idx": 112,
+   "speaker": 0,
+   "startMs": 1753570,
+   "endMs": 1761465,
+   "text": "Yeah. So what I what I would love to see, and I don't I don't know how, much each team has has delved into this."
+  },
+  {
+   "idx": 113,
+   "speaker": 0,
+   "startMs": 1762985,
+   "endMs": 1791345,
+   "text": "But I ideally, within the the structure of, like, you have a go to market motion, and that go to market motion is comprised of some set of marketing activities. So some set of campaigns and some set of sales plays. And then for each of those campaigns and sales plays, then we would have, you know, outcomes that we're we're driving towards. And so what would be really cool is if for this"
+  },
+  {
+   "idx": 114,
+   "speaker": 0,
+   "startMs": 1791985,
+   "endMs": 1825705,
+   "text": "even for this one is if we even started to make that shift, although this is not, like, a a requirement for this one. Like, let's just do the same thing we've always done. It's next Monday. Do what's familiar. But in my mind, it would be great to say, like, here are these three go to market motions. This is what PMM team and TMM team are spending a huge amount of time on, and these are the results we're aiming to drive. This is this is and so you're sharing the the predictor. This is, like, this is what we're trying to go and achieve. And then, then, yeah, over the coming months, we would be able to report against that."
+  },
+  {
+   "idx": 115,
+   "speaker": 2,
+   "startMs": 1826425,
+   "endMs": 1828825,
+   "text": "That sounds like a good slide for you to create, William."
+  },
+  {
+   "idx": 116,
+   "speaker": 0,
+   "startMs": 1830340,
+   "endMs": 1839780,
+   "text": "I'm I'm totally up for it, and my only, my only cop out there is I'm, I've I'm a little bit kinda, like, behind the,"
+  },
+  {
+   "idx": 117,
+   "speaker": 0,
+   "startMs": 1841860,
+   "endMs": 1848365,
+   "text": "like, I don't even think I've attended each I have not yet been to, like, a DevOps platform stand up even."
+  },
+  {
+   "idx": 118,
+   "speaker": 0,
+   "startMs": 1850845,
+   "endMs": 1852445,
+   "text": "Some of the I'm kinda like"
+  },
+  {
+   "idx": 119,
+   "speaker": 0,
+   "startMs": 1854685,
+   "endMs": 1873140,
+   "text": "you know? I think I was out of office for a week, and then I was, like, CMO shadow for two weeks. And so that last week was kind of my first week poking into this stuff. So I'm happy to kinda own that, and then that's why I said, like, I probably won't have it for this Monday, but, that's that's a really good"
+  },
+  {
+   "idx": 120,
+   "speaker": 0,
+   "startMs": 1874655,
+   "endMs": 1878575,
+   "text": "thing in general for for me to just put a to do to myself that, like,"
+  },
+  {
+   "idx": 121,
+   "speaker": 0,
+   "startMs": 1881215,
+   "endMs": 1905845,
+   "text": "you know, have some kinda overview on how all the motions are measuring success, which, candidly, Cindy, that's kinda what I said in the meeting to, Todd and Tracy and Ty was, I really think it's that's what I told them. I said, I think it's our responsibility to create the GC slide. I don't think we should just always bump this down to our teams,"
+  },
+  {
+   "idx": 122,
+   "speaker": 0,
+   "startMs": 1906645,
+   "endMs": 1942515,
+   "text": "as their responsibility to go and make the slide. I like the idea of, hey. Anybody on the team could add things they want visibility for. So to your point, Tracy, if you wanted visibility for, let's say, hey. Look at all these kind of sales meetings I went to. I think that that's good to add to have as, like, anything that y'all care about and that you wanted to surface, I think that's good to have that channel. But, that was kind of my point is that, like, hey. I think it's the the management team's job to create the GC deck. So, making it to do myself. Cool. Alida, you've got point seven here."
+  },
+  {
+   "idx": 123,
+   "speaker": 1,
+   "startMs": 1944515,
+   "endMs": 1971465,
+   "text": "Yeah. I just wanna say thanks to everyone for jumping in and helping me out with the partner versus competitor exercise. Very, very helpful. So as I mentioned, that's gonna kinda be the starting point for us to decide well, no. I think, William, I think we're deciding to keep even if we tag someone as a partner, we're gonna still keep a competitor page. Right? I haven't read your notes in the issue yet."
+  },
+  {
+   "idx": 124,
+   "speaker": 0,
+   "startMs": 1972665,
+   "endMs": 1984420,
+   "text": "So that is a great question. Actually, I think that this definitely bears worth talking about, even on YouTube, I suppose, for anybody in the world that would watch this video."
+  },
+  {
+   "idx": 125,
+   "speaker": 0,
+   "startMs": 1987555,
+   "endMs": 2016205,
+   "text": "But, so there's a few there's a few bits of nuance. So one is that we we have a delimiter on is another vendor, are they a technology partner or are they? Or even we could even just say generally, like, are they a partner or are they not a partner? That list exists, and there are criteria for being an official partner. And, you know, some some companies are partners and some companies aren't. Now"
+  },
+  {
+   "idx": 126,
+   "speaker": 0,
+   "startMs": 2018045,
+   "endMs": 2057730,
+   "text": "some of the some of the nuance comes in, like, well, what if somebody's, let's say, like, a potential partner? Or what if there's somebody's somebody that we may want to partner with in the future And some of our capabilities overlap, but some of them don't. And so what message do we put up about them on our website? So, for example, on a comparison page where we compare GitLab with other DevOps tools, is the thing that we say about that tool, is that gonna hinder, let's say, the work of our alliances team to try to to try to create a partnership that we don't yet have? So I think that's some of the nuance that we need to navigate."
+  },
+  {
+   "idx": 127,
+   "speaker": 0,
+   "startMs": 2058930,
+   "endMs": 2093230,
+   "text": "I did open an issue, where I think I tagged the whole team on it. I think the the team you should have gotten a notification. And then I think what do we tag Alita? We tagged, Mayank and, Dunk and some other folks. But the the I kinda had, like, three there's I I think in my head, there are three basic options. Maybe there are more, but there there's basically for any vendor out there where they are a partner or potential partner and, also, they have some type of capability that overlaps with GitLab,"
+  },
+  {
+   "idx": 128,
+   "speaker": 0,
+   "startMs": 2093790,
+   "endMs": 2102335,
+   "text": "we could have only a DevOps comparison page. We could have only a partner page, or we could have both."
+  },
+  {
+   "idx": 129,
+   "speaker": 0,
+   "startMs": 2104735,
+   "endMs": 2109055,
+   "text": "So there's some discussion of, like, kinda what's the what's the strategy there."
+  },
+  {
+   "idx": 130,
+   "speaker": 0,
+   "startMs": 2111320,
+   "endMs": 2119320,
+   "text": "I think that we end up having both, but, you know, that's just a a a thing to kind of get alignment on, I think."
+  },
+  {
+   "idx": 131,
+   "speaker": 1,
+   "startMs": 2119960,
+   "endMs": 2148540,
+   "text": "Yeah. I haven't, gone into the issue to add my kinda thoughts yet. I'll I'll I'll do that today. If if the team decides and and we all, you know, are aligned to having both, I'm I'm okay with that just because that's what we all want. But my personal perspective, I think when we look at DevOps tools and how many competitors we cover, I think it for me, I feel like we should narrow the list down, and this is one of the ways that I can do that."
+  },
+  {
+   "idx": 132,
+   "speaker": 1,
+   "startMs": 2150060,
+   "endMs": 2153455,
+   "text": "But, again, whatever we decide, I'm on board with."
+  },
+  {
+   "idx": 133,
+   "speaker": 4,
+   "startMs": 2154175,
+   "endMs": 2155215,
+   "text": "Yeah. Well I"
+  },
+  {
+   "idx": 134,
+   "speaker": 0,
+   "startMs": 2156175,
+   "endMs": 2175190,
+   "text": "sorry. I was just gonna say, Alita, I think you are the DRI, so you should you should take the input of everybody else and ideally make a call that kind of weighs the trade offs of of, you know, what we need to weigh. Right. But"
+  },
+  {
+   "idx": 135,
+   "speaker": 0,
+   "startMs": 2177110,
+   "endMs": 2188705,
+   "text": "to your point about tiering the, you know, the idea would be maybe if somebody if if some if a partner if somebody's a partner, maybe they fall into a different tier. That is"
+  },
+  {
+   "idx": 136,
+   "speaker": 4,
+   "startMs": 2191825,
+   "endMs": 2229220,
+   "text": "that's that makes sense that that's maybe part of the conversation as well. What were you thinking, Cormac? I was just going to say plus one to pairing that list down. I think there are some folks I imagine it's the same for everyone, but, certainly within the agile, like, plan space, there are some competitors there where it probably doesn't make sense. Like, at least, you know I mean, Atlassian does a lot of things, but, like, Trello from Atlassian, like, Trello is not really a if if someone is considering Trello, they're probably not considering GitLab for that for that specific use case."
+  },
+  {
+   "idx": 137,
+   "speaker": 4,
+   "startMs": 2230260,
+   "endMs": 2246430,
+   "text": "They could be. They could be using Trello with other things, and then there could be a multi vendor solution they're comparing against us. But, you know, there there are some cases where if we if we needed to trim that list down, we could probably do so without doing it to service to customers."
+  },
+  {
+   "idx": 138,
+   "speaker": 6,
+   "startMs": 2246670,
+   "endMs": 2259790,
+   "text": "Yeah. Great. Yep. I mean, we're you know, the ROI is tough. Right? With the with the the status in now, I think we'd have a much better time keeping it up to date and maintaining it and much more focused list, if you would if you will."
+  },
+  {
+   "idx": 139,
+   "speaker": 3,
+   "startMs": 2261115,
+   "endMs": 2273990,
+   "text": "Yeah. I I I Yeah. That's that's very much true on the SCM side. I mean, I I added to the list a whole bunch of of folks. Everyone who hosts snippets is not is not a competitor. You know? Yeah."
+  },
+  {
+   "idx": 140,
+   "speaker": 0,
+   "startMs": 2274870,
+   "endMs": 2292495,
+   "text": "And one one bit of nuance that I might suggest is that for that section of our website is not I don't I don't think the intention is strictly to show, like, competitors,"
+  },
+  {
+   "idx": 141,
+   "speaker": 0,
+   "startMs": 2294335,
+   "endMs": 2296255,
+   "text": "in in a kind of, like,"
+  },
+  {
+   "idx": 142,
+   "speaker": 0,
+   "startMs": 2298015,
+   "endMs": 2330090,
+   "text": "competitive sense. Although I think so for example, coming back to your point about, like, a tool like Trello, it seems reasonable that folks that are users, prospects, customers of GitLab would say, okay. Well, GitLab has these issue boards. When when could I use issue boards, and when could I use Trello? Could I use them together? Would I use them for different reasons? That seems like that would be helpful information to our customer base. Now"
+  },
+  {
+   "idx": 143,
+   "speaker": 0,
+   "startMs": 2330970,
+   "endMs": 2368580,
+   "text": "what I really like, Alita, is your proposal of, like, tiering these where there are some tools that are probably more important to our user base that, like, for those kind of tools, it's it's more important to those users and those prospects and those customers that that there's some kind of, like, how do I understand this tool versus GitLab? And those are the ones where you focus that energy and effort. So maybe a tool like Trello just has something very lightweight or nothing at all because it's it's not something that our our users would care as much about. But, that's kinda my thought on it is that if there was a if there was a user and they're trying to think, well, when would I use GitLab and when would I use tool x?"
+  },
+  {
+   "idx": 144,
+   "speaker": 0,
+   "startMs": 2369645,
+   "endMs": 2374285,
+   "text": "It's probably helpful to have some type of web information about that."
+  },
+  {
+   "idx": 145,
+   "speaker": 4,
+   "startMs": 2374845,
+   "endMs": 2413365,
+   "text": "Well, that one to to that point, William, I think if we had those kind of qualitative context pages you were talking about, then that would be wonderful for Trello because I think, you know, Trello is one of those things that people just spin up everywhere, and there will there will be questions about that. If I think right now, the the thing that's a little weird is if we're scoring against them, it's it's it's a weird because then it is a direct it doesn't give you any extra context and it could confuse things. So if we did have that, how does this fit into this world view that would also be, you know, would also be easier on our partners. I think that would be useful information. One of the things"
+  },
+  {
+   "idx": 146,
+   "speaker": 2,
+   "startMs": 2413900,
+   "endMs": 2451680,
+   "text": "Go ahead, Kate. That's in thinking was if you look at it and break it into two parts, you've got how do we compare on scope and how do we compare on capabilities? And you might give everyone a comparison on scope and not everyone a comparison on capabilities. So scope would be important to show, you know, we do all this. They only do this part or they do all this too. But to understand how they fit from a scope standpoint and then from a capability standpoint, maybe with a partner, you decide"
+  },
+  {
+   "idx": 147,
+   "speaker": 2,
+   "startMs": 2452080,
+   "endMs": 2465285,
+   "text": "you don't want to go down that path. Or maybe you do go down that path and you say, and they have this capability that we don't have that complements us and that's why they're a partner. So I have the the scoring thing"
+  },
+  {
+   "idx": 148,
+   "speaker": 1,
+   "startMs": 2466485,
+   "endMs": 2500570,
+   "text": "can get so complex. Here's what I was thinking, and you guys tell me if you agree or disagree. So Parker, myself, and Ryan, we had a call last week with Parker, what was the guy's name from Forrester? Chris Condo. Chris Condo. Right? We had a great conversation. The idea is that we start having these monthly sync calls where I ask them specific questions, competitive related, questions. I was thinking the next call we have that I bring this to the table and ask them their perspective and their opinion on"
+  },
+  {
+   "idx": 149,
+   "speaker": 1,
+   "startMs": 2501050,
+   "endMs": 2507690,
+   "text": "what do they think we should consider, what should be the factors we consider we should consider in scoring ourselves against other competitors."
+  },
+  {
+   "idx": 150,
+   "speaker": 1,
+   "startMs": 2509770,
+   "endMs": 2511210,
+   "text": "What do you think about that?"
+  },
+  {
+   "idx": 151,
+   "speaker": 0,
+   "startMs": 2512490,
+   "endMs": 2551355,
+   "text": "So I would just I'll I'll say this, and Alita, you and I have talked about this ad nauseam. And so it like, you and I have had 50 conversations about this, but I realized, like, the rest of the team has not. So my strong extremely strong stance is that the current graphic that we have on those DevOps tools pages is really, really bad. It is negative on several, several fronts. So trying to the reason why is, to your point, Cindy, it it scores"
+  },
+  {
+   "idx": 152,
+   "speaker": 0,
+   "startMs": 2551835,
+   "endMs": 2585725,
+   "text": "capabilities of every single tool on that list, and it treats them all as though they are platform. So you look at the page, and you would say, for example, like Trello. You would be like, Trello is not a DevOps platform, but we score it. We're like, we give it, like, zero for CI or something. It's just really goofy. And so the reason why it's bad is because, like, we lose credibility because anybody who looks at that page is like, does GitLab even understand what Trello is? Like, why are they even scoring Trello on CI? Yep. It's it makes us lose credibility."
+  },
+  {
+   "idx": 153,
+   "speaker": 0,
+   "startMs": 2586220,
+   "endMs": 2622300,
+   "text": "It causes frustration with, partners or potential partners. Right? As our alliances team is that's kinda share with us, hey. So and so wants to partner with GitLab, but we have this page where we, like, really, really misrepresent their tool. So we're not being fair. I don't I don't feel like it's in line with GitLab's values of, transparency. It's not very transparent. It's it's it's very, very, like, marketing kind of dishonest almost. It's kind of I don't wanna overstate it, but I really, really dislike the current graphic. Yeah. We've talked about it, and I agree. When I brought this up,"
+  },
+  {
+   "idx": 154,
+   "speaker": 1,
+   "startMs": 2622780,
+   "endMs": 2644720,
+   "text": "to leadership, I think one of the things that that leadership really likes about the format of the the infographic is that they feel someone can quickly look at it and immediately say, oh, is not a player in x y z space. You know, they are they are CICD player or whatever. Right? So I think that was one of the the reasons why"
+  },
+  {
+   "idx": 155,
+   "speaker": 6,
+   "startMs": 2646080,
+   "endMs": 2657445,
+   "text": "leadership would like us to continue down the path with these current infographics. Right? Then they should give us the reason to do it right. I think I think, like, if that's the case, then yeah. We just Well,"
+  },
+  {
+   "idx": 156,
+   "speaker": 0,
+   "startMs": 2657925,
+   "endMs": 2674430,
+   "text": "Alita, I really like your proposal. So so, I don't know, Alita. Would you be able to just link your issue or your plan? You have, like, a and I know most of the team has waited on that plan, but it'd great to just have a link in the agenda. And one of the things I really like in your scope of issues is your"
+  },
+  {
+   "idx": 157,
+   "speaker": 0,
+   "startMs": 2676350,
+   "endMs": 2711415,
+   "text": "your kind of proposal for an for an an augment to the current graphic. Graphic. The current graphic treats everybody like they're all a platform play, and it's kinda dishonest, and it's kind of, you know, not credible. And then it scores everybody like that, but that's kinda goofy. What leadership or, like, Todd in particular, what Todd likes about the graphic is that it tells our platform story. That's true. It would be great to tell our platform story, but the there's a graphic that you propose, Lee, that's really cool I like because it shows, okay, GitLab is a DevOps platform, and this tool does this one thing."
+  },
+  {
+   "idx": 158,
+   "speaker": 0,
+   "startMs": 2711975,
+   "endMs": 2741065,
+   "text": "Nobody is gonna be offended by having that's true. That is true. It's transparent. It's credible. If we just have a visual representation of GitLab, what's the difference between GitLab and Trello? Well, GitLab does all of this stuff, including issue boards, and Trello does, like, issue boards, right, or, you know, Kanban boards. And that's one difference. And that alone, just having that credibly represented, tells our platform story and,"
+  },
+  {
+   "idx": 159,
+   "speaker": 0,
+   "startMs": 2742025,
+   "endMs": 2768700,
+   "text": "helps our users. Right? They would look at it and be like, well, what's the difference between GitLab and Trello? Oh, well, this is one major difference. So I like how Cindy said it. It's like scope. So if you just show the scope, you don't have to so I have to score on scope. But then, potentially, a score would be on, like, let's say, capabilities maybe, where, on the specific bits of functionality where GitLab and, whatever tool overlap, like,"
+  },
+  {
+   "idx": 160,
+   "speaker": 1,
+   "startMs": 2770235,
+   "endMs": 2805835,
+   "text": "how are they how do they how do they compare? Yeah. And so I know we I don't wanna take up too much more time on this, William. I know you have you have other things to to to talk about. But really quick before we move on, I wanted to get the team to weigh in. I think most of you kinda weighed in on a K call, but for those of you who were not on the K call. So I kinda had I threw one option out there. Hey. We, you know, we talked to some analysts and say, hey. We're doing the scoring. Can you kinda help us out, guide us here? Right? I don't know what they would say. But I would my recommendation is that we ask. The second option is, do we just ask for money to hire a third party"
+  },
+  {
+   "idx": 161,
+   "speaker": 1,
+   "startMs": 2806155,
+   "endMs": 2818330,
+   "text": "firm to come in and do it? And I know we talked about this on a k call, and everyone gave their opinion. But for those of you who were not on the call, can you share your thoughts? What do you yay or nay? Do you think that's something we should do or not?"
+  },
+  {
+   "idx": 162,
+   "speaker": 6,
+   "startMs": 2818970,
+   "endMs": 2829305,
+   "text": "You should I think it's also important to to point out, Alita, that you that right now, it would be a voluntary thing. And, like, my point on the call was that I don't if it's voluntary, I don't think it'll get done."
+  },
+  {
+   "idx": 163,
+   "speaker": 4,
+   "startMs": 2831225,
+   "endMs": 2871080,
+   "text": "I I I think with third parties so it do you mean just a third party to come in and get it done or a third party to come in and put their stamp of approval on it like we were doing No. Third party to actually do the research and the scoring and all of that for us. I I think that the that would certainly add to credibility, but I think that it can also go stale unless we're engaged in a long term partnership. And when we since being recorded, when we worked with another vendor, there were there were thoughts that, you know, there there could be business considerations considerations at at some some point that could affect that."
+  },
+  {
+   "idx": 164,
+   "speaker": 4,
+   "startMs": 2871800,
+   "endMs": 2904900,
+   "text": "That you know, if our relationship with that party changes at any point, then what happens to do they do they own that data? Do we have the right to update that data? As soon as we update it, do we lose credibility that we gained? So that that's something we'd need to lock in something long term if we were to do that. It also, we would have to figure out where the marketing in that goes as well because, I mean, it is also a marketing tool. And if so if a third party controls that, then we lose the ability. We'd have to market around it."
+  },
+  {
+   "idx": 165,
+   "speaker": 1,
+   "startMs": 2906180,
+   "endMs": 2907300,
+   "text": "Yeah. Okay."
+  },
+  {
+   "idx": 166,
+   "speaker": 0,
+   "startMs": 2907860,
+   "endMs": 2934510,
+   "text": "I will I will say this. I I think that, if we had tiered, you know, comparison pages and it wasn't, like, 80 tools plus or however many are on there, and every single quarter, this entire team and all of TMM and and, like, you know, as many resources as possible needs to go and update all 80 tools every quarter, that seems,"
+  },
+  {
+   "idx": 167,
+   "speaker": 0,
+   "startMs": 2936270,
+   "endMs": 2960020,
+   "text": "I don't think I I just don't wanna sign up for that. But if we have a tiered list of tools and we say, like, there's tier one and maybe even, like, a tier two, it it it feels to me like a pretty reasonable ask. Like, I would make this ask of the team to say, like, as part of your quarterly goals as a product marketing manager, you would update, you know,"
+  },
+  {
+   "idx": 168,
+   "speaker": 0,
+   "startMs": 2961540,
+   "endMs": 2966020,
+   "text": "one to three tools each quarter to kinda keep it fresh."
+  },
+  {
+   "idx": 169,
+   "speaker": 0,
+   "startMs": 2967675,
+   "endMs": 2970155,
+   "text": "Does does that seem like a reasonable ask?"
+  },
+  {
+   "idx": 170,
+   "speaker": 4,
+   "startMs": 2974315,
+   "endMs": 2990890,
+   "text": "I think so. I think so, but I don't wanna speak for It's not something that I relish, but I think Yeah. But if we know it's coming, it's not like, you know, last time it was all hands on deck for, you know, two days. And and I think if we know it's coming, then, you know, we'll we'll all have moments when we can"
+  },
+  {
+   "idx": 171,
+   "speaker": 6,
+   "startMs": 2991290,
+   "endMs": 2998155,
+   "text": "Two days? Two days. Yeah. Mine was more like It was, like, two months. Yeah. Yeah. It Like so, like, I"
+  },
+  {
+   "idx": 172,
+   "speaker": 0,
+   "startMs": 2998955,
+   "endMs": 3033875,
+   "text": "don't see this scaling up. That's my input. But yeah. Yeah. Basically, I thought that a lot tire last time was a pretty big debacle of a mismanagement of resources. But my thought is, as a product marketer, you want to be an SME on the top competitors for your solutions that you own, right, or the products that you own. But we only have one product, so in this case, for the solutions that you own. You know, a core a core competency for any PMM would be to be a competitive subject matter expert"
+  },
+  {
+   "idx": 173,
+   "speaker": 0,
+   "startMs": 3034280,
+   "endMs": 3074160,
+   "text": "on the top competitors in in their space. And so if you're if you're doing that that kind of bit of research anyway or for that matter, it could be it could be, like, because you have a task to go and, like, update some set of pages or just to even to check-in on them, then it's a reason to go and and check-in on them. And, that's kind of my thought there is that for 80 tools is too much, but it but, Alita, I think and I could we could ask this of Ty as well to say, like, hey. We think a core competency for a TMM is to be an SME on the top one to three tools for their space"
+  },
+  {
+   "idx": 174,
+   "speaker": 0,
+   "startMs": 3074480,
+   "endMs": 3087205,
+   "text": "and that they should keep fresh on that information on, like, a quarterly basis. And then one of the outcomes of keeping fresh on that would be, like, maybe an update to a web page. That feels like a very fair and a and a reasonable and a scalable ask."
+  },
+  {
+   "idx": 175,
+   "speaker": 2,
+   "startMs": 3087525,
+   "endMs": 3115635,
+   "text": "Here's another thought too is if if we do break it into scope versus capabilities, the scope part of it, it shouldn't change too much from quarter to quarter. Right? That's it'd be more stable. Capabilities might, but if you say if you tier that capabilities part and say, you know, top three, competitors or something, and then give the give the ability for them to,"
+  },
+  {
+   "idx": 176,
+   "speaker": 2,
+   "startMs": 3117795,
+   "endMs": 3131100,
+   "text": "open an MR and suggest changes if there's something on there that's not accurate. But I do think you still have to figure out you probably don't want the detailed comparison on ones that you're trying to partner."
+  },
+  {
+   "idx": 177,
+   "speaker": 4,
+   "startMs": 3131900,
+   "endMs": 3166635,
+   "text": "And if we limit it to, say, top three, the our our our PM our our PM counterparts should be deeply involved with that same sort of research already. Yep. So it should They be might even have it on their vision page. Yeah. And so I think that that, you know, if I, you know, if I if I called up Gabe and said, Gabe, let's talk about I don't know. I'm trying to think Basecamp. I was like, yeah. I haven't looked at Basecamp, but I guarantee he's looked at Azure boards and, you know, that sort of thing. So think I think that's"
+  },
+  {
+   "idx": 178,
+   "speaker": 0,
+   "startMs": 3167915,
+   "endMs": 3191440,
+   "text": "that if we limit it, that could be easier than we think. Yeah. Cool. Well, Alita has a a plan in there. There's a specific issue for the partner stuff you can weigh in on, And some of these other things as they crop up, we can log issues for them. And, thank you all for a a great meeting, and happy Monday. Yeah. Happy week, everybody. Fingers crossed for Samus vaccine."
+  },
+  {
+   "idx": 179,
+   "speaker": 1,
+   "startMs": 3191920,
+   "endMs": 3193040,
+   "text": "Yeah."
+  }
+ ]
+}

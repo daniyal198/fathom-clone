@@ -3,7 +3,12 @@ node_modules/
 .vercel/
 .env
 .env*.local
-data/audio/
+data/media/
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+.vercel
+.env*
+.agents/
+.claude/skills/
+skills-lock.json
