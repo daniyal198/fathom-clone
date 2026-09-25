@@ -36,7 +36,7 @@ export default async function MeetingsPage({ searchParams }: PageProps<"/">) {
 
       <UpcomingStrip calendar={calendar} />
 
-      <div className="mt-8 mb-3 flex items-center gap-1 border-b border-line">
+      <div className="scroll-thin mt-8 mb-3 flex items-center gap-1 overflow-x-auto border-b border-line">
         {(
           [
             ["all", "All meetings"],
@@ -48,7 +48,7 @@ export default async function MeetingsPage({ searchParams }: PageProps<"/">) {
             key={key}
             href={key === "all" ? "/" : `/?tab=${key}`}
             className={cn(
-              "-mb-px flex items-center gap-1.5 border-b-2 px-3 pb-2.5 text-[13.5px] font-medium transition-colors",
+              "-mb-px flex shrink-0 items-center gap-1.5 border-b-2 px-3 pb-2.5 text-[13.5px] font-medium whitespace-nowrap transition-colors",
               tab === key ? "border-accent text-ink" : "border-transparent text-ink-3 hover:text-ink-2"
             )}
           >

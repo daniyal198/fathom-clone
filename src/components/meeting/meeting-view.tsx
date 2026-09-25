@@ -152,7 +152,7 @@ function MeetingInner({ data, initialMs }: { data: MeetingData; initialMs: numbe
                 </Popover.Portal>
               </Popover.Root>
               {meeting.sourceUrl && (
-                <a href={meeting.sourceUrl} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-ink" title={`Originally recorded ${meeting.recordedOn ?? ""}`}>
+                <a href={meeting.sourceUrl} target="_blank" rel="noreferrer" className="hidden items-center gap-1 hover:text-ink sm:flex" title={`Originally recorded ${meeting.recordedOn ?? ""}`}>
                   <ExternalLink size={12} /> Source: {meeting.sourceLabel}
                 </a>
               )}
@@ -182,8 +182,10 @@ function MeetingInner({ data, initialMs }: { data: MeetingData; initialMs: numbe
           ) : (
             <div className="flex aspect-video items-center justify-center rounded-xl border border-line bg-sunken text-ink-3">No recording</div>
           )}
-          <Chapters chapters={chapters} />
-          <SpeakerLanes data={data} totalTalk={totalTalk} onFocus={focusPerson} />
+          <div className="hidden space-y-4 lg:block">
+            <Chapters chapters={chapters} />
+            <SpeakerLanes data={data} totalTalk={totalTalk} onFocus={focusPerson} />
+          </div>
         </div>
 
         <aside className="flex h-[80vh] min-h-0 flex-col border-t border-line bg-surface lg:h-auto lg:border-t-0 lg:border-l">
@@ -230,6 +232,11 @@ function MeetingInner({ data, initialMs }: { data: MeetingData; initialMs: numbe
             {tab === "ask" && <AskPanel meetingId={meeting.id} suggestions={suggestions} />}
           </div>
         </aside>
+        {/* Phones: notes first (above), then chapters and speakers */}
+        <div className="space-y-4 p-4 lg:hidden">
+          <Chapters chapters={chapters} />
+          <SpeakerLanes data={data} totalTalk={totalTalk} onFocus={focusPerson} />
+        </div>
       </div>
 
       <ShareDialog

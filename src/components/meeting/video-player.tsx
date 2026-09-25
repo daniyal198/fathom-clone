@@ -36,6 +36,7 @@ export function VideoPlayer({
   const [muted, setMuted] = useState(false);
   const [rate, setRate] = useState(1);
   const [ready, setReady] = useState(false);
+  const [audioOnly, setAudioOnly] = useState(false);
   const wrap = useRef<HTMLDivElement>(null);
   const clipRef = useRef(clipRange);
   clipRef.current = clipRange;
@@ -80,6 +81,7 @@ export function VideoPlayer({
     };
     const onMeta = () => {
       setReady(true);
+      setAudioOnly(v.videoWidth === 0);
       if (!didInit.current) {
         didInit.current = true;
         if (startRef.current) v.currentTime = startRef.current / 1000;
@@ -141,6 +143,7 @@ export function VideoPlayer({
           className="h-full w-full cursor-pointer object-contain"
           onClick={p.toggle}
         />
+        {audioOnly && <NowSpeaking utterances={utterances} participants={participants} playing={playing} />}
         {!playing && ready && (
           <button
             onClick={p.toggle}
@@ -193,6 +196,31 @@ export function VideoPlayer({
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Audio-only recordings (uploads, in-person) get a speaker view instead of a black box.
+function NowSpeaking({ utterances, participants, playing }: { utterances: Utterance[]; participants: Participant[]; playing: boolean }) {
+  const t = useTime(250);
+  const u = utterances[indexAt(utterances, t)];
+  const speaking = u && u.endMs >= t ? participants.find((x) => x.key === u.speaker) : null;
+  return (
+    <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#1b1a2e] to-[#101014]">
+      <div className="flex items-center gap-3">
+        {participants.slice(0, 6).map((x) => (
+          <div key={x.key} className={cn("flex flex-col items-center gap-1.5 transition-all", speaking?.key === x.key ? "scale-110 opacity-100" : "opacity-40")}>
+            <span
+              className={cn("flex h-14 w-14 items-center justify-center rounded-full text-[18px] font-semibold text-white", speaking?.key === x.key && playing && "ring-4 ring-white/25")}
+              style={{ background: x.color }}
+            >
+              {x.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase()}
+            </span>
+            <span className="max-w-[90px] truncate text-[11.5px] text-white/80">{x.name}</span>
+          </div>
+        ))}
+      </div>
+      <p className="max-w-[80%] truncate text-center text-[13px] text-white/60">{speaking ? `${speaking.name} is speaking` : playing ? "…" : "Audio recording"}</p>
     </div>
   );
 }
